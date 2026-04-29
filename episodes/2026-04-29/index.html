@@ -385,15 +385,15 @@
         .story-card:hover .story-headline { color: var(--accent); }
         .story-card:hover .card-cta { color: var(--accent); }
 
-        .story-card-body { padding: 0.9rem 1rem 0.75rem; flex: 1; }
+        .story-card-body { padding: 0.9rem 1rem 0.75rem; flex: 1; display: flex; flex-direction: column; }
 
         .story-tag { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6888; display: block; margin-bottom: 0.38rem; }
         .story-headline { font-size: 0.97rem; font-weight: 600; line-height: 1.35; color: #c4c8d8; margin-bottom: 0.45rem; transition: color 0.15s; }
-        .story-brief { font-size: 0.82rem; color: #9aa0c0; line-height: 1.6; margin-bottom: 0.55rem; }
+        .story-brief { font-size: 0.82rem; color: #9aa0c0; line-height: 1.6; margin-bottom: 0.55rem; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 
         .key-stat { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--accent); background: var(--accent-dim); border: 1px solid #1e3a5e; border-radius: 3px; padding: 0.15rem 0.55rem; margin-bottom: 0.55rem; }
 
-        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; }
+        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; font-size: 0.72rem; color: #383a4a; margin-top: auto; padding-top: 0.4rem; }
         .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: var(--text-muted); }
         .metric-val { color: #515870; font-weight: 600; }       /* outlets: muted slate */
         .metric-val.srq-val { color: #505878; }                 /* SRQ: muted indigo */
@@ -479,7 +479,7 @@
         .mid-card:hover { border-color: var(--accent); transform: translateY(-1px); }
         .mid-card:hover .mid-headline { color: var(--accent); }
         .mid-card:hover .mid-cta { color: var(--accent); }
-        .mid-card-body { padding: 0.9rem 1rem 0.75rem; flex: 1; }
+        .mid-card-body { padding: 0.9rem 1rem 0.75rem; flex: 1; display: flex; flex-direction: column; }
         .mid-badge { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #506070; display: block; margin-bottom: 0.38rem; }
         .mid-headline { font-size: 0.9rem; font-weight: 600; line-height: 1.35; color: #9298b8; margin-bottom: 0.42rem; transition: color 0.15s; }
         .mid-brief { font-size: 0.78rem; color: #606878; line-height: 1.55; margin-bottom: 0.4rem; }
@@ -563,11 +563,11 @@
         .nc-card:hover { border-color: var(--accent); transform: translateY(-1px); }
         .nc-card:hover .nc-headline { color: var(--accent); }
         .nc-card:hover .nc-cta { color: var(--accent); }
-        .nc-card-body { padding: 0.85rem 0.95rem 0.7rem; flex: 1; }
+        .nc-card-body { padding: 0.85rem 0.95rem 0.7rem; flex: 1; display: flex; flex-direction: column; }
         .nc-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6272; display: block; margin-bottom: 0.32rem; }
         .nc-headline { font-size: 0.9rem; font-weight: 600; color: #a8adc4; line-height: 1.35; margin-bottom: 0.42rem; transition: color 0.15s; }
         .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: var(--text-muted); }
+        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: #383a4a; margin-top: auto; padding-top: 0.35rem; }
         .nc-card-footer { padding: 0.42rem 0.95rem; border-top: 1px solid var(--border-soft); }
         .nc-cta { font-size: 0.68rem; font-weight: 600; color: #5a6888; transition: color 0.15s; }
         .gate2-pass { font-size: 0.6rem; padding: 0 5px; border-radius: 2px; background: #0c1808; color: #407850; border: 1px solid #1a2a18; }
@@ -815,7 +815,7 @@
 <header class="site-header">
 <div class="header-inner">
     <div class="header-top">
-        <div class="header-brand">
+        <div class="header-brand brand-wordmark">
             <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span><span class="cadence-label" id="cadence-label">DAILY</span>
         </div>
 
