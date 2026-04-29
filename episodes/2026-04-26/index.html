@@ -106,7 +106,7 @@
             gap: 0.5rem;
         }
 
-        .header-brand { font-size: 1.4rem; display: flex; align-items: baseline; gap: 0.35rem; }
+        .header-brand { font-size: 1.4rem; display: flex; align-items: baseline; }
         .cadence-label {
             font-size: 1.0rem;
             font-weight: 900;
@@ -116,6 +116,7 @@
             line-height: 1;
             position: relative;
             top: 1px;
+            margin-left: 0.35rem;
         }
 
         .episode-info { text-align: right; }
@@ -342,7 +343,7 @@
         .cat-section { margin-bottom: 2.5rem; }
         .cat-heading { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.7rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
         .cat-icon { width: 3px; height: 0.9rem; border-radius: 2px; flex-shrink: 0; }
-        .cat-name { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); }
+        .cat-name { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8090a8; }
         .cat-count { font-size: 0.68rem; color: var(--text-dim); margin-left: auto; }
 
         .sub-label {
@@ -815,9 +816,8 @@
 <header class="site-header">
 <div class="header-inner">
     <div class="header-top">
-        <div class="header-brand brand-wordmark">
-            <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span>
-            <span class="cadence-label" id="cadence-label">DAILY</span>
+        <div class="header-brand">
+            <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span><span class="cadence-label" id="cadence-label">DAILY</span>
         </div>
 
         <div class="episode-info">
@@ -6720,10 +6720,10 @@
       <span class="story-meta-item">Relevance: <strong>0.52</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
@@ -6773,8 +6773,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -6786,10 +6787,10 @@
       <span class="story-meta-item">Relevance: <strong>0.52</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
@@ -6839,8 +6840,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -6852,10 +6854,10 @@
       <span class="story-meta-item">Relevance: <strong>0.48</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">5</div><div class="srq-card-label">Articles</div></div>
@@ -6905,8 +6907,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -6918,10 +6921,10 @@
       <span class="story-meta-item">Relevance: <strong>0.48</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">5</div><div class="srq-card-label">Articles</div></div>
@@ -6962,8 +6965,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -6975,10 +6979,10 @@
       <span class="story-meta-item">Relevance: <strong>0.46</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7010,8 +7014,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7023,10 +7028,10 @@
       <span class="story-meta-item">Relevance: <strong>0.46</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7058,8 +7063,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7071,10 +7077,10 @@
       <span class="story-meta-item">Relevance: <strong>0.45</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
@@ -7106,8 +7112,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7119,10 +7126,10 @@
       <span class="story-meta-item">Relevance: <strong>0.43</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7154,8 +7161,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7167,10 +7175,10 @@
       <span class="story-meta-item">Relevance: <strong>0.38</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7202,8 +7210,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7215,10 +7224,10 @@
       <span class="story-meta-item">Relevance: <strong>0.38</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7250,8 +7259,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7265,10 +7275,10 @@
       <span class="story-meta-item">Relevance: <strong>0.52</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
@@ -7318,8 +7328,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7331,10 +7342,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7366,8 +7377,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7379,10 +7391,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7414,8 +7426,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7427,10 +7440,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7462,8 +7475,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7477,10 +7491,10 @@
       <span class="story-meta-item">Relevance: <strong>0.46</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7512,8 +7526,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7525,10 +7540,10 @@
       <span class="story-meta-item">Relevance: <strong>0.43</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7560,8 +7575,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7573,10 +7589,10 @@
       <span class="story-meta-item">Relevance: <strong>0.4</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7608,8 +7624,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7621,10 +7638,10 @@
       <span class="story-meta-item">Relevance: <strong>0.4</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7656,8 +7673,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7669,10 +7687,10 @@
       <span class="story-meta-item">Relevance: <strong>0.38</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
@@ -7695,8 +7713,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7708,10 +7727,10 @@
       <span class="story-meta-item">Relevance: <strong>0.31</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7743,8 +7762,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7756,10 +7776,10 @@
       <span class="story-meta-item">Relevance: <strong>0.24</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
@@ -7800,8 +7820,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7813,10 +7834,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7848,8 +7869,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7863,10 +7885,10 @@
       <span class="story-meta-item">Relevance: <strong>0.44</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7898,8 +7920,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7913,10 +7936,10 @@
       <span class="story-meta-item">Relevance: <strong>0.43</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -7948,8 +7971,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -7963,10 +7987,10 @@
       <span class="story-meta-item">Relevance: <strong>0.27</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
@@ -7989,8 +8013,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8002,10 +8027,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
@@ -8046,8 +8071,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8059,10 +8085,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -8094,8 +8120,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8107,10 +8134,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -8142,8 +8169,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8155,10 +8183,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -8190,8 +8218,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8203,10 +8232,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -8238,8 +8267,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8251,10 +8281,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       It did not meet the minimum verification threshold (3+ sources from 2+ bias categories).
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
@@ -8286,8 +8316,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8299,10 +8330,10 @@
       <span class="story-meta-item">Relevance: <strong>0.18</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
-    <div class="not-covered-notice">
-      This story was tracked by ThreadRoK this week but was not selected for today's episode.
-       Other stories scored higher on relevance and verifiability.
-      It may appear in a future episode as the story develops.
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
@@ -8334,8 +8365,9 @@
       
     </div>
     
+    
     <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have not been fully claim-scored.</p>
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
     </div>
   </div>
   
@@ -8344,7 +8376,7 @@
 </div>
 
 <script>
-const __NC_DATA__ = {"climate_energy": [{"article_count": 2, "category": "climate_energy", "gate1_score": 0.44, "gate2_pass": false, "headline": "Southeastern Georgia wildfire evacuation threat", "id": 18045, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.42, "srq_bias_div": 0.1, "srq_factuality": 1.0, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T20:28:22+00:00", "source_domain": "npr.org", "title": "A fast-growing Georgia wildfire tops 31 square miles, with evacuations possible", "url": "https://www.npr.org/2026/04/26/nx-s1-5800174/georgia-wildfire-evacuations"}, {"published_at": "2026-04-25T19:57:58+00:00", "source_domain": "pbs.org", "title": "Wildfires in southeastern Georgia continue to threaten residents", "url": "https://www.pbs.org/newshour/nation/wildfires-in-southeastern-georgia-continue-to-threaten-residents"}]}], "domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.46, "gate2_pass": false, "headline": "DOJ seeks dismissal of Trump ballroom lawsuit", "id": 18065, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.39, "srq_bias_div": 0.2, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:58:25+00:00", "source_domain": "washingtonexaminer.com", "title": "DOJ calls on National Trust to drop lawsuit against Trump ballroom after dinner shooting", "url": "https://www.washingtonexaminer.com/news/justice/4543805/doj-national-trust-ballroom-lawsuit/"}, {"published_at": "2026-04-26T22:50:12+00:00", "source_domain": "pbs.org", "title": "Justice Department cites Correspondents\u0027 Dinner shooting in push to drop Trump ballroom lawsuit", "url": "https://www.pbs.org/newshour/nation/justice-department-cites-correspondents-dinner-shooting-in-push-to-drop-trump-ballroom-lawsuit"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.43, "gate2_pass": false, "headline": "Shooting incident at White House Correspondents Dinner", "id": 18044, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T04:22:59+00:00", "source_domain": "bbc.com", "title": "What it was like in the room as shots rang out at correspondents\u0027 dinner", "url": "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-26T04:00:32+00:00", "source_domain": "washingtonexaminer.com", "title": "Correspondents\u2019 dinner gunman believed to be guest at DC hotel where event was held", "url": "https://www.washingtonexaminer.com/news/4543438/correspondents-dinner-gunman-dc-hotel-guest/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "WHCA dinner shooting prompts bipartisan response", "id": 18052, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T20:38:01+00:00", "source_domain": "thehill.com", "title": "House Democrat proposes bipartisan national commission for political violence after WHCA dinner shooting", "url": "https://thehill.com/homenews/house/5850124-bipartisan-commission-political-violence-khanna/"}, {"published_at": "2026-04-26T05:38:52+00:00", "source_domain": "washingtonexaminer.com", "title": "Republicans and Democrats unite after WHCA dinner shooting: \u2018Violence has no place\u2019", "url": "https://www.washingtonexaminer.com/news/house/4543496/republicans-democrats-unite-after-whca-shooting/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "Trump claims WHCA dinner shooting religiously motivated", "id": 18068, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T16:05:20+00:00", "source_domain": "washingtonexaminer.com", "title": "Trump says correspondents\u2019 dinner gunman \u2018hates Christians,\u2019 motive was \u2018religious\u2019", "url": "https://www.washingtonexaminer.com/news/white-house/4543614/trump-correspondents-dinner-shooter-christians/"}, {"published_at": "2026-04-26T15:48:06+00:00", "source_domain": "thehill.com", "title": "Trump says WHCA dinner shooting was a \u2018religious thing\u2019", "url": "https://thehill.com/homenews/administration/5849741-trump-white-house-dinner-shooting/"}]}, {"article_count": 4, "category": "domestic_politics", "gate1_score": 0.38, "gate2_pass": true, "headline": "Suspect arrested for alleged Trump shooting at WHCA dinner", "id": 18067, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T20:06:44+00:00", "source_domain": "thehill.com", "title": "Suspected shooter was likely targeting Trump at WHCA dinner", "url": "https://thehill.com/homenews/administration/5850101-trump-white-house-correspondents-dinner-shooting/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": false, "headline": "Kevin Warsh nominated for Federal Reserve leadership", "id": 18034, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "forbes.com", "title": "Warsh Plans For Regime Change At The Fed , Here What That Means", "url": "https://www.forbes.com/sites/simonmoore/2026/04/26/warsh-plans-for-regime-change-at-the-fed-heres-what-that-means/"}, {"published_at": "2026-04-26T05:45:00Z", "source_domain": "theweek.com", "title": "Kevin Warsh nomination hearing : the battle for control of the Fed", "url": "https://theweek.com/business/economy/kevin-warshs-nomination-hearing-the-battle-for-control-of-the-fed"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.24, "gate2_pass": true, "headline": "Tillis backs Kevin Warsh Federal Reserve chair confirmation", "id": 18059, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.5, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T21:15:00Z", "source_domain": "wwaytv3.com", "title": "Tillis says he ready to move ahead with confirming Warsh as Trump pick as Fed chair", "url": "https://www.wwaytv3.com/tillis-says-hes-ready-to-move-ahead-with-confirming-warsh-as-trumps-pick-as-fed-chair/"}, {"published_at": "2026-04-26T20:45:00Z", "source_domain": "el-balad.com", "title": "Senator Tillis Supports Advancing Warsh Confirmation as Fed Chair", "url": "https://www.el-balad.com/16925004"}, {"published_at": "2026-04-26T15:30:00Z", "source_domain": "abc11.com", "title": "NC Sen . Thom Tillis drops opposition , clearing path for Kevin Warsh as Fed chair", "url": "https://abc11.com/post/nc-sen-thom-tillis-drops-opposition-clearing-path-kevin-warsh-fed-chair/18971064/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.21, "gate2_pass": false, "headline": "ACCC sues Woolworths over misleading discount claims", "id": 18078, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T03:00:00Z", "source_domain": "watoday.com.au", "title": "ACCC v Woolworths : What shoppers thought as Woolies defended discounts in court", "url": "https://www.watoday.com.au/business/consumer-affairs/pretty-rude-what-shoppers-thought-as-woolies-defended-discounts-in-court-20260421-p5zpsv.html"}, {"published_at": "2026-04-25T20:00:00Z", "source_domain": "brisbanetimes.com.au", "title": "  Pretty rude : What shoppers thought as Woolies defended discounts in court", "url": "https://www.brisbanetimes.com.au/business/consumer-affairs/pretty-rude-what-shoppers-thought-as-woolies-defended-discounts-in-court-20260421-p5zpsv.html"}]}], "economy": [{"article_count": 4, "category": "economy", "gate1_score": 0.27, "gate2_pass": true, "headline": "ETF short interest volatility across multiple funds April", "id": 18091, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.26, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "dailypolitical.com", "title": "PGIM Jennison International Opportunities ETF ( NYSEARCA : PJIO ) Sees Significant Increase in Short Interest", "url": "https://www.dailypolitical.com/2026/04/26/pgim-jennison-international-opportunities-etf-nysearcapjio-sees-significant-increase-in-short-interest.html"}]}, {"article_count": 3, "category": "economy", "gate1_score": 0.21, "gate2_pass": true, "headline": "Fed decision, Iran tensions, Q4 earnings drive markets", "id": 18072, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T07:00:00Z", "source_domain": "newkerala.com", "title": "Fed Meet , Q4 Earnings , US - Iran Tensions to Drive Markets", "url": "https://www.newkerala.com/news/a/fed-meet-q4-earnings-us-iran-tensions-likely-drive-330.htm"}, {"published_at": "2026-04-26T06:45:00Z", "source_domain": "prokerala.com", "title": "Fed meet , Q4 earnings , US - Iran tensions likely to drive stock market this week", "url": "https://www.prokerala.com/news/articles/a1755378.html"}, {"published_at": "2026-04-26T04:45:00Z", "source_domain": "livemint.com", "title": "US Fed meeting , US - Iran war to Q4 results 2026 : Top five triggers that may dictate the Indian stock market this week", "url": "https://www.livemint.com/market/stock-market-news/us-fed-meeting-us-iran-war-to-q4-results-2026-top-five-triggers-that-may-dictate-the-indian-stock-market-this-week-11777168791810.html"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Warsh Fed chairmanship unlikely to trigger immediate rate cuts", "id": 18074, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-25T19:45:00Z", "source_domain": "wsls.com", "title": "Dont count on rate cuts just yet : Warsh as Fed chair may not lead to big policy changes", "url": "https://www.wsls.com/news/politics/2026/04/24/dont-count-on-rate-cuts-just-yet-warsh-as-fed-chair-may-not-lead-to-big-policy-changes/"}, {"published_at": "2026-04-25T11:00:00Z", "source_domain": "winnipegfreepress.com", "title": "Dont count on rate cuts just yet : Warsh as Fed chair may not lead to big policy changes \u2013 Winnipeg Free Press", "url": "https://www.winnipegfreepress.com/business/2026/04/25/dont-count-on-rate-cuts-just-yet-warsh-as-fed-chair-may-not-lead-to-big-policy-changes"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Credit card debt reduction strategies and methods", "id": 18077, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "wxow.com", "title": "How to get out of credit card debt fast", "url": "https://www.wxow.com/news/national/how-to-get-out-of-credit-card-debt-fast/article_8cea5d36-60eb-5b45-918a-fb30b64a829f.html"}, {"published_at": "2026-04-25T07:15:00Z", "source_domain": "northcountrynow.com", "title": "How to get out of credit card debt fast - North Country Now", "url": "http://northcountrynow.com/premium/stacker/stories/how-to-get-out-of-credit-card-debt-fast,366610"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Farmers demand budget adjustments amid fuel crisis economic impact", "id": 18083, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "stockjournal.com.au", "title": "Farmers want budget fix as economy faces fuel crisis fallout | Stock Journal", "url": "https://www.stockjournal.com.au/story/9232446/farmers-want-budget-fix-as-economy-faces-fuel-crisis-fallout/"}, {"published_at": "2026-04-26T20:15:00Z", "source_domain": "farmweekly.com.au", "title": "Farmers want budget fix as economy faces fuel crisis fallout | Farm Weekly", "url": "https://www.farmweekly.com.au/story/9232446/farmers-want-budget-fix-as-economy-faces-fuel-crisis-fallout/"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Central banks navigate geopolitical tensions and energy crisis", "id": 18084, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "marketscreener.com", "title": "Week Ahead for FX , Bonds : Major Central Bank - 2 - ", "url": "https://www.marketscreener.com/news/week-ahead-for-fx-bonds-major-central-bank-2-ce7f59dcda8cf422"}, {"published_at": "2026-04-26T13:45:00Z", "source_domain": "dailysabah.com", "title": "Week ahead : Top central banks to remain wary amid war , energy strains", "url": "https://www.dailysabah.com/business/economy/week-ahead-top-central-banks-to-remain-wary-amid-war-energy-strains"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Federal Reserve maintains interest rates steady this week", "id": 18088, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T10:45:00Z", "source_domain": "bostonglobe.com", "title": "Fed to lead uneasy G - 7 as rates stay on hold this week", "url": "https://www.bostonglobe.com/2026/04/26/business/fed-to-lead-uneasy-g-7-as-rates-stay-on-hold-this-week/"}, {"published_at": "2026-04-26T10:00:00Z", "source_domain": "hurriyetdailynews.com", "title": "Fed expected to hold interest rates steady again this week", "url": "https://www.hurriyetdailynews.com/fed-expected-to-hold-interest-rates-steady-again-this-week-221476"}]}, {"article_count": 3, "category": "economy", "gate1_score": 0.18, "gate2_pass": true, "headline": "AP Business SummaryBrief at 1 : 20 a . m . EDT", "id": 18070, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.2, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T07:45:00Z", "source_domain": "harrisondaily.com", "title": "AP Business SummaryBrief at 1 : 20 a . m . EDT", "url": "http://harrisondaily.com/stories/ap-business-summarybrief-at-120-am-edt,376090"}, {"published_at": "2026-04-26T05:45:00Z", "source_domain": "mankatofreepress.com", "title": "AP Business SummaryBrief at 11 : 32 p . m . EDT", "url": "https://www.mankatofreepress.com/news/business/ap-business-summarybrief-at-11-32-p-m-edt/article_b0123f99-549a-5628-88f0-e7b7e57b3697.html"}]}], "geopolitics": [{"article_count": 4, "category": "geopolitics", "gate1_score": 0.52, "gate2_pass": true, "headline": "Mexico disputes CIA agents\u0027 authorization for operations", "id": 18043, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "top_articles": [{"published_at": "2026-04-25T22:38:00+00:00", "source_domain": "pbs.org", "title": "Mexico says 2 U.S. federal agents who died were not authorized to participate in any local operation", "url": "https://www.pbs.org/newshour/world/mexico-says-2-u-s-federal-agents-who-died-were-not-authorized-to-participate-in-any-local-operation"}, {"published_at": "2026-04-25T19:57:00+00:00", "source_domain": "dw.com", "title": "Mexico says alleged CIA agents \u0027not authorized\u0027 to operate on its soil", "url": "https://www.dw.com/en/mexico-says-alleged-cia-agents-not-authorized-to-operate-on-its-soil/a-76937822?maca=en-rss-en-all-1573-rdf"}, {"published_at": "2026-04-25T17:40:51+00:00", "source_domain": "bbc.com", "title": "Mexico says US agents killed in crash weren\u0027t permitted to operate there", "url": "https://www.bbc.com/news/articles/cx2491we011o?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-25T17:26:31+00:00", "source_domain": "aljazeera.com", "title": "CIA agents reported killed in Mexico were not authorised to operate: Gov\u2019t", "url": "https://www.aljazeera.com/news/2026/4/25/presence-of-reported-us-cia-agents-killed-in-crash-not-authorised-mexico?traffic_source=rss"}]}, {"article_count": 4, "category": "geopolitics", "gate1_score": 0.52, "gate2_pass": true, "headline": "Mali defence minister killed in coordinated insurgent attacks", "id": 18061, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:55:11+00:00", "source_domain": "theguardian.com", "title": "Mali defence minister killed amid flurry of insurgent attacks", "url": "https://www.theguardian.com/world/2026/apr/26/mali-defence-minister-killed-amid-flurry-of-insurgent-attacks"}, {"published_at": "2026-04-26T20:56:26+00:00", "source_domain": "bbc.com", "title": "Mali defence minister killed as country hit by wave of rebel attacks", "url": "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-26T19:14:37+00:00", "source_domain": "pbs.org", "title": "Malian defense minister killed in attack as jihadi and rebel forces seized towns and military bases", "url": "https://www.pbs.org/newshour/world/malian-defense-minister-killed-in-attack-as-jihadi-and-rebel-forces-seized-towns-and-military-bases"}, {"published_at": "2026-04-26T13:42:28+00:00", "source_domain": "aljazeera.com", "title": "Mali defence minister killed after coordinated attacks", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/mali-defence-minister-killed-after-coordinated-attacks?traffic_source=rss"}]}, {"article_count": 5, "category": "geopolitics", "gate1_score": 0.48, "gate2_pass": true, "headline": "Trump cancels Iran nuclear talks envoy dispatch", "id": 18026, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.47, "srq_bias_div": 0.3, "srq_factuality": 0.55, "srq_independence": 0.67, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T00:00:00+00:00", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran rejects talks under siege, Trump cancels envoys\u2019 trip", "url": "https://www.aljazeera.com/news/liveblog/2026/4/26/iran-war-live-tehran-rejects-talks-under-siege-trump-cancels-envoys-trip?traffic_source=rss"}, {"published_at": "2026-04-25T23:15:00Z", "source_domain": "wdbo.com", "title": "The Latest : Trump says he called off dispatching envoys to Iran talks", "url": "https://www.wdbo.com/news/world/latest-trump-sending/YF54UEXUUU3LXLLORMXILV7TCY/"}, {"published_at": "2026-04-25T22:15:00Z", "source_domain": "seattletimes.com", "title": "Live : The Latest : Trump says he called off dispatching envoys to Iran talks", "url": "https://www.seattletimes.com/business/the-latest-trump-sending-witkoff-and-kushner-to-pakistan-for-talks-with-irans-foreign-minister/"}, {"published_at": "2026-04-25T21:42:30+00:00", "source_domain": "thehill.com", "title": "Trump tells reporters US received new proposal from Iran after trip cancellation", "url": "https://thehill.com/homenews/administration/5849180-trump-tells-reporters-us-received-new-proposal-from-iran-after-trip-cancellation/"}]}, {"article_count": 5, "category": "geopolitics", "gate1_score": 0.48, "gate2_pass": true, "headline": "Colombia highway bombing death toll rises amid violence wave", "id": 18041, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.53, "srq_bias_div": 0.5, "srq_factuality": 0.73, "srq_independence": 0.5, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T20:15:29+00:00", "source_domain": "aljazeera.com", "title": "Bomb attack on Colombia highway kills 19 ahead of election", "url": "https://www.aljazeera.com/gallery/2026/4/26/bomb-attack-on-colombia-highway-kills-19-ahead-of-election?traffic_source=rss"}, {"published_at": "2026-04-26T19:21:12+00:00", "source_domain": "pbs.org", "title": "Colombia bus bombing death toll rises to 20 during a wave of violence", "url": "https://www.pbs.org/newshour/world/colombia-bus-bombing-death-toll-rises-to-20-during-a-wave-of-violence"}, {"published_at": "2026-04-26T15:54:00+00:00", "source_domain": "dw.com", "title": "Colombia highway bomb attack kills at least 19", "url": "https://www.dw.com/en/colombia-highway-bomb-attack-kills-at-least-19/a-76939450?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.46, "gate2_pass": false, "headline": "Russian airstrikes kill seven Ukrainians overnight", "id": 18036, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.4, "srq_bias_div": 0.2, "srq_factuality": 0.8, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-25T13:17:15+00:00", "source_domain": "theguardian.com", "title": "Russian airstrikes kill at least seven people in Ukraine overnight", "url": "https://www.theguardian.com/world/2026/apr/25/russian-airstrikes-ukraine-dnipro-odesa-kharkiv"}, {"published_at": "2026-04-25T12:29:37+00:00", "source_domain": "bbc.com", "title": "Seven dead in major Russian attack on Ukraine", "url": "https://www.bbc.com/news/articles/c0rxk4q0pj0o?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.46, "gate2_pass": false, "headline": "Chernobyl anniversary marked by Ukraine Russia strikes", "id": 18066, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.39, "srq_bias_div": 0.2, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T18:07:41+00:00", "source_domain": "pbs.org", "title": "Strikes in Ukraine and Russia kill at least 16 on Chernobyl\u0027s 40th anniversary", "url": "https://www.pbs.org/newshour/world/strikes-in-ukraine-and-russia-kill-at-least-16-on-chernobyls-40th-anniversary"}, {"published_at": "2026-04-26T13:45:49+00:00", "source_domain": "aljazeera.com", "title": "40 years since the world\u2019s worst nuclear disaster in Ukraine", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/40-years-since-the-worlds-worst-nuclear-disaster-in-ukraine?traffic_source=rss"}]}, {"article_count": 3, "category": "geopolitics", "gate1_score": 0.45, "gate2_pass": true, "headline": "Assad-era officials face trial in Damascus", "id": 18063, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.41, "srq_bias_div": 0.3, "srq_factuality": 0.65, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T17:49:30+00:00", "source_domain": "aljazeera.com", "title": "First trial of Assad-era Syrian official starts in Damascus", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/first-trial-of-assad-era-syrian-official-starts-in-damascus?traffic_source=rss"}, {"published_at": "2026-04-26T14:38:00+00:00", "source_domain": "dw.com", "title": "Syria: First trial of Assad-era officials opens in Damascus", "url": "https://www.dw.com/en/syria-first-trial-of-assad-era-officials-opens-in-damascus/a-76944735?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.43, "gate2_pass": false, "headline": "Assassination attempt targeting Trump and officials", "id": 18062, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T18:03:11+00:00", "source_domain": "aljazeera.com", "title": "Accused shooter was targeting Trump and US officials, authorities say", "url": "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss"}, {"published_at": "2026-04-26T15:30:00+00:00", "source_domain": "dw.com", "title": "Gunman was likely targeting Trump team, says official", "url": "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.38, "gate2_pass": false, "headline": "U.S. removes Iranian mines from Strait of Hormuz", "id": 18046, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.1, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-25T16:25:07+00:00", "source_domain": "pbs.org", "title": "U.S. says it\u0027s clearing Iranian mines in latest push to open the Strait of Hormuz", "url": "https://www.pbs.org/newshour/world/u-s-says-its-clearing-iranian-mines-in-latest-push-to-open-the-strait-of-hormuz"}, {"published_at": "2026-04-25T10:00:00+00:00", "source_domain": "thehill.com", "title": "Why Iran\u2019s grip on the Hormuz Strait will be hard to break", "url": "https://thehill.com/policy/defense/5845542-iran-us-strait-standoff/"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.38, "gate2_pass": false, "headline": "King Charles State Visit to United States Proceeding", "id": 18064, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.1, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T21:08:50+00:00", "source_domain": "thehill.com", "title": "King Charles\u2019s US visit to go ahead as planned: Buckingham Palace", "url": "https://thehill.com/blogs/in-the-know/5850183-king-charles-queen-camila-us-visit/"}, {"published_at": "2026-04-26T10:00:00+00:00", "source_domain": "npr.org", "title": "King Charles U.S. visit comes at tense moment in transatlantic relationship", "url": "https://www.npr.org/2026/04/26/nx-s1-5788696/king-queen-state-trump"}]}], "health": [{"article_count": 2, "category": "health", "gate1_score": 0.43, "gate2_pass": false, "headline": "Trump uses WHCD shooting to promote ballroom renovation", "id": 18047, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T16:18:02+00:00", "source_domain": "theverge.com", "title": "Trump turns the WHCD shooting into a pitch for the White House ballroom", "url": "https://www.theverge.com/policy/918843/trump-whcd-attack-white-house-ballroom"}, {"published_at": "2026-04-26T03:28:01+00:00", "source_domain": "thehill.com", "title": "Trump says WHCD shooting highlights need for ballroom", "url": "https://thehill.com/homenews/5849464-trump-whcd-shooting-house-ballroom/"}]}], "tech": [{"article_count": 4, "category": "tech", "gate1_score": 0.52, "gate2_pass": false, "headline": "Sebastian Sawe breaks two-hour marathon barrier in London", "id": 18021, "lite_claims": [], "processing_status": "full_scored", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T20:48:30+00:00", "source_domain": "theguardian.com", "title": "London Marathon hails \u2018greatest day\u2019 as Sawe breaks two hours and records tumble", "url": "https://www.theguardian.com/sport/2026/apr/26/london-marathon-hails-greatest-day-as-sawe-breaks-two-hours-and-records-tumble"}, {"published_at": "2026-04-26T11:34:47+00:00", "source_domain": "npr.org", "title": "Kenya\u0027s Sabastian Sawe is first person to run sub-2-hour marathon to win in London", "url": "https://www.npr.org/2026/04/26/nx-s1-5800057/kenya-sabastian-sawe-first-person-2-hour-marathon-london"}, {"published_at": "2026-04-26T11:27:52+00:00", "source_domain": "aljazeera.com", "title": "Sebastian Sawe breaks London marathon record with first run under two hours", "url": "https://www.aljazeera.com/sports/2026/4/26/kenyas-sawe-is-worlds-first-man-to-run-a-sub-two-hour-marathon-in-london?traffic_source=rss"}, {"published_at": "2026-04-26T11:07:00+00:00", "source_domain": "dw.com", "title": "Sawe smashes 2-hour mark setting record at London Marathon", "url": "https://www.dw.com/en/sawe-smashes-2-hour-mark-setting-record-at-london-marathon/a-76943171?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "Entry-level job market slowdown in Kansas Missouri", "id": 18014, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-25T22:45:00Z", "source_domain": "fox2detroit.com", "title": "College grads enter tough hiring market : Some tips to help with the job hunt", "url": "https://www.fox2detroit.com/news/college-grads-enter-tough-hiring-market-some-tips-help-job-hunt"}, {"published_at": "2026-04-25T17:00:00Z", "source_domain": "kcur.org", "title": "Entry - level job seekers in Kansas and Missouri feel the hiring slowdown :  It rough out here  ", "url": "https://www.kcur.org/news/2026-04-25/entry-level-job-seekers-in-kansas-and-missouri-feel-the-hiring-slowdown-its-rough-out-here"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "AI Pioneer Calls for Regulatory Controls", "id": 18016, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T22:45:00Z", "source_domain": "azernews.az", "title": "Time to apply brakes to runaway AI , says pioneer", "url": "https://www.azernews.az/region/257584.html"}, {"published_at": "2026-04-26T22:15:00Z", "source_domain": "today.az", "title": "Today . Az - Time to apply brakes to runaway AI , says pioneer", "url": "http://today.az/news/regions/267422.html"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "Major tech companies announce mass layoffs and buyouts", "id": 18017, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "ibtimes.co.uk", "title": "The Tech Purge : Why Nike Is Cutting 1 , 400 More Jobs Despite Their New  Win Now  Promise", "url": "https://www.ibtimes.co.uk/tech-purge-why-nike-cutting-1400-more-jobs-despite-their-new-win-now-promise-1793669"}, {"published_at": "2026-04-26T12:15:00Z", "source_domain": "aol.com", "title": "Bloody Thursday : Up to 18 , 000 people lose jobs or face buyouts at Meta , Nike and Microsoft", "url": "https://www.aol.com/finance/bloody-thursday-18-000-people-114500679.html"}]}]};
+const __NC_DATA__ = {"climate_energy": [{"article_count": 2, "category": "climate_energy", "gate1_score": 0.44, "gate2_pass": false, "headline": "Southeastern Georgia wildfire evacuation threat", "id": 18045, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.42, "srq_bias_div": 0.1, "srq_factuality": 1.0, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T20:28:22+00:00", "source_domain": "npr.org", "title": "A fast-growing Georgia wildfire tops 31 square miles, with evacuations possible", "url": "https://www.npr.org/2026/04/26/nx-s1-5800174/georgia-wildfire-evacuations"}, {"published_at": "2026-04-25T19:57:58+00:00", "source_domain": "pbs.org", "title": "Wildfires in southeastern Georgia continue to threaten residents", "url": "https://www.pbs.org/newshour/nation/wildfires-in-southeastern-georgia-continue-to-threaten-residents"}]}], "domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.46, "gate2_pass": false, "headline": "DOJ seeks dismissal of Trump ballroom lawsuit", "id": 18065, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.39, "srq_bias_div": 0.2, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:58:25+00:00", "source_domain": "washingtonexaminer.com", "title": "DOJ calls on National Trust to drop lawsuit against Trump ballroom after dinner shooting", "url": "https://www.washingtonexaminer.com/news/justice/4543805/doj-national-trust-ballroom-lawsuit/"}, {"published_at": "2026-04-26T22:50:12+00:00", "source_domain": "pbs.org", "title": "Justice Department cites Correspondents\u0027 Dinner shooting in push to drop Trump ballroom lawsuit", "url": "https://www.pbs.org/newshour/nation/justice-department-cites-correspondents-dinner-shooting-in-push-to-drop-trump-ballroom-lawsuit"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.43, "gate2_pass": false, "headline": "Shooting incident at White House Correspondents Dinner", "id": 18044, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T04:22:59+00:00", "source_domain": "bbc.com", "title": "What it was like in the room as shots rang out at correspondents\u0027 dinner", "url": "https://www.bbc.com/news/articles/c62j23wzeqeo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-26T04:00:32+00:00", "source_domain": "washingtonexaminer.com", "title": "Correspondents\u2019 dinner gunman believed to be guest at DC hotel where event was held", "url": "https://www.washingtonexaminer.com/news/4543438/correspondents-dinner-gunman-dc-hotel-guest/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "WHCA dinner shooting prompts bipartisan response", "id": 18052, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T20:38:01+00:00", "source_domain": "thehill.com", "title": "House Democrat proposes bipartisan national commission for political violence after WHCA dinner shooting", "url": "https://thehill.com/homenews/house/5850124-bipartisan-commission-political-violence-khanna/"}, {"published_at": "2026-04-26T05:38:52+00:00", "source_domain": "washingtonexaminer.com", "title": "Republicans and Democrats unite after WHCA dinner shooting: \u2018Violence has no place\u2019", "url": "https://www.washingtonexaminer.com/news/house/4543496/republicans-democrats-unite-after-whca-shooting/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "Trump claims WHCA dinner shooting religiously motivated", "id": 18068, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T16:05:20+00:00", "source_domain": "washingtonexaminer.com", "title": "Trump says correspondents\u2019 dinner gunman \u2018hates Christians,\u2019 motive was \u2018religious\u2019", "url": "https://www.washingtonexaminer.com/news/white-house/4543614/trump-correspondents-dinner-shooter-christians/"}, {"published_at": "2026-04-26T15:48:06+00:00", "source_domain": "thehill.com", "title": "Trump says WHCA dinner shooting was a \u2018religious thing\u2019", "url": "https://thehill.com/homenews/administration/5849741-trump-white-house-dinner-shooting/"}]}, {"article_count": 4, "category": "domestic_politics", "gate1_score": 0.38, "gate2_pass": true, "headline": "Suspect arrested for alleged Trump shooting at WHCA dinner", "id": 18067, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T20:06:44+00:00", "source_domain": "thehill.com", "title": "Suspected shooter was likely targeting Trump at WHCA dinner", "url": "https://thehill.com/homenews/administration/5850101-trump-white-house-correspondents-dinner-shooting/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": false, "headline": "Kevin Warsh nominated for Federal Reserve leadership", "id": 18034, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "forbes.com", "title": "Warsh Plans For Regime Change At The Fed , Here What That Means", "url": "https://www.forbes.com/sites/simonmoore/2026/04/26/warsh-plans-for-regime-change-at-the-fed-heres-what-that-means/"}, {"published_at": "2026-04-26T05:45:00Z", "source_domain": "theweek.com", "title": "Kevin Warsh nomination hearing : the battle for control of the Fed", "url": "https://theweek.com/business/economy/kevin-warshs-nomination-hearing-the-battle-for-control-of-the-fed"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.24, "gate2_pass": true, "headline": "Tillis backs Kevin Warsh Federal Reserve chair confirmation", "id": 18059, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.5, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T21:15:00Z", "source_domain": "wwaytv3.com", "title": "Tillis says he ready to move ahead with confirming Warsh as Trump pick as Fed chair", "url": "https://www.wwaytv3.com/tillis-says-hes-ready-to-move-ahead-with-confirming-warsh-as-trumps-pick-as-fed-chair/"}, {"published_at": "2026-04-26T20:45:00Z", "source_domain": "el-balad.com", "title": "Senator Tillis Supports Advancing Warsh Confirmation as Fed Chair", "url": "https://www.el-balad.com/16925004"}, {"published_at": "2026-04-26T15:30:00Z", "source_domain": "abc11.com", "title": "NC Sen . Thom Tillis drops opposition , clearing path for Kevin Warsh as Fed chair", "url": "https://abc11.com/post/nc-sen-thom-tillis-drops-opposition-clearing-path-kevin-warsh-fed-chair/18971064/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.21, "gate2_pass": false, "headline": "ACCC sues Woolworths over misleading discount claims", "id": 18078, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T03:00:00Z", "source_domain": "watoday.com.au", "title": "ACCC v Woolworths : What shoppers thought as Woolies defended discounts in court", "url": "https://www.watoday.com.au/business/consumer-affairs/pretty-rude-what-shoppers-thought-as-woolies-defended-discounts-in-court-20260421-p5zpsv.html"}, {"published_at": "2026-04-25T20:00:00Z", "source_domain": "brisbanetimes.com.au", "title": "  Pretty rude : What shoppers thought as Woolies defended discounts in court", "url": "https://www.brisbanetimes.com.au/business/consumer-affairs/pretty-rude-what-shoppers-thought-as-woolies-defended-discounts-in-court-20260421-p5zpsv.html"}]}], "economy": [{"article_count": 4, "category": "economy", "gate1_score": 0.27, "gate2_pass": true, "headline": "ETF short interest volatility across multiple funds April", "id": 18091, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.26, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "dailypolitical.com", "title": "PGIM Jennison International Opportunities ETF ( NYSEARCA : PJIO ) Sees Significant Increase in Short Interest", "url": "https://www.dailypolitical.com/2026/04/26/pgim-jennison-international-opportunities-etf-nysearcapjio-sees-significant-increase-in-short-interest.html"}]}, {"article_count": 3, "category": "economy", "gate1_score": 0.21, "gate2_pass": true, "headline": "Fed decision, Iran tensions, Q4 earnings drive markets", "id": 18072, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T07:00:00Z", "source_domain": "newkerala.com", "title": "Fed Meet , Q4 Earnings , US - Iran Tensions to Drive Markets", "url": "https://www.newkerala.com/news/a/fed-meet-q4-earnings-us-iran-tensions-likely-drive-330.htm"}, {"published_at": "2026-04-26T06:45:00Z", "source_domain": "prokerala.com", "title": "Fed meet , Q4 earnings , US - Iran tensions likely to drive stock market this week", "url": "https://www.prokerala.com/news/articles/a1755378.html"}, {"published_at": "2026-04-26T04:45:00Z", "source_domain": "livemint.com", "title": "US Fed meeting , US - Iran war to Q4 results 2026 : Top five triggers that may dictate the Indian stock market this week", "url": "https://www.livemint.com/market/stock-market-news/us-fed-meeting-us-iran-war-to-q4-results-2026-top-five-triggers-that-may-dictate-the-indian-stock-market-this-week-11777168791810.html"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Warsh Fed chairmanship unlikely to trigger immediate rate cuts", "id": 18074, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-25T19:45:00Z", "source_domain": "wsls.com", "title": "Dont count on rate cuts just yet : Warsh as Fed chair may not lead to big policy changes", "url": "https://www.wsls.com/news/politics/2026/04/24/dont-count-on-rate-cuts-just-yet-warsh-as-fed-chair-may-not-lead-to-big-policy-changes/"}, {"published_at": "2026-04-25T11:00:00Z", "source_domain": "winnipegfreepress.com", "title": "Dont count on rate cuts just yet : Warsh as Fed chair may not lead to big policy changes \u2013 Winnipeg Free Press", "url": "https://www.winnipegfreepress.com/business/2026/04/25/dont-count-on-rate-cuts-just-yet-warsh-as-fed-chair-may-not-lead-to-big-policy-changes"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Credit card debt reduction strategies and methods", "id": 18077, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "wxow.com", "title": "How to get out of credit card debt fast", "url": "https://www.wxow.com/news/national/how-to-get-out-of-credit-card-debt-fast/article_8cea5d36-60eb-5b45-918a-fb30b64a829f.html"}, {"published_at": "2026-04-25T07:15:00Z", "source_domain": "northcountrynow.com", "title": "How to get out of credit card debt fast - North Country Now", "url": "http://northcountrynow.com/premium/stacker/stories/how-to-get-out-of-credit-card-debt-fast,366610"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Farmers demand budget adjustments amid fuel crisis economic impact", "id": 18083, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "stockjournal.com.au", "title": "Farmers want budget fix as economy faces fuel crisis fallout | Stock Journal", "url": "https://www.stockjournal.com.au/story/9232446/farmers-want-budget-fix-as-economy-faces-fuel-crisis-fallout/"}, {"published_at": "2026-04-26T20:15:00Z", "source_domain": "farmweekly.com.au", "title": "Farmers want budget fix as economy faces fuel crisis fallout | Farm Weekly", "url": "https://www.farmweekly.com.au/story/9232446/farmers-want-budget-fix-as-economy-faces-fuel-crisis-fallout/"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Central banks navigate geopolitical tensions and energy crisis", "id": 18084, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:15:00Z", "source_domain": "marketscreener.com", "title": "Week Ahead for FX , Bonds : Major Central Bank - 2 - ", "url": "https://www.marketscreener.com/news/week-ahead-for-fx-bonds-major-central-bank-2-ce7f59dcda8cf422"}, {"published_at": "2026-04-26T13:45:00Z", "source_domain": "dailysabah.com", "title": "Week ahead : Top central banks to remain wary amid war , energy strains", "url": "https://www.dailysabah.com/business/economy/week-ahead-top-central-banks-to-remain-wary-amid-war-energy-strains"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Federal Reserve maintains interest rates steady this week", "id": 18088, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T10:45:00Z", "source_domain": "bostonglobe.com", "title": "Fed to lead uneasy G - 7 as rates stay on hold this week", "url": "https://www.bostonglobe.com/2026/04/26/business/fed-to-lead-uneasy-g-7-as-rates-stay-on-hold-this-week/"}, {"published_at": "2026-04-26T10:00:00Z", "source_domain": "hurriyetdailynews.com", "title": "Fed expected to hold interest rates steady again this week", "url": "https://www.hurriyetdailynews.com/fed-expected-to-hold-interest-rates-steady-again-this-week-221476"}]}, {"article_count": 3, "category": "economy", "gate1_score": 0.18, "gate2_pass": true, "headline": "AP Business SummaryBrief at 1 : 20 a . m . EDT", "id": 18070, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.2, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T07:45:00Z", "source_domain": "harrisondaily.com", "title": "AP Business SummaryBrief at 1 : 20 a . m . EDT", "url": "http://harrisondaily.com/stories/ap-business-summarybrief-at-120-am-edt,376090"}, {"published_at": "2026-04-26T05:45:00Z", "source_domain": "mankatofreepress.com", "title": "AP Business SummaryBrief at 11 : 32 p . m . EDT", "url": "https://www.mankatofreepress.com/news/business/ap-business-summarybrief-at-11-32-p-m-edt/article_b0123f99-549a-5628-88f0-e7b7e57b3697.html"}]}], "geopolitics": [{"article_count": 4, "category": "geopolitics", "gate1_score": 0.52, "gate2_pass": true, "headline": "Mexico disputes CIA agents\u0027 authorization for operations", "id": 18043, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-25T22:38:00+00:00", "source_domain": "pbs.org", "title": "Mexico says 2 U.S. federal agents who died were not authorized to participate in any local operation", "url": "https://www.pbs.org/newshour/world/mexico-says-2-u-s-federal-agents-who-died-were-not-authorized-to-participate-in-any-local-operation"}, {"published_at": "2026-04-25T19:57:00+00:00", "source_domain": "dw.com", "title": "Mexico says alleged CIA agents \u0027not authorized\u0027 to operate on its soil", "url": "https://www.dw.com/en/mexico-says-alleged-cia-agents-not-authorized-to-operate-on-its-soil/a-76937822?maca=en-rss-en-all-1573-rdf"}, {"published_at": "2026-04-25T17:40:51+00:00", "source_domain": "bbc.com", "title": "Mexico says US agents killed in crash weren\u0027t permitted to operate there", "url": "https://www.bbc.com/news/articles/cx2491we011o?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-25T17:26:31+00:00", "source_domain": "aljazeera.com", "title": "CIA agents reported killed in Mexico were not authorised to operate: Gov\u2019t", "url": "https://www.aljazeera.com/news/2026/4/25/presence-of-reported-us-cia-agents-killed-in-crash-not-authorised-mexico?traffic_source=rss"}]}, {"article_count": 4, "category": "geopolitics", "gate1_score": 0.52, "gate2_pass": true, "headline": "Mali defence minister killed in coordinated insurgent attacks", "id": 18061, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:55:11+00:00", "source_domain": "theguardian.com", "title": "Mali defence minister killed amid flurry of insurgent attacks", "url": "https://www.theguardian.com/world/2026/apr/26/mali-defence-minister-killed-amid-flurry-of-insurgent-attacks"}, {"published_at": "2026-04-26T20:56:26+00:00", "source_domain": "bbc.com", "title": "Mali defence minister killed as country hit by wave of rebel attacks", "url": "https://www.bbc.com/news/articles/c5yvy7v66ndo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-04-26T19:14:37+00:00", "source_domain": "pbs.org", "title": "Malian defense minister killed in attack as jihadi and rebel forces seized towns and military bases", "url": "https://www.pbs.org/newshour/world/malian-defense-minister-killed-in-attack-as-jihadi-and-rebel-forces-seized-towns-and-military-bases"}, {"published_at": "2026-04-26T13:42:28+00:00", "source_domain": "aljazeera.com", "title": "Mali defence minister killed after coordinated attacks", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/mali-defence-minister-killed-after-coordinated-attacks?traffic_source=rss"}]}, {"article_count": 5, "category": "geopolitics", "gate1_score": 0.48, "gate2_pass": true, "headline": "Trump cancels Iran nuclear talks envoy dispatch", "id": 18026, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.47, "srq_bias_div": 0.3, "srq_factuality": 0.55, "srq_independence": 0.67, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T00:00:00+00:00", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran rejects talks under siege, Trump cancels envoys\u2019 trip", "url": "https://www.aljazeera.com/news/liveblog/2026/4/26/iran-war-live-tehran-rejects-talks-under-siege-trump-cancels-envoys-trip?traffic_source=rss"}, {"published_at": "2026-04-25T23:15:00Z", "source_domain": "wdbo.com", "title": "The Latest : Trump says he called off dispatching envoys to Iran talks", "url": "https://www.wdbo.com/news/world/latest-trump-sending/YF54UEXUUU3LXLLORMXILV7TCY/"}, {"published_at": "2026-04-25T22:15:00Z", "source_domain": "seattletimes.com", "title": "Live : The Latest : Trump says he called off dispatching envoys to Iran talks", "url": "https://www.seattletimes.com/business/the-latest-trump-sending-witkoff-and-kushner-to-pakistan-for-talks-with-irans-foreign-minister/"}, {"published_at": "2026-04-25T21:42:30+00:00", "source_domain": "thehill.com", "title": "Trump tells reporters US received new proposal from Iran after trip cancellation", "url": "https://thehill.com/homenews/administration/5849180-trump-tells-reporters-us-received-new-proposal-from-iran-after-trip-cancellation/"}]}, {"article_count": 5, "category": "geopolitics", "gate1_score": 0.48, "gate2_pass": true, "headline": "Colombia highway bombing death toll rises amid violence wave", "id": 18041, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.53, "srq_bias_div": 0.5, "srq_factuality": 0.73, "srq_independence": 0.5, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T20:15:29+00:00", "source_domain": "aljazeera.com", "title": "Bomb attack on Colombia highway kills 19 ahead of election", "url": "https://www.aljazeera.com/gallery/2026/4/26/bomb-attack-on-colombia-highway-kills-19-ahead-of-election?traffic_source=rss"}, {"published_at": "2026-04-26T19:21:12+00:00", "source_domain": "pbs.org", "title": "Colombia bus bombing death toll rises to 20 during a wave of violence", "url": "https://www.pbs.org/newshour/world/colombia-bus-bombing-death-toll-rises-to-20-during-a-wave-of-violence"}, {"published_at": "2026-04-26T15:54:00+00:00", "source_domain": "dw.com", "title": "Colombia highway bomb attack kills at least 19", "url": "https://www.dw.com/en/colombia-highway-bomb-attack-kills-at-least-19/a-76939450?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.46, "gate2_pass": false, "headline": "Russian airstrikes kill seven Ukrainians overnight", "id": 18036, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.4, "srq_bias_div": 0.2, "srq_factuality": 0.8, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-25T13:17:15+00:00", "source_domain": "theguardian.com", "title": "Russian airstrikes kill at least seven people in Ukraine overnight", "url": "https://www.theguardian.com/world/2026/apr/25/russian-airstrikes-ukraine-dnipro-odesa-kharkiv"}, {"published_at": "2026-04-25T12:29:37+00:00", "source_domain": "bbc.com", "title": "Seven dead in major Russian attack on Ukraine", "url": "https://www.bbc.com/news/articles/c0rxk4q0pj0o?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.46, "gate2_pass": false, "headline": "Chernobyl anniversary marked by Ukraine Russia strikes", "id": 18066, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.39, "srq_bias_div": 0.2, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T18:07:41+00:00", "source_domain": "pbs.org", "title": "Strikes in Ukraine and Russia kill at least 16 on Chernobyl\u0027s 40th anniversary", "url": "https://www.pbs.org/newshour/world/strikes-in-ukraine-and-russia-kill-at-least-16-on-chernobyls-40th-anniversary"}, {"published_at": "2026-04-26T13:45:49+00:00", "source_domain": "aljazeera.com", "title": "40 years since the world\u2019s worst nuclear disaster in Ukraine", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/40-years-since-the-worlds-worst-nuclear-disaster-in-ukraine?traffic_source=rss"}]}, {"article_count": 3, "category": "geopolitics", "gate1_score": 0.45, "gate2_pass": true, "headline": "Assad-era officials face trial in Damascus", "id": 18063, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.41, "srq_bias_div": 0.3, "srq_factuality": 0.65, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T17:49:30+00:00", "source_domain": "aljazeera.com", "title": "First trial of Assad-era Syrian official starts in Damascus", "url": "https://www.aljazeera.com/video/newsfeed/2026/4/26/first-trial-of-assad-era-syrian-official-starts-in-damascus?traffic_source=rss"}, {"published_at": "2026-04-26T14:38:00+00:00", "source_domain": "dw.com", "title": "Syria: First trial of Assad-era officials opens in Damascus", "url": "https://www.dw.com/en/syria-first-trial-of-assad-era-officials-opens-in-damascus/a-76944735?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.43, "gate2_pass": false, "headline": "Assassination attempt targeting Trump and officials", "id": 18062, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T18:03:11+00:00", "source_domain": "aljazeera.com", "title": "Accused shooter was targeting Trump and US officials, authorities say", "url": "https://www.aljazeera.com/news/2026/4/26/trump-his-administration-likely-targets-at-media-dinner-us-official?traffic_source=rss"}, {"published_at": "2026-04-26T15:30:00+00:00", "source_domain": "dw.com", "title": "Gunman was likely targeting Trump team, says official", "url": "https://www.dw.com/en/gunman-was-likely-targeting-trump-team-says-official/live-76938867?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.38, "gate2_pass": false, "headline": "U.S. removes Iranian mines from Strait of Hormuz", "id": 18046, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.1, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-25T16:25:07+00:00", "source_domain": "pbs.org", "title": "U.S. says it\u0027s clearing Iranian mines in latest push to open the Strait of Hormuz", "url": "https://www.pbs.org/newshour/world/u-s-says-its-clearing-iranian-mines-in-latest-push-to-open-the-strait-of-hormuz"}, {"published_at": "2026-04-25T10:00:00+00:00", "source_domain": "thehill.com", "title": "Why Iran\u2019s grip on the Hormuz Strait will be hard to break", "url": "https://thehill.com/policy/defense/5845542-iran-us-strait-standoff/"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.38, "gate2_pass": false, "headline": "King Charles State Visit to United States Proceeding", "id": 18064, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.35, "srq_bias_div": 0.1, "srq_factuality": 0.76, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T21:08:50+00:00", "source_domain": "thehill.com", "title": "King Charles\u2019s US visit to go ahead as planned: Buckingham Palace", "url": "https://thehill.com/blogs/in-the-know/5850183-king-charles-queen-camila-us-visit/"}, {"published_at": "2026-04-26T10:00:00+00:00", "source_domain": "npr.org", "title": "King Charles U.S. visit comes at tense moment in transatlantic relationship", "url": "https://www.npr.org/2026/04/26/nx-s1-5788696/king-queen-state-trump"}]}], "health": [{"article_count": 2, "category": "health", "gate1_score": 0.43, "gate2_pass": false, "headline": "Trump uses WHCD shooting to promote ballroom renovation", "id": 18047, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T16:18:02+00:00", "source_domain": "theverge.com", "title": "Trump turns the WHCD shooting into a pitch for the White House ballroom", "url": "https://www.theverge.com/policy/918843/trump-whcd-attack-white-house-ballroom"}, {"published_at": "2026-04-26T03:28:01+00:00", "source_domain": "thehill.com", "title": "Trump says WHCD shooting highlights need for ballroom", "url": "https://thehill.com/homenews/5849464-trump-whcd-shooting-house-ballroom/"}]}], "tech": [{"article_count": 4, "category": "tech", "gate1_score": 0.52, "gate2_pass": false, "headline": "Sebastian Sawe breaks two-hour marathon barrier in London", "id": 18021, "lite_claims": [], "processing_status": "full_scored", "srq": 0.55, "srq_bias_div": 0.4, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T20:48:30+00:00", "source_domain": "theguardian.com", "title": "London Marathon hails \u2018greatest day\u2019 as Sawe breaks two hours and records tumble", "url": "https://www.theguardian.com/sport/2026/apr/26/london-marathon-hails-greatest-day-as-sawe-breaks-two-hours-and-records-tumble"}, {"published_at": "2026-04-26T11:34:47+00:00", "source_domain": "npr.org", "title": "Kenya\u0027s Sabastian Sawe is first person to run sub-2-hour marathon to win in London", "url": "https://www.npr.org/2026/04/26/nx-s1-5800057/kenya-sabastian-sawe-first-person-2-hour-marathon-london"}, {"published_at": "2026-04-26T11:27:52+00:00", "source_domain": "aljazeera.com", "title": "Sebastian Sawe breaks London marathon record with first run under two hours", "url": "https://www.aljazeera.com/sports/2026/4/26/kenyas-sawe-is-worlds-first-man-to-run-a-sub-two-hour-marathon-in-london?traffic_source=rss"}, {"published_at": "2026-04-26T11:07:00+00:00", "source_domain": "dw.com", "title": "Sawe smashes 2-hour mark setting record at London Marathon", "url": "https://www.dw.com/en/sawe-smashes-2-hour-mark-setting-record-at-london-marathon/a-76943171?maca=en-rss-en-all-1573-rdf"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "Entry-level job market slowdown in Kansas Missouri", "id": 18014, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-25T22:45:00Z", "source_domain": "fox2detroit.com", "title": "College grads enter tough hiring market : Some tips to help with the job hunt", "url": "https://www.fox2detroit.com/news/college-grads-enter-tough-hiring-market-some-tips-help-job-hunt"}, {"published_at": "2026-04-25T17:00:00Z", "source_domain": "kcur.org", "title": "Entry - level job seekers in Kansas and Missouri feel the hiring slowdown :  It rough out here  ", "url": "https://www.kcur.org/news/2026-04-25/entry-level-job-seekers-in-kansas-and-missouri-feel-the-hiring-slowdown-its-rough-out-here"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "AI Pioneer Calls for Regulatory Controls", "id": 18016, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T22:45:00Z", "source_domain": "azernews.az", "title": "Time to apply brakes to runaway AI , says pioneer", "url": "https://www.azernews.az/region/257584.html"}, {"published_at": "2026-04-26T22:15:00Z", "source_domain": "today.az", "title": "Today . Az - Time to apply brakes to runaway AI , says pioneer", "url": "http://today.az/news/regions/267422.html"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.21, "gate2_pass": false, "headline": "Major tech companies announce mass layoffs and buyouts", "id": 18017, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-04-26T17:30:00Z", "source_domain": "ibtimes.co.uk", "title": "The Tech Purge : Why Nike Is Cutting 1 , 400 More Jobs Despite Their New  Win Now  Promise", "url": "https://www.ibtimes.co.uk/tech-purge-why-nike-cutting-1400-more-jobs-despite-their-new-win-now-promise-1793669"}, {"published_at": "2026-04-26T12:15:00Z", "source_domain": "aol.com", "title": "Bloody Thursday : Up to 18 , 000 people lose jobs or face buyouts at Meta , Nike and Microsoft", "url": "https://www.aol.com/finance/bloody-thursday-18-000-people-114500679.html"}]}]};
 // Flatten to id→object map for panel title lookup
 const __NC_MAP__ = {};
 Object.values(__NC_DATA__).forEach(items => items.forEach(nc => { __NC_MAP__[nc.id] = nc; }));
