@@ -393,8 +393,9 @@
 
         .key-stat { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--accent); background: var(--accent-dim); border: 1px solid #1e3a5e; border-radius: 3px; padding: 0.15rem 0.55rem; margin-bottom: 0.55rem; }
 
-        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; font-size: 0.72rem; color: #383a4a; margin-top: auto; padding-top: 0.4rem; }
-        .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: var(--text-muted); }
+        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; font-size: 0.72rem; }
+        .card-spacer { flex: 1; min-height: 0; }
+        .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: #3a3e50; }
         .metric-val { color: #515870; font-weight: 600; }       /* outlets: muted slate */
         .metric-val.srq-val { color: #505878; }                 /* SRQ: muted indigo */
         .srq-wrap { display: flex; align-items: center; gap: 0.3rem; }
@@ -411,7 +412,7 @@
         .cvs-mini-dist { display: flex; flex-wrap: wrap; gap: 0.2rem; margin-bottom: 0.5rem; }
 
         .cvs-badge { display: inline-flex; align-items: center; gap: 0.2rem; padding: 2px 7px; border-radius: 3px; font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
-        .cvs-V1 { background: var(--v1-bg); color: #38b060; }
+        .cvs-V1 { background: var(--v1-bg); color: var(--v1); }
         .cvs-V2 { background: var(--v2-bg); color: #3060a8; }
         .cvs-V3 { background: var(--v3-bg); color: #6878a0; }
         .cvs-V4 { background: var(--v4-bg); color: #c09020; }
@@ -486,8 +487,11 @@
         .mid-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: var(--text-muted); }
         .mid-card-footer { padding: 0.42rem 1rem; border-top: 1px solid var(--border-soft); }
         .mid-cta { font-size: 0.68rem; font-weight: 600; color: #486070; transition: color 0.15s; }
-        .mid-sources { display: flex; flex-wrap: wrap; gap: 0.22rem; margin-top: 0.5rem; }
+        .mid-sources { display: flex; flex-wrap: wrap; gap: 0.22rem; margin-top: 0.4rem; }
         .mid-src-chip { font-size: 0.64rem; padding: 1px 6px; border-radius: 3px; background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border-soft); white-space: nowrap; }
+        .mid-src-more { color: var(--text-dim); background: transparent; border-color: transparent; font-style: italic; }
+        .sub-metrics { display: flex; flex-wrap: nowrap; gap: 0.45rem; margin-bottom: 0.4rem; }
+        .sub-metrics .metric { gap: 0.18rem; font-size: 0.59rem; white-space: nowrap; }
 
         /* ── In-episode badge on covered cards ───────────── */
         .ep-badge { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #4898c8; display: block; margin-bottom: 0.35rem; }
@@ -567,7 +571,7 @@
         .nc-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6272; display: block; margin-bottom: 0.32rem; }
         .nc-headline { font-size: 0.9rem; font-weight: 600; color: #a8adc4; line-height: 1.35; margin-bottom: 0.42rem; transition: color 0.15s; }
         .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: #383a4a; margin-top: auto; padding-top: 0.35rem; }
+        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: #383a4a; }
         .nc-card-footer { padding: 0.42rem 0.95rem; border-top: 1px solid var(--border-soft); }
         .nc-cta { font-size: 0.68rem; font-weight: 600; color: #5a6888; transition: color 0.15s; }
         .gate2-pass { font-size: 0.6rem; padding: 0 5px; border-radius: 2px; background: #0c1808; color: #407850; border: 1px solid #1a2a18; }
@@ -973,21 +977,21 @@
                     
                     
                     <div class="bspec-seg bs-lc" style="flex:4;background:var(--bias-lc)"
-                         title="Lean Left: 4"></div>
+                         title="Lean Left: 4">LC</div>
                     
                     
                     
                     
                     
                     <div class="bspec-seg bs-c" style="flex:7;background:var(--bias-c)"
-                         title="Center: 7"></div>
+                         title="Center: 7">C</div>
                     
                     
                     
                     
                     
                     <div class="bspec-seg bs-rc" style="flex:3;background:var(--bias-rc)"
-                         title="Lean Right: 3"></div>
+                         title="Lean Right: 3">RC</div>
                     
                     
                     
@@ -1086,11 +1090,11 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18043" onclick="showNotCovered(18043)">
-                    Mexico disputes CIA agents&#39; authorization for operat…
+                    Mexico disputes CIA agents&#39; authorization for operations
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18061" onclick="showNotCovered(18061)">
-                    Mali defence minister killed in coordinated insurgen…
+                    Mali defence minister killed in coordinated insurgent attacks
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18026" onclick="showNotCovered(18026)">
@@ -1098,7 +1102,7 @@
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18041" onclick="showNotCovered(18041)">
-                    Colombia highway bombing death toll rises amid viole…
+                    Colombia highway bombing death toll rises amid violence wave
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18063" onclick="showNotCovered(18063)">
@@ -1124,11 +1128,11 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18091" onclick="showNotCovered(18091)">
-                    ETF short interest volatility across multiple funds …
+                    ETF short interest volatility across multiple funds April
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18072" onclick="showNotCovered(18072)">
-                    Fed decision, Iran tensions, Q4 earnings drive marke…
+                    Fed decision, Iran tensions, Q4 earnings drive markets
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18070" onclick="showNotCovered(18070)">
@@ -1154,11 +1158,11 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18067" onclick="showNotCovered(18067)">
-                    Suspect arrested for alleged Trump shooting at WHCA …
+                    Suspect arrested for alleged Trump shooting at WHCA dinner
                 </button>
                 
                 <button class="sb-link sb-mid" data-story-id="nc-18059" onclick="showNotCovered(18059)">
-                    Tillis backs Kevin Warsh Federal Reserve chair confi…
+                    Tillis backs Kevin Warsh Federal Reserve chair confirmation
                 </button>
                 
                 
@@ -1249,7 +1253,7 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18021" onclick="showNotCovered(18021)">
-                    Sebastian Sawe breaks two-hour marathon barrier in L…
+                    Sebastian Sawe breaks two-hour marathon barrier in London
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18014" onclick="showNotCovered(18014)">
@@ -1261,7 +1265,7 @@
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18017" onclick="showNotCovered(18017)">
-                    Major tech companies announce mass layoffs and buyou…
+                    Major tech companies announce mass layoffs and buyouts
                 </button>
                 
                 
@@ -1282,7 +1286,7 @@
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18066" onclick="showNotCovered(18066)">
-                    Chernobyl anniversary marked by Ukraine Russia strik…
+                    Chernobyl anniversary marked by Ukraine Russia strikes
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18062" onclick="showNotCovered(18062)">
@@ -1311,7 +1315,7 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18074" onclick="showNotCovered(18074)">
-                    Warsh Fed chairmanship unlikely to trigger immediate…
+                    Warsh Fed chairmanship unlikely to trigger immediate rate cuts
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18077" onclick="showNotCovered(18077)">
@@ -1319,15 +1323,15 @@
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18083" onclick="showNotCovered(18083)">
-                    Farmers demand budget adjustments amid fuel crisis e…
+                    Farmers demand budget adjustments amid fuel crisis economic impact
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18084" onclick="showNotCovered(18084)">
-                    Central banks navigate geopolitical tensions and ene…
+                    Central banks navigate geopolitical tensions and energy crisis
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18088" onclick="showNotCovered(18088)">
-                    Federal Reserve maintains interest rates steady this…
+                    Federal Reserve maintains interest rates steady this week
                 </button>
                 
                 
@@ -1348,7 +1352,7 @@
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18044" onclick="showNotCovered(18044)">
-                    Shooting incident at White House Correspondents Dinn…
+                    Shooting incident at White House Correspondents Dinner
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18052" onclick="showNotCovered(18052)">
@@ -1356,7 +1360,7 @@
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18068" onclick="showNotCovered(18068)">
-                    Trump claims WHCA dinner shooting religiously motiva…
+                    Trump claims WHCA dinner shooting religiously motivated
                 </button>
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18034" onclick="showNotCovered(18034)">
@@ -1386,7 +1390,7 @@
             <div class="sidebar-stories">
                 
                 <button class="sb-link sb-nc" data-story-id="nc-18047" onclick="showNotCovered(18047)">
-                    Trump uses WHCD shooting to promote ballroom renovat…
+                    Trump uses WHCD shooting to promote ballroom renovation
                 </button>
                 
                 
@@ -1467,7 +1471,7 @@
                                     <span class="story-tag">tech</span>
                                     <h2 class="story-headline">Tillis Backs Warsh After DOJ Closes Powell Probe</h2>
                                     <p class="story-brief">Senator Thom Tillis announced support for Kevin Warsh&#39;s Federal Reserve chairmanship nomination after the DOJ reportedly closed a criminal investigation into current chair Jerome Powell.</p>
-                                    <div class="key-stat">7 articles · SRQ 0.608</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">7</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -1536,12 +1540,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Sebastian Sawe breaks two-hour marathon barrier in London</div>
                             
-                            <div class="nc-meta">
-                                <span>4 articles</span>
-                                <span>SRQ 0.55</span>
-                                <span>Bias div. 0.4</span>
-                                <span>Factuality 0.76</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1551,12 +1549,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Entry-level job market slowdown in Kansas Missouri</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1566,12 +1558,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">AI Pioneer Calls for Regulatory Controls</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1581,12 +1567,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Major tech companies announce mass layoffs and buyouts</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1646,7 +1626,7 @@
                                     <span class="story-tag">geopolitics</span>
                                     <h2 class="story-headline">Gunman Storms Correspondents&#39; Dinner Lobby, Officer Shot</h2>
                                     <p class="story-brief">A gunman armed with firearms and knives entered the lobby of the White House Correspondents&#39; Dinner Saturday night, shooting one officer before being taken into custody.</p>
-                                    <div class="key-stat">17 articles · SRQ 0.832</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">17</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -1713,7 +1693,7 @@
                                     <span class="story-tag">geopolitics</span>
                                     <h2 class="story-headline">Suspect Identified, Assassination Charge Under Consideration</h2>
                                     <p class="story-brief">Cole Tomas Allen, a California man arrested at the White House Correspondents&#39; Dinner, reportedly told family he intended to target administration officials, and could face attempted assassination charges.</p>
-                                    <div class="key-stat">8 articles · SRQ 0.756</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">8</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -1773,20 +1753,12 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Mexico disputes CIA agents&#39; authorization for operations</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:55.0%"></div></div>
-                                            <span class="metric-val srq-val">0.55</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.52</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.4</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.76</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.4</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.76</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -1801,6 +1773,7 @@
                                         
                                         <span class="mid-src-chip" title="CIA agents reported killed in Mexico were not authorised to operate: Gov’t">aljazeera.com</span>
                                         
+                                        
                                     </div>
                                     
                                 </div>
@@ -1813,20 +1786,12 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Mali defence minister killed in coordinated insurgent attacks</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:55.0%"></div></div>
-                                            <span class="metric-val srq-val">0.55</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.52</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.4</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.76</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.4</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.76</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -1841,6 +1806,7 @@
                                         
                                         <span class="mid-src-chip" title="Mali defence minister killed after coordinated attacks">aljazeera.com</span>
                                         
+                                        
                                     </div>
                                     
                                 </div>
@@ -1853,20 +1819,12 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Trump cancels Iran nuclear talks envoy dispatch</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">5</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:47.0%"></div></div>
-                                            <span class="metric-val srq-val">0.47</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.48</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.3</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.55</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.3</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.55</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -1881,6 +1839,7 @@
                                         
                                         <span class="mid-src-chip" title="Trump tells reporters US received new proposal from Iran after trip cancellation">thehill.com</span>
                                         
+                                        
                                     </div>
                                     
                                 </div>
@@ -1893,20 +1852,12 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Colombia highway bombing death toll rises amid violence wave</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">5</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:53.0%"></div></div>
-                                            <span class="metric-val srq-val">0.53</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.48</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.73</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.5</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.73</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -1918,6 +1869,7 @@
                                         <span class="mid-src-chip" title="Colombia bus bombing death toll rises to 20 during a wave of violence">pbs.org</span>
                                         
                                         <span class="mid-src-chip" title="Colombia highway bomb attack kills at least 19">dw.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -1931,20 +1883,12 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Assad-era officials face trial in Damascus</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:41.0%"></div></div>
-                                            <span class="metric-val srq-val">0.41</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.45</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.3</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.65</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.3</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.65</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
                                     </div>
                                     
                                     
@@ -1954,6 +1898,7 @@
                                         <span class="mid-src-chip" title="First trial of Assad-era Syrian official starts in Damascus">aljazeera.com</span>
                                         
                                         <span class="mid-src-chip" title="Syria: First trial of Assad-era officials opens in Damascus">dw.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -1976,12 +1921,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Russian airstrikes kill seven Ukrainians overnight</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.4</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.8</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1991,12 +1930,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Chernobyl anniversary marked by Ukraine Russia strikes</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.39</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.76</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2006,12 +1939,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Assassination attempt targeting Trump and officials</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.36</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.68</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2021,12 +1948,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">U.S. removes Iranian mines from Strait of Hormuz</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.35</span>
-                                <span>Bias div. 0.1</span>
-                                <span>Factuality 0.76</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2036,12 +1957,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">King Charles State Visit to United States Proceeding</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.35</span>
-                                <span>Bias div. 0.1</span>
-                                <span>Factuality 0.76</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2094,20 +2009,12 @@
                                     <span class="story-tag">ECONOMY</span>
                                     <div class="mid-headline">ETF short interest volatility across multiple funds April</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:26.0%"></div></div>
-                                            <span class="metric-val srq-val">0.26</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.27</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
                                     </div>
                                     
                                     
@@ -2115,6 +2022,7 @@
                                     <div class="mid-sources">
                                         
                                         <span class="mid-src-chip" title="PGIM Jennison International Opportunities ETF ( NYSEARCA : PJIO ) Sees Significant Increase in Short Interest">dailypolitical.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -2128,20 +2036,12 @@
                                     <span class="story-tag">ECONOMY</span>
                                     <div class="mid-headline">Fed decision, Iran tensions, Q4 earnings drive markets</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:24.0%"></div></div>
-                                            <span class="metric-val srq-val">0.24</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.21</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
                                     </div>
                                     
                                     
@@ -2153,6 +2053,7 @@
                                         <span class="mid-src-chip" title="Fed meet , Q4 earnings , US - Iran tensions likely to drive stock market this week">prokerala.com</span>
                                         
                                         <span class="mid-src-chip" title="US Fed meeting , US - Iran war to Q4 results 2026 : Top five triggers that may dictate the Indian stock market this week">livemint.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -2166,20 +2067,12 @@
                                     <span class="story-tag">ECONOMY</span>
                                     <div class="mid-headline">AP Business SummaryBrief at 1 : 20 a . m . EDT</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:20.0%"></div></div>
-                                            <span class="metric-val srq-val">0.2</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.18</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
                                     </div>
                                     
                                     
@@ -2189,6 +2082,7 @@
                                         <span class="mid-src-chip" title="AP Business SummaryBrief at 1 : 20 a . m . EDT">harrisondaily.com</span>
                                         
                                         <span class="mid-src-chip" title="AP Business SummaryBrief at 11 : 32 p . m . EDT">mankatofreepress.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -2211,12 +2105,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Warsh Fed chairmanship unlikely to trigger immediate rate cuts</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2226,12 +2114,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Credit card debt reduction strategies and methods</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2241,12 +2123,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Farmers demand budget adjustments amid fuel crisis economic impact</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2256,12 +2132,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Central banks navigate geopolitical tensions and energy crisis</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2271,12 +2141,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Federal Reserve maintains interest rates steady this week</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2324,20 +2188,12 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Suspect arrested for alleged Trump shooting at WHCA dinner</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:35.0%"></div></div>
-                                            <span class="metric-val srq-val">0.35</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.38</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.2</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.6</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.2</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.6</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
                                     </div>
                                     
                                     
@@ -2345,6 +2201,7 @@
                                     <div class="mid-sources">
                                         
                                         <span class="mid-src-chip" title="Suspected shooter was likely targeting Trump at WHCA dinner">thehill.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -2358,20 +2215,12 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Tillis backs Kevin Warsh Federal Reserve chair confirmation</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
-                                        <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
-                                        <div class="metric srq-wrap">
-                                            <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
-                                            <div class="srq-track"><div class="srq-fill" style="width:28.0%"></div></div>
-                                            <span class="metric-val srq-val">0.28</span>
-                                        </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.24</span></div>
-                                    </div>
+                                    <div class="card-spacer"></div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -2383,6 +2232,7 @@
                                         <span class="mid-src-chip" title="Senator Tillis Supports Advancing Warsh Confirmation as Fed Chair">el-balad.com</span>
                                         
                                         <span class="mid-src-chip" title="NC Sen . Thom Tillis drops opposition , clearing path for Kevin Warsh as Fed chair">abc11.com</span>
+                                        
                                         
                                     </div>
                                     
@@ -2405,12 +2255,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">DOJ seeks dismissal of Trump ballroom lawsuit</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.39</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.76</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2420,12 +2264,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Shooting incident at White House Correspondents Dinner</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.36</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.68</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2435,12 +2273,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">WHCA dinner shooting prompts bipartisan response</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.34</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.6</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2450,12 +2282,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Trump claims WHCA dinner shooting religiously motivated</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.34</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.6</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2465,12 +2291,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Kevin Warsh nominated for Federal Reserve leadership</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.27</span>
-                                <span>Bias div. 0.05</span>
-                                <span>Factuality 0.54</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2480,12 +2300,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">ACCC sues Woolworths over misleading discount claims</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.24</span>
-                                
-                                <span>Factuality 0.5</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2527,12 +2341,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Trump uses WHCD shooting to promote ballroom renovation</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.36</span>
-                                <span>Bias div. 0.2</span>
-                                <span>Factuality 0.68</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2574,12 +2382,6 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Southeastern Georgia wildfire evacuation threat</div>
                             
-                            <div class="nc-meta">
-                                <span>2 articles</span>
-                                <span>SRQ 0.42</span>
-                                <span>Bias div. 0.1</span>
-                                <span>Factuality 1.0</span>
-                            </div>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
