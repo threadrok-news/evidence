@@ -34,11 +34,11 @@
             --v4: #fbbf24; --v4-bg: #281f04;
             --v5: #52576c; --v5-bg: #131520;
 
-            --bias-l:  #2a5aaa;
-            --bias-lc: #4a78c8;
+            --bias-l:  #24508a;
+            --bias-lc: #305a90;
             --bias-c:  #505868;
-            --bias-rc: #c04040;
-            --bias-r:  #883030;
+            --bias-rc: #8a2828;
+            --bias-r:  #6a1c1c;
             --bias-u:  #303040;
         }
 
@@ -342,7 +342,7 @@
         .cat-section { margin-bottom: 2.5rem; }
         .cat-heading { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.7rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
         .cat-icon { width: 3px; height: 0.9rem; border-radius: 2px; flex-shrink: 0; }
-        .cat-name { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+        .cat-name { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); }
         .cat-count { font-size: 0.68rem; color: var(--text-dim); margin-left: auto; }
 
         .sub-label {
@@ -394,8 +394,8 @@
 
         .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; }
         .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: var(--text-muted); }
-        .metric-val { color: #8898b8; font-weight: 600; }       /* outlets: muted slate */
-        .metric-val.srq-val { color: #7888c0; }                 /* SRQ: muted indigo */
+        .metric-val { color: #515870; font-weight: 600; }       /* outlets: muted slate */
+        .metric-val.srq-val { color: #505878; }                 /* SRQ: muted indigo */
         .srq-wrap { display: flex; align-items: center; gap: 0.3rem; }
         .srq-track { width: 40px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
         .srq-fill { height: 100%; border-radius: 2px; background: linear-gradient(to right, #3a5a90, #357860); }
@@ -411,7 +411,7 @@
 
         .cvs-badge { display: inline-flex; align-items: center; gap: 0.2rem; padding: 2px 7px; border-radius: 3px; font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
         .cvs-V1 { background: var(--v1-bg); color: #38b060; }
-        .cvs-V2 { background: var(--v2-bg); color: #4880d8; }
+        .cvs-V2 { background: var(--v2-bg); color: #3060a8; }
         .cvs-V3 { background: var(--v3-bg); color: #6878a0; }
         .cvs-V4 { background: var(--v4-bg); color: #c09020; }
         .cvs-V5 { background: var(--v5-bg); color: #4a4e60; border: 1px dashed #333; }
@@ -531,16 +531,18 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 0.35rem;
+            color: var(--text-dim);
             display: flex;
             align-items: center;
             gap: 0.4rem;
         }
         .sidebar-cat-label::after { content: ""; flex: 1; height: 1px; background: var(--border-soft); }
+        .sidebar-cat-bar { width: 3px; height: 0.75rem; border-radius: 2px; flex-shrink: 0; }
         .sb-group-label { font-size: 0.57rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); margin: 0.35rem 0 0.1rem 0.5rem; }
         .sb-mid { color: #606878; font-style: italic; border-left-color: #202535; }
         .sb-mid:hover { color: var(--text-muted); border-left-color: var(--border); background: var(--surface-2); font-style: normal; }
         .sb-nc-cat { display: flex; align-items: center; gap: 0.3rem; margin-top: 0.5rem; margin-bottom: 0.15rem; }
-        .sb-nc-cat-label { font-size: 0.57rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .sb-nc-cat-label { font-size: 0.57rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); }
         .sb-nc { color: #484c58; border-left-color: #181a22; font-style: italic; }
         .sb-nc:hover { color: #606878; border-left-color: var(--border-soft); background: var(--surface-2); font-style: normal; }
 
@@ -689,10 +691,10 @@
         #story-content .bias-dot { width: 7px; height: 7px; border-radius: 2px; }
         #story-content .srq-breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.65rem; margin-bottom: 1.75rem; }
         #story-content .srq-card { background: var(--card); border: 1px solid var(--border-soft); border-radius: 6px; padding: 0.65rem 0.85rem; text-align: center; }
-        #story-content .srq-card-val { font-size: 1.4rem; font-weight: 700; color: #8090b0; line-height: 1; } /* outlets: muted slate */
-        #story-content .srq-card-val.c-blue   { color: #4a88b0; }   /* bias diversity: muted teal-blue */
-        #story-content .srq-card-val.c-green  { color: #4a9070; }   /* factuality: muted green */
-        #story-content .srq-card-val.c-accent { color: #6878b8; }   /* SRQ composite: muted indigo */
+        #story-content .srq-card-val { font-size: 1.4rem; font-weight: 700; color: #505868; line-height: 1; } /* outlets: muted slate */
+        #story-content .srq-card-val.c-blue   { color: #3a6080; }   /* bias diversity: muted teal-blue */
+        #story-content .srq-card-val.c-green  { color: #3a6850; }   /* factuality: muted green */
+        #story-content .srq-card-val.c-accent { color: #485088; }   /* SRQ composite: muted indigo */
         #story-content .srq-card-label { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); margin-top: 0.22rem; }
         #story-content .claims-list { display: flex; flex-direction: column; gap: 0.75rem; }
         #story-content .claim-card { background: var(--card); border: 1px solid var(--border-soft); border-radius: 6px; overflow: hidden; }
@@ -824,29 +826,9 @@
             
             <select class="ep-selector" onchange="onEpisodeChange(this)" title="Jump to episode">
                 
-                <option value="2026-W15" data-cadence="weekly" >2026-W15 (W)</option>
-                
-                <option value="2026-W14" data-cadence="weekly" >2026-W14 (W)</option>
-                
-                <option value="2026-W14-sample" data-cadence="weekly" >2026-W14-sample (W)</option>
-                
                 <option value="2026-04-29" data-cadence="daily" selected>2026-04-29</option>
                 
                 <option value="2026-04-26" data-cadence="daily" >2026-04-26</option>
-                
-                <option value="2026-04-25" data-cadence="daily" >2026-04-25</option>
-                
-                <option value="2026-04-14" data-cadence="daily" >2026-04-14</option>
-                
-                <option value="2026-04-13" data-cadence="daily" >2026-04-13</option>
-                
-                <option value="2026-04-12" data-cadence="daily" >2026-04-12</option>
-                
-                <option value="2026-04-11" data-cadence="daily" >2026-04-11</option>
-                
-                <option value="2026-04-10" data-cadence="daily" >2026-04-10</option>
-                
-                <option value="2026-04-09" data-cadence="daily" >2026-04-09</option>
                 
             </select>
             
@@ -1067,7 +1049,7 @@
         
         
         <div class="sidebar-section">
-            <div class="sidebar-cat-label" style="color:#c05858">GEOPOLITICS</div>
+            <div class="sidebar-cat-label"><span class="sidebar-cat-bar" style="background:#c05858"></span>GEOPOLITICS</div>
             
             <div class="sb-group-label">In Episode</div>
             <div class="sidebar-stories">
@@ -1124,7 +1106,7 @@
         
         
         <div class="sidebar-section">
-            <div class="sidebar-cat-label" style="color:#4aaa78">ECONOMY</div>
+            <div class="sidebar-cat-label"><span class="sidebar-cat-bar" style="background:#4aaa78"></span>ECONOMY</div>
             
             
             <div class="sb-group-label">Also Tracked</div>
@@ -1150,7 +1132,7 @@
         
         
         <div class="sidebar-section">
-            <div class="sidebar-cat-label" style="color:#8868c0">DOMESTIC POLITICS</div>
+            <div class="sidebar-cat-label"><span class="sidebar-cat-bar" style="background:#8868c0"></span>DOMESTIC POLITICS</div>
             
             <div class="sb-group-label">In Episode</div>
             <div class="sidebar-stories">
@@ -1199,7 +1181,7 @@
         
         
         <div class="sidebar-section">
-            <div class="sidebar-cat-label" style="color:#c07840">HEALTH</div>
+            <div class="sidebar-cat-label"><span class="sidebar-cat-bar" style="background:#c07840"></span>HEALTH</div>
             
             
             <div class="sb-group-label">Also Tracked</div>
@@ -1221,7 +1203,7 @@
         
         
         <div class="sidebar-section">
-            <div class="sidebar-cat-label" style="color:#40a090">CLIMATE ENERGY</div>
+            <div class="sidebar-cat-label"><span class="sidebar-cat-bar" style="background:#40a090"></span>CLIMATE ENERGY</div>
             
             
             <div class="sb-group-label">Also Tracked</div>
@@ -1304,7 +1286,8 @@
             
             
             <div class="sb-nc-cat">
-                <span class="sb-nc-cat-label" style="color:#c05858">GEOPOLITICS</span>
+                <span class="sidebar-cat-bar" style="background:#c05858"></span>
+                <span class="sb-nc-cat-label">GEOPOLITICS</span>
             </div>
             <div class="sidebar-stories">
                 
@@ -1332,7 +1315,8 @@
             
             
             <div class="sb-nc-cat">
-                <span class="sb-nc-cat-label" style="color:#4aaa78">ECONOMY</span>
+                <span class="sidebar-cat-bar" style="background:#4aaa78"></span>
+                <span class="sb-nc-cat-label">ECONOMY</span>
             </div>
             <div class="sidebar-stories">
                 
@@ -1381,7 +1365,8 @@
             
             
             <div class="sb-nc-cat">
-                <span class="sb-nc-cat-label" style="color:#8868c0">DOMESTIC POLITICS</span>
+                <span class="sidebar-cat-bar" style="background:#8868c0"></span>
+                <span class="sb-nc-cat-label">DOMESTIC POLITICS</span>
             </div>
             <div class="sidebar-stories">
                 
@@ -1422,7 +1407,8 @@
             
             
             <div class="sb-nc-cat">
-                <span class="sb-nc-cat-label" style="color:#c07840">HEALTH</span>
+                <span class="sidebar-cat-bar" style="background:#c07840"></span>
+                <span class="sb-nc-cat-label">HEALTH</span>
             </div>
             <div class="sidebar-stories">
                 
@@ -1442,7 +1428,8 @@
             
             
             <div class="sb-nc-cat">
-                <span class="sb-nc-cat-label" style="color:#40a090">CLIMATE ENERGY</span>
+                <span class="sidebar-cat-bar" style="background:#40a090"></span>
+                <span class="sb-nc-cat-label">CLIMATE ENERGY</span>
             </div>
             <div class="sidebar-stories">
                 
@@ -1488,7 +1475,7 @@
             <section class="cat-section" id="cat-geopolitics">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:#c05858"></div>
-                    <span class="cat-name" style="color:#c05858">GEOPOLITICS</span>
+                    <span class="cat-name">GEOPOLITICS</span>
                     <span class="cat-count">
                         1 in episode · 6 tracked · 4 not covered
                     </span>
@@ -1595,13 +1582,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:44.0%"></div></div>
                                             <span class="metric-val srq-val">0.44</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.4</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.4</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.15</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.55</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.83</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.15</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.55</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.83</span></div>
                                     </div>
                                     
                                     
@@ -1644,13 +1631,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:38.0%"></div></div>
                                             <span class="metric-val srq-val">0.38</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.4</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.4</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.1</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.62</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.62</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -1689,13 +1676,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:40.0%"></div></div>
                                             <span class="metric-val srq-val">0.4</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.4</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.4</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.1</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.62</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.67</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.62</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -1736,13 +1723,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:35.0%"></div></div>
                                             <span class="metric-val srq-val">0.35</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.36</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.36</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.1</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.61</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.61</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -1781,13 +1768,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:34.0%"></div></div>
                                             <span class="metric-val srq-val">0.34</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.34</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.34</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.1</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.56</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.56</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -1830,13 +1817,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:32.0%"></div></div>
                                             <span class="metric-val srq-val">0.32</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.34</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.34</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.05</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.55</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.05</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.55</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -1951,7 +1938,7 @@
             <section class="cat-section" id="cat-economy">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:#4aaa78"></div>
-                    <span class="cat-name" style="color:#4aaa78">ECONOMY</span>
+                    <span class="cat-name">ECONOMY</span>
                     <span class="cat-count">
                         0 in episode · 2 tracked · 8 not covered
                     </span>
@@ -1986,13 +1973,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:33.0%"></div></div>
                                             <span class="metric-val srq-val">0.33</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.27</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.27</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.67</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -2033,13 +2020,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:33.0%"></div></div>
                                             <span class="metric-val srq-val">0.33</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.27</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.27</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.67</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -2212,7 +2199,7 @@
             <section class="cat-section" id="cat-domestic_politics">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:#8868c0"></div>
-                    <span class="cat-name" style="color:#8868c0">DOMESTIC POLITICS</span>
+                    <span class="cat-name">DOMESTIC POLITICS</span>
                     <span class="cat-count">
                         2 in episode · 4 tracked · 6 not covered
                     </span>
@@ -2386,13 +2373,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:41.0%"></div></div>
                                             <span class="metric-val srq-val">0.41</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.45</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.45</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.2</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.54</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.67</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.2</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.54</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -2433,13 +2420,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:40.0%"></div></div>
                                             <span class="metric-val srq-val">0.4</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.43</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.43</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.3</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.6</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.33</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.3</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.6</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
                                     </div>
                                     
                                     
@@ -2476,13 +2463,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:39.0%"></div></div>
                                             <span class="metric-val srq-val">0.39</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.38</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.38</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.1</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.58</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.67</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.58</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.67</span></div>
                                     </div>
                                     
                                     
@@ -2523,13 +2510,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:30.0%"></div></div>
                                             <span class="metric-val srq-val">0.3</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.32</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.32</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0.05</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.51</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.05</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.51</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
                                     </div>
                                     
                                     
@@ -2680,7 +2667,7 @@
             <section class="cat-section" id="cat-health">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:#c07840"></div>
-                    <span class="cat-name" style="color:#c07840">HEALTH</span>
+                    <span class="cat-name">HEALTH</span>
                     <span class="cat-count">
                         0 in episode · 1 tracked · 2 not covered
                     </span>
@@ -2715,13 +2702,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:20.0%"></div></div>
                                             <span class="metric-val srq-val">0.2</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.18</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.18</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.17</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
                                     </div>
                                     
                                     
@@ -2812,7 +2799,7 @@
             <section class="cat-section" id="cat-climate_energy">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:#40a090"></div>
-                    <span class="cat-name" style="color:#40a090">CLIMATE ENERGY</span>
+                    <span class="cat-name">CLIMATE ENERGY</span>
                     <span class="cat-count">
                         0 in episode · 1 tracked · 3 not covered
                     </span>
@@ -2847,13 +2834,13 @@
                                             <div class="srq-track"><div class="srq-fill" style="width:20.0%"></div></div>
                                             <span class="metric-val srq-val">0.2</span>
                                         </div>
-                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#6878a8">0.18</span></div>
+                                        <div class="metric"><span style="font-size:0.68rem;color:var(--text-dim)">Rel.</span><span class="metric-val" style="color:#485070">0.18</span></div>
                                     </div>
                                     
                                     <div class="story-metrics" style="margin-top:0.2rem">
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#6070a8">0</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#608860">0.5</span></div>
-                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#708890">0.17</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Factuality</span><span class="metric-val" style="color:#3d5840">0.5</span></div>
+                                        <div class="metric"><span style="font-size:0.65rem;color:var(--text-dim)">Independence</span><span class="metric-val" style="color:#3d5060">0.17</span></div>
                                     </div>
                                     
                                     
@@ -2953,7 +2940,7 @@
             <section class="developing-section" id="developing">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:var(--dev-accent)"></div>
-                    <span class="cat-name" style="color:var(--dev-accent)">Developing Stories</span>
+                    <span class="cat-name">Developing Stories</span>
                     <span class="cat-count" style="color:#9a7a40">5</span>
                 </div>
                 <p class="dev-notice">Significant but not yet meeting verification threshold for claim-level scoring.</p>
@@ -9120,14 +9107,48 @@ function onEpisodeChange(select) {
     window.location.href = '../' + select.value + '/index.html';
 }
 
-// Initialise on page load from the selected option
+// Dynamically populate episode selector from episodes.json so all static pages
+// always show the full up-to-date list without needing to be regenerated.
 (function() {
+    const CURRENT_EP = '2026-04-29';
+    const CURRENT_CADENCE = 'daily';
     const sel = document.querySelector('.ep-selector');
-    if (sel) {
-        const opt = sel.options[sel.selectedIndex];
-        setCadenceLabel(opt?.dataset?.cadence || 'daily');
+
+    // Derive episodes.json URL from current page location
+    // Page URL: .../evidence/episodes/YYYY-MM-DD/index.html
+    // JSON URL: .../evidence/episodes.json  (two levels up from episode dir)
+    const parts = window.location.pathname.split('/');
+    const epIdx = parts.lastIndexOf('episodes');
+    const jsonUrl = epIdx >= 0
+        ? parts.slice(0, epIdx + 1).join('/') + '.json'
+        : null;
+
+    function rebuildSelector(episodes) {
+        if (!sel || !episodes || !episodes.length) return;
+        sel.innerHTML = '';
+        episodes.forEach(function(ep) {
+            const opt = document.createElement('option');
+            opt.value = ep.id;
+            opt.dataset.cadence = ep.cadence || 'daily';
+            opt.textContent = ep.id + (ep.cadence === 'weekly' ? ' (W)' : '');
+            if (ep.id === CURRENT_EP) opt.selected = true;
+            sel.appendChild(opt);
+        });
+    }
+
+    if (jsonUrl) {
+        fetch(jsonUrl)
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(data) { if (data) rebuildSelector(data); })
+            .catch(function() {})   // silently fall back to static options
+            .finally(function() {
+                // Set cadence label from whichever option is selected
+                const opt = sel ? sel.options[sel.selectedIndex] : null;
+                setCadenceLabel(opt ? opt.dataset.cadence || CURRENT_CADENCE : CURRENT_CADENCE);
+            });
     } else {
-        setCadenceLabel('daily');
+        const opt = sel ? sel.options[sel.selectedIndex] : null;
+        setCadenceLabel(opt ? opt.dataset.cadence || CURRENT_CADENCE : CURRENT_CADENCE);
     }
 })();
 </script>
