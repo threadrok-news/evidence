@@ -34,11 +34,11 @@
             --v4: #fbbf24; --v4-bg: #281f04;
             --v5: #52576c; --v5-bg: #131520;
 
-            --bias-l:  #24508a;
-            --bias-lc: #305a90;
-            --bias-c:  #505868;
-            --bias-rc: #8a2828;
-            --bias-r:  #6a1c1c;
+            --bias-l:  #1a3a6e;
+            --bias-lc: #233a7a;
+            --bias-c:  #404858;
+            --bias-rc: #7a2020;
+            --bias-r:  #581818;
             --bias-u:  #303040;
         }
 
@@ -566,7 +566,7 @@
         .nc-card-body { padding: 0.85rem 0.95rem 0.7rem; flex: 1; }
         .nc-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6272; display: block; margin-bottom: 0.32rem; }
         .nc-headline { font-size: 0.9rem; font-weight: 600; color: #a8adc4; line-height: 1.35; margin-bottom: 0.42rem; transition: color 0.15s; }
-        .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; }
+        .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: var(--text-muted); }
         .nc-card-footer { padding: 0.42rem 0.95rem; border-top: 1px solid var(--border-soft); }
         .nc-cta { font-size: 0.68rem; font-weight: 600; color: #5a6888; transition: color 0.15s; }
@@ -665,11 +665,12 @@
 
         /* ── Loaded story content styles ─────────────────── */
         /* Mirrors evidence_story_template.html .article-wrap internals */
-        #story-content .story-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.55rem; }
+        #story-content .story-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8090a8; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4rem; }
+        #story-content .story-category-bar { width: 3px; height: 0.7rem; border-radius: 2px; flex-shrink: 0; }
         #story-content .story-headline { font-size: 1.55rem; font-weight: 700; line-height: 1.25; color: var(--text); margin-bottom: 0.55rem; }
         #story-content .story-meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.1rem; margin-bottom: 1.25rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-soft); }
-        #story-content .story-meta-item { font-size: 0.76rem; color: var(--text-muted); }
-        #story-content .story-meta-item strong { color: var(--text); }
+        #story-content .story-meta-item { font-size: 0.76rem; color: var(--text-dim); }
+        #story-content .story-meta-item strong { color: #606878; }
         #story-content .srq-inline { display: inline-flex; align-items: center; gap: 0.35rem; }
         #story-content .srq-track-sm { width: 44px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
         #story-content .srq-fill-sm { height: 100%; border-radius: 2px; background: linear-gradient(to right, #3a5a90, #357860); }
@@ -682,7 +683,7 @@
         #story-content .bias-bar-full { display: flex; height: 22px; border-radius: 5px; overflow: hidden; margin-bottom: 0.55rem; }
         #story-content .bseg { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: rgba(255,255,255,0.9); padding: 0 3px; overflow: hidden; white-space: nowrap; }
         #story-content .bseg.bl  { background: var(--bias-l); }
-        #story-content .bseg.blc { background: var(--bias-lc); color: #1a3a60; }
+        #story-content .bseg.blc { background: var(--bias-lc); }
         #story-content .bseg.bc  { background: var(--bias-c); }
         #story-content .bseg.brc { background: var(--bias-rc); }
         #story-content .bseg.br  { background: var(--bias-r); }
@@ -971,21 +972,21 @@
                     
                     
                     
-                    <div class="bspec-seg bs-lc" style="flex:4;background:#4a78c8"
+                    <div class="bspec-seg bs-lc" style="flex:4;background:var(--bias-lc)"
                          title="Lean Left: 4">LC</div>
                     
                     
                     
                     
                     
-                    <div class="bspec-seg bs-c" style="flex:7;background:#505868"
+                    <div class="bspec-seg bs-c" style="flex:7;background:var(--bias-c)"
                          title="Center: 7">C</div>
                     
                     
                     
                     
                     
-                    <div class="bspec-seg bs-rc" style="flex:3;background:#c04040"
+                    <div class="bspec-seg bs-rc" style="flex:3;background:var(--bias-rc)"
                          title="Lean Right: 3">RC</div>
                     
                     
@@ -1002,21 +1003,21 @@
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#4a78c8"></div>
+                        <div class="bsl-dot" style="background:var(--bias-lc)"></div>
                         <span>Lean L 4</span>
                     </div>
                     
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#505868"></div>
+                        <div class="bsl-dot" style="background:var(--bias-c)"></div>
                         <span>Center 7</span>
                     </div>
                     
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#c04040"></div>
+                        <div class="bsl-dot" style="background:var(--bias-rc)"></div>
                         <span>Lean R 3</span>
                     </div>
                     
@@ -1769,6 +1770,7 @@
                             <div class="mid-card" data-story-id="nc-18043" onclick="showNotCovered(18043)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Mexico disputes CIA agents&#39; authorization for operations</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1808,6 +1810,7 @@
                             <div class="mid-card" data-story-id="nc-18061" onclick="showNotCovered(18061)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Mali defence minister killed in coordinated insurgent attacks</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1847,6 +1850,7 @@
                             <div class="mid-card" data-story-id="nc-18026" onclick="showNotCovered(18026)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Trump cancels Iran nuclear talks envoy dispatch</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1886,6 +1890,7 @@
                             <div class="mid-card" data-story-id="nc-18041" onclick="showNotCovered(18041)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Colombia highway bombing death toll rises amid violence wave</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1923,6 +1928,7 @@
                             <div class="mid-card" data-story-id="nc-18063" onclick="showNotCovered(18063)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Assad-era officials face trial in Damascus</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2085,6 +2091,7 @@
                             <div class="mid-card" data-story-id="nc-18091" onclick="showNotCovered(18091)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#4aaa78;flex-shrink:0"></span>ECONOMY</span>
                                     <div class="mid-headline">ETF short interest volatility across multiple funds April</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2118,6 +2125,7 @@
                             <div class="mid-card" data-story-id="nc-18072" onclick="showNotCovered(18072)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#4aaa78;flex-shrink:0"></span>ECONOMY</span>
                                     <div class="mid-headline">Fed decision, Iran tensions, Q4 earnings drive markets</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2155,6 +2163,7 @@
                             <div class="mid-card" data-story-id="nc-18070" onclick="showNotCovered(18070)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#4aaa78;flex-shrink:0"></span>ECONOMY</span>
                                     <div class="mid-headline">AP Business SummaryBrief at 1 : 20 a . m . EDT</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2312,6 +2321,7 @@
                             <div class="mid-card" data-story-id="nc-18067" onclick="showNotCovered(18067)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Suspect arrested for alleged Trump shooting at WHCA dinner</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2345,6 +2355,7 @@
                             <div class="mid-card" data-story-id="nc-18059" onclick="showNotCovered(18059)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Tillis backs Kevin Warsh Federal Reserve chair confirmation</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2691,7 +2702,7 @@
   
 
   <div id="pool-seg-18019">
-    <div class="story-category">TECH</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH</div>
     <h1 class="story-headline">Tillis Backs Warsh After DOJ Closes Powell Probe</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -3729,7 +3740,7 @@
   
 
   <div id="pool-seg-18040">
-    <div class="story-category">GEOPOLITICS</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS</div>
     <h1 class="story-headline">Gunman Storms Correspondents&#39; Dinner Lobby, Officer Shot</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -5208,7 +5219,7 @@
   
 
   <div id="pool-seg-18037">
-    <div class="story-category">GEOPOLITICS</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS</div>
     <h1 class="story-headline">Suspect Identified, Assassination Charge Under Consideration</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6558,7 +6569,7 @@
   
 
   <div id="pool-dev-18039">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Investigators Believe Trump Was Likely a Target</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6590,7 +6601,7 @@
   
 
   <div id="pool-dev-18027">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Iran Foreign Minister Leaves Islamabad Without U.S. Meeting</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6622,7 +6633,7 @@
   
 
   <div id="pool-dev-18035">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Coordinated Armed Attacks Reported Across Mali</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6654,7 +6665,7 @@
   
 
   <div id="pool-dev-18042">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Palestinians Declare Local Elections a Success</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6686,7 +6697,7 @@
   
 
   <div id="pool-dev-18048">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Iran-U.S. Peace Talks Reported on Hold</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-26</span>
@@ -6713,7 +6724,7 @@
   
   
   <div id="pool-nc-18043">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Mexico disputes CIA agents&#39; authorization for operations</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -6780,7 +6791,7 @@
   </div>
   
   <div id="pool-nc-18061">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Mali defence minister killed in coordinated insurgent attacks</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -6847,7 +6858,7 @@
   </div>
   
   <div id="pool-nc-18026">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Trump cancels Iran nuclear talks envoy dispatch</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>5</strong> articles tracked</span>
@@ -6914,7 +6925,7 @@
   </div>
   
   <div id="pool-nc-18041">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Colombia highway bombing death toll rises amid violence wave</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>5</strong> articles tracked</span>
@@ -6972,7 +6983,7 @@
   </div>
   
   <div id="pool-nc-18036">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Russian airstrikes kill seven Ukrainians overnight</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7021,7 +7032,7 @@
   </div>
   
   <div id="pool-nc-18066">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Chernobyl anniversary marked by Ukraine Russia strikes</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7070,7 +7081,7 @@
   </div>
   
   <div id="pool-nc-18063">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Assad-era officials face trial in Damascus</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
@@ -7119,7 +7130,7 @@
   </div>
   
   <div id="pool-nc-18062">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Assassination attempt targeting Trump and officials</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7168,7 +7179,7 @@
   </div>
   
   <div id="pool-nc-18046">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">U.S. removes Iranian mines from Strait of Hormuz</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7217,7 +7228,7 @@
   </div>
   
   <div id="pool-nc-18064">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">King Charles State Visit to United States Proceeding</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7268,7 +7279,7 @@
   
   
   <div id="pool-nc-18021">
-    <div class="story-category">TECH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · NOT COVERED</div>
     <h1 class="story-headline">Sebastian Sawe breaks two-hour marathon barrier in London</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -7335,7 +7346,7 @@
   </div>
   
   <div id="pool-nc-18014">
-    <div class="story-category">TECH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · NOT COVERED</div>
     <h1 class="story-headline">Entry-level job market slowdown in Kansas Missouri</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7384,7 +7395,7 @@
   </div>
   
   <div id="pool-nc-18016">
-    <div class="story-category">TECH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · NOT COVERED</div>
     <h1 class="story-headline">AI Pioneer Calls for Regulatory Controls</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7433,7 +7444,7 @@
   </div>
   
   <div id="pool-nc-18017">
-    <div class="story-category">TECH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · NOT COVERED</div>
     <h1 class="story-headline">Major tech companies announce mass layoffs and buyouts</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7484,7 +7495,7 @@
   
   
   <div id="pool-nc-18065">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">DOJ seeks dismissal of Trump ballroom lawsuit</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7533,7 +7544,7 @@
   </div>
   
   <div id="pool-nc-18044">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Shooting incident at White House Correspondents Dinner</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7582,7 +7593,7 @@
   </div>
   
   <div id="pool-nc-18052">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">WHCA dinner shooting prompts bipartisan response</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7631,7 +7642,7 @@
   </div>
   
   <div id="pool-nc-18068">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Trump claims WHCA dinner shooting religiously motivated</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7680,7 +7691,7 @@
   </div>
   
   <div id="pool-nc-18067">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Suspect arrested for alleged Trump shooting at WHCA dinner</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -7720,7 +7731,7 @@
   </div>
   
   <div id="pool-nc-18034">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Kevin Warsh nominated for Federal Reserve leadership</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7769,7 +7780,7 @@
   </div>
   
   <div id="pool-nc-18059">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Tillis backs Kevin Warsh Federal Reserve chair confirmation</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
@@ -7827,7 +7838,7 @@
   </div>
   
   <div id="pool-nc-18078">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">ACCC sues Woolworths over misleading discount claims</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7878,7 +7889,7 @@
   
   
   <div id="pool-nc-18045">
-    <div class="story-category">CLIMATE_ENERGY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#40a090"></span>CLIMATE_ENERGY · NOT COVERED</div>
     <h1 class="story-headline">Southeastern Georgia wildfire evacuation threat</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7929,7 +7940,7 @@
   
   
   <div id="pool-nc-18047">
-    <div class="story-category">HEALTH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c07840"></span>HEALTH · NOT COVERED</div>
     <h1 class="story-headline">Trump uses WHCD shooting to promote ballroom renovation</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7980,7 +7991,7 @@
   
   
   <div id="pool-nc-18091">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">ETF short interest volatility across multiple funds April</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -8020,7 +8031,7 @@
   </div>
   
   <div id="pool-nc-18072">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Fed decision, Iran tensions, Q4 earnings drive markets</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
@@ -8078,7 +8089,7 @@
   </div>
   
   <div id="pool-nc-18074">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Warsh Fed chairmanship unlikely to trigger immediate rate cuts</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8127,7 +8138,7 @@
   </div>
   
   <div id="pool-nc-18077">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Credit card debt reduction strategies and methods</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8176,7 +8187,7 @@
   </div>
   
   <div id="pool-nc-18083">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Farmers demand budget adjustments amid fuel crisis economic impact</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8225,7 +8236,7 @@
   </div>
   
   <div id="pool-nc-18084">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Central banks navigate geopolitical tensions and energy crisis</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8274,7 +8285,7 @@
   </div>
   
   <div id="pool-nc-18088">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Federal Reserve maintains interest rates steady this week</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8323,7 +8334,7 @@
   </div>
   
   <div id="pool-nc-18070">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">AP Business SummaryBrief at 1 : 20 a . m . EDT</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
