@@ -393,8 +393,9 @@
 
         .key-stat { display: inline-block; font-size: 0.75rem; font-weight: 600; color: var(--accent); background: var(--accent-dim); border: 1px solid #1e3a5e; border-radius: 3px; padding: 0.15rem 0.55rem; margin-bottom: 0.55rem; }
 
-        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; font-size: 0.72rem; color: #383a4a; margin-top: auto; padding-top: 0.4rem; }
-        .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: var(--text-muted); }
+        .story-metrics { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; margin-bottom: 0.5rem; font-size: 0.72rem; }
+        .card-spacer { flex: 1; min-height: 0; }
+        .metric { display: flex; align-items: center; gap: 0.25rem; font-size: 0.72rem; color: #3a3e50; }
         .metric-val { color: #515870; font-weight: 600; }       /* outlets: muted slate */
         .metric-val.srq-val { color: #505878; }                 /* SRQ: muted indigo */
         .srq-wrap { display: flex; align-items: center; gap: 0.3rem; }
@@ -567,7 +568,7 @@
         .nc-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6272; display: block; margin-bottom: 0.32rem; }
         .nc-headline { font-size: 0.9rem; font-weight: 600; color: #a8adc4; line-height: 1.35; margin-bottom: 0.42rem; transition: color 0.15s; }
         .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: #383a4a; margin-top: auto; padding-top: 0.35rem; }
+        .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: #383a4a; }
         .nc-card-footer { padding: 0.42rem 0.95rem; border-top: 1px solid var(--border-soft); }
         .nc-cta { font-size: 0.68rem; font-weight: 600; color: #5a6888; transition: color 0.15s; }
         .gate2-pass { font-size: 0.6rem; padding: 0 5px; border-radius: 2px; background: #0c1808; color: #407850; border: 1px solid #1a2a18; }
@@ -967,14 +968,14 @@
                     
                     
                     <div class="bspec-seg bs-lc" style="flex:4;background:var(--bias-lc)"
-                         title="Lean Left: 4"></div>
+                         title="Lean Left: 4">LC</div>
                     
                     
                     
                     
                     
                     <div class="bspec-seg bs-c" style="flex:7;background:var(--bias-c)"
-                         title="Center: 7"></div>
+                         title="Center: 7">C</div>
                     
                     
                     
@@ -1518,6 +1519,7 @@
                                     <h2 class="story-headline">UAE Formally Exits OPEC Oil Cartel</h2>
                                     <p class="story-brief">The United Arab Emirates has withdrawn from OPEC, raising questions about the cartel&#39;s ability to maintain unified production policy.</p>
                                     <div class="key-stat">9 articles · SRQ 0.754</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">9</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -1577,7 +1579,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Pentagon requests congressional approval for Department of War rename</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">5</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1627,7 +1630,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Andrzej Poczobut freed in Poland-Belarus prisoner swap</div>
                                     <p class="nc-brief">Prominent journalist Andrzej Poczobut was freed from prison in Belarus as part of a 10-person prisoner swap with Poland. The US brokered the diplomatic agreement that secured his release.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1673,7 +1677,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Ukraine accuses Israel of buying stolen grain</div>
                                     <p class="nc-brief">Ukraine&#39;s President Zelensky accused Israel of purchasing grain stolen by Russia from Ukrainian territories, deepening the diplomatic rift between the two nations. The accusation reflects tensions over Israel&#39;s grain imports amid the Ukraine-Russia conflict.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1721,7 +1726,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">King Charles addresses Congress on NATO and Ukraine support</div>
                                     <p class="nc-brief">King Charles delivered a speech to the US Congress during Trump&#39;s visit emphasizing NATO unity and Ukraine support.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1767,7 +1773,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Trump claims King Charles agrees Iran nuclear ban</div>
                                     <p class="nc-brief">Trump claimed that King Charles agrees with him that Iran should not possess nuclear weapons.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">5</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1817,7 +1824,8 @@
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">US and allies support Panama sovereignty over canal</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">5</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -1876,6 +1884,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">US soldier charged with Maduro prediction market betting</div>
                             <p class="nc-brief">A US soldier pleaded not guilty to charges related to betting or trading predictions on Nicolás Maduro&#39;s capture or ouster.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.36</span>
@@ -1891,6 +1900,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Austrian man admits Taylor Swift concert attack plot</div>
                             <p class="nc-brief">An Austrian man admitted to plotting an attack on a Taylor Swift concert in Vienna.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.36</span>
@@ -1906,6 +1916,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Trump administration deadlock with Iran nuclear negotiations</div>
                             
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.29</span>
@@ -1921,6 +1932,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">McConnell criticizes Pentagon delay on Ukraine military aid</div>
                             
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.3</span>
@@ -1974,7 +1986,8 @@
                                     <span class="story-tag">ECONOMY</span>
                                     <div class="mid-headline">US consumer confidence rises April amid Iran tensions</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2022,7 +2035,8 @@
                                     <span class="story-tag">ECONOMY</span>
                                     <div class="mid-headline">AI stocks decline while oil prices surge</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2079,6 +2093,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">New Zealand household living costs increase 2.1 percent</div>
                             <p class="nc-brief">New Zealand household living costs increased by 2.1 percent.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.2</span>
@@ -2094,6 +2109,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Trump implements new import taxes after tariff rejection</div>
                             <p class="nc-brief">Trump is implementing new import taxes to replace tariffs that were struck down.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.19</span>
@@ -2109,6 +2125,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Eurozone inflation surge driven by energy costs</div>
                             <p class="nc-brief">Eurozone inflation expectations have risen due to concerns over new price increases driven by energy costs. Rising inflation in the eurozone affects monetary policy decisions and consumer purchasing power across the European Union.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2124,6 +2141,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Electric air taxis debut in New York City</div>
                             <p class="nc-brief">Electric air taxis operated for the first time in New York City, marking a milestone in urban air mobility technology deployment. The event demonstrates progress in alternative transportation infrastructure in a major metropolitan area.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2139,6 +2157,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Duke Energy announces June rate increase plan</div>
                             <p class="nc-brief">Duke Energy announced plans to raise utility rates in June, citing specific infrastructure and operational costs. The rate increase affects residential and commercial customers across Duke Energy&#39;s service territory.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2154,6 +2173,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Woodside Energy profits from Middle East conflict oil prices</div>
                             <p class="nc-brief">Woodside Energy&#39;s first-quarter revenue increased, driven by Middle East geopolitical tensions raising commodity prices.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.21</span>
@@ -2169,6 +2189,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Australia Q1 inflation rises amid Middle East tensions</div>
                             <p class="nc-brief">Australia&#39;s Q1 consumer prices increased, with Middle East tensions contributing to higher fuel costs.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.21</span>
@@ -2184,6 +2205,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Federal Reserve holds rates steady under Powell leadership transition</div>
                             
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2250,6 +2272,7 @@
                                     <h2 class="story-headline">DOJ Secures Second Indictment Against James Comey</h2>
                                     <p class="story-brief">The Justice Department secured a second indictment against former FBI Director James Comey, tied to an online post the DOJ characterizes as a threat against President Trump.</p>
                                     <div class="key-stat">18 articles · SRQ 0.653</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">18</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -2317,6 +2340,7 @@
                                     <h2 class="story-headline">FCC Orders ABC License Review Amid Trump Dispute</h2>
                                     <p class="story-brief">The FCC ordered Disney&#39;s ABC to seek early license renewals for 8 TV stations, citing DEI initiatives amid a conflict between President Trump and the network.</p>
                                     <div class="key-stat">4 articles · SRQ 0.570</div>
+                                    <div class="card-spacer"></div>
                                     <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>outlets</span></div>
                                         <div class="metric srq-wrap">
@@ -2376,7 +2400,8 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">King Charles III addresses U.S. Congress during state visit</div>
                                     <p class="nc-brief">King Charles III addressed a joint session of Congress during his US visit, with the event proceeding as scheduled without delays. The address marked a significant moment in the royal visit and US-UK relations.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2424,7 +2449,8 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">King Charles III White House state dinner with Trump</div>
                                     <p class="nc-brief">President Trump hosted a state dinner at the White House for King Charles III, featuring formal ceremonies and remarks. The dinner represents significant diplomatic engagement between the US and UK.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">3</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2468,7 +2494,8 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">FCC reviews Disney broadcast licenses after Kimmel Trump joke</div>
                                     <p class="nc-brief">The FCC ordered a review of Disney&#39;s broadcast station licenses following criticism from Trump regarding a Jimmy Kimmel joke about Melania Trump. The action has raised concerns about political interference in media regulation.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2516,7 +2543,8 @@
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Republican disagreement over taxpayer funding Trump ballroom</div>
                                     
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">10</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2581,6 +2609,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Fed Chair Powell Interest Rate Decision Term End</div>
                             <p class="nc-brief">Federal Reserve Chair Powell held a briefing on interest rate decisions as his tenure approaches its end. The event highlighted uncertainty about Powell&#39;s future at the Fed.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.39</span>
@@ -2596,6 +2625,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Nathan Chasing Horse sentenced life sexual assault</div>
                             <p class="nc-brief">Ex-actor Nathan Chasing Horse has been convicted and sentenced for sexual assault. The case reflects ongoing accountability in the entertainment industry for serious crimes.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.39</span>
@@ -2611,6 +2641,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">California gubernatorial debate lacks clear frontrunner</div>
                             <p class="nc-brief">California gubernatorial candidates participated in a debate that became chaotic as contenders sought breakout moments.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.34</span>
@@ -2626,6 +2657,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">South Korean court extends Lee Myung-bak&#39;s wife sentence</div>
                             
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.32</span>
@@ -2641,6 +2673,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Former FBI Director James Comey indicted by grand jury</div>
                             
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.32</span>
@@ -2656,6 +2689,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Trump-appointed judges overturn Texas ruling</div>
                             <p class="nc-brief">Judges appointed during the Trump administration with originalist judicial philosophy have issued a significant ruling in Texas, continuing a pattern of conservative decisions. The case highlights ongoing influence of Trump-era judicial appointments.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.27</span>
@@ -2709,7 +2743,8 @@
                                     <span class="story-tag">HEALTH</span>
                                     <div class="mid-headline">Alan Johnson stroke patient recovers from drug trial</div>
                                     <p class="nc-brief">Alan Johnson, a stroke patient, reported a remarkable recovery following participation in a drug trial.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">27</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2774,6 +2809,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Provincial funding expands primary care access to 11000 people</div>
                             <p class="nc-brief">A provincial investment initiative aims to connect 11,000 people to primary care services. The program addresses healthcare access challenges in the region.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2789,6 +2825,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Canberra Hospital emergency department staffing crisis</div>
                             <p class="nc-brief">Canberra Hospital emergency department staff are facing dangerous working conditions that have prompted union warnings. The situation highlights staffing and safety concerns at the hospital.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2842,7 +2879,8 @@
                                     <span class="story-tag">CLIMATE ENERGY</span>
                                     <div class="mid-headline">Electric air taxis debut in New York City</div>
                                     <p class="nc-brief">Electric air taxis operated their first flights in New York City.</p>
-                                    <div class="story-metrics" style="margin-top:0.45rem">
+                                    <div class="card-spacer"></div>
+                                    <div class="story-metrics">
                                         <div class="metric"><span class="metric-val">6</span><span>articles</span></div>
                                         <div class="metric srq-wrap">
                                             <span style="font-size:0.68rem;color:var(--text-dim)">SRQ</span>
@@ -2903,6 +2941,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Sungrow hosts GRES 2026 renewable energy conference</div>
                             <p class="nc-brief">Sungrow Power Supply Co. is hosting the GRES 2026 event to showcase innovation in energy solutions across various scenarios. The company is highlighting value-driven technological advances in the renewable energy sector.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2918,6 +2957,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Europe experiences record-breaking heat throughout 2025</div>
                             <p class="nc-brief">Europe experienced above-average heat in 2025 across nearly all regions, with multiple climate records broken. This data demonstrates the accelerating pace of climate change impacts on the continent.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
@@ -2933,6 +2973,7 @@
                             <span class="nc-label">Not Covered</span>
                             <div class="nc-headline">Europe warming twice faster than global average</div>
                             <p class="nc-brief">A report concludes that Europe is warming more than twice as fast as the global average and is the fastest-warming continent. This finding underscores the disproportionate climate change impact on Europe compared to other regions.</p>
+                            <div class="card-spacer"></div>
                             <div class="nc-meta">
                                 <span>2 articles</span>
                                 <span>SRQ 0.24</span>
