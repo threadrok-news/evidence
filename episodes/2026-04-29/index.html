@@ -34,11 +34,11 @@
             --v4: #fbbf24; --v4-bg: #281f04;
             --v5: #52576c; --v5-bg: #131520;
 
-            --bias-l:  #24508a;
-            --bias-lc: #305a90;
-            --bias-c:  #505868;
-            --bias-rc: #8a2828;
-            --bias-r:  #6a1c1c;
+            --bias-l:  #1a3a6e;
+            --bias-lc: #233a7a;
+            --bias-c:  #404858;
+            --bias-rc: #7a2020;
+            --bias-r:  #581818;
             --bias-u:  #303040;
         }
 
@@ -566,7 +566,7 @@
         .nc-card-body { padding: 0.85rem 0.95rem 0.7rem; flex: 1; }
         .nc-label { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #5a6272; display: block; margin-bottom: 0.32rem; }
         .nc-headline { font-size: 0.9rem; font-weight: 600; color: #a8adc4; line-height: 1.35; margin-bottom: 0.42rem; transition: color 0.15s; }
-        .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; }
+        .nc-brief { font-size: 0.75rem; color: #707898; line-height: 1.5; margin: 0 0 0.4rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
         .nc-meta { display: flex; flex-wrap: wrap; gap: 0.32rem 0.7rem; font-size: 0.68rem; color: var(--text-muted); }
         .nc-card-footer { padding: 0.42rem 0.95rem; border-top: 1px solid var(--border-soft); }
         .nc-cta { font-size: 0.68rem; font-weight: 600; color: #5a6888; transition: color 0.15s; }
@@ -665,11 +665,12 @@
 
         /* ── Loaded story content styles ─────────────────── */
         /* Mirrors evidence_story_template.html .article-wrap internals */
-        #story-content .story-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.55rem; }
+        #story-content .story-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8090a8; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4rem; }
+        #story-content .story-category-bar { width: 3px; height: 0.7rem; border-radius: 2px; flex-shrink: 0; }
         #story-content .story-headline { font-size: 1.55rem; font-weight: 700; line-height: 1.25; color: var(--text); margin-bottom: 0.55rem; }
         #story-content .story-meta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.1rem; margin-bottom: 1.25rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-soft); }
-        #story-content .story-meta-item { font-size: 0.76rem; color: var(--text-muted); }
-        #story-content .story-meta-item strong { color: var(--text); }
+        #story-content .story-meta-item { font-size: 0.76rem; color: var(--text-dim); }
+        #story-content .story-meta-item strong { color: #606878; }
         #story-content .srq-inline { display: inline-flex; align-items: center; gap: 0.35rem; }
         #story-content .srq-track-sm { width: 44px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
         #story-content .srq-fill-sm { height: 100%; border-radius: 2px; background: linear-gradient(to right, #3a5a90, #357860); }
@@ -682,7 +683,7 @@
         #story-content .bias-bar-full { display: flex; height: 22px; border-radius: 5px; overflow: hidden; margin-bottom: 0.55rem; }
         #story-content .bseg { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: rgba(255,255,255,0.9); padding: 0 3px; overflow: hidden; white-space: nowrap; }
         #story-content .bseg.bl  { background: var(--bias-l); }
-        #story-content .bseg.blc { background: var(--bias-lc); color: #1a3a60; }
+        #story-content .bseg.blc { background: var(--bias-lc); }
         #story-content .bseg.bc  { background: var(--bias-c); }
         #story-content .bseg.brc { background: var(--bias-rc); }
         #story-content .bseg.br  { background: var(--bias-r); }
@@ -965,28 +966,28 @@
                     
                     
                     
-                    <div class="bspec-seg bs-lc" style="flex:4;background:#4a78c8"
+                    <div class="bspec-seg bs-lc" style="flex:4;background:var(--bias-lc)"
                          title="Lean Left: 4">LC</div>
                     
                     
                     
                     
                     
-                    <div class="bspec-seg bs-c" style="flex:7;background:#505868"
+                    <div class="bspec-seg bs-c" style="flex:7;background:var(--bias-c)"
                          title="Center: 7">C</div>
                     
                     
                     
                     
                     
-                    <div class="bspec-seg bs-rc" style="flex:1;background:#c04040"
+                    <div class="bspec-seg bs-rc" style="flex:1;background:var(--bias-rc)"
                          title="Lean Right: 1"></div>
                     
                     
                     
                     
                     
-                    <div class="bspec-seg bs-r" style="flex:1;background:#883030"
+                    <div class="bspec-seg bs-r" style="flex:1;background:var(--bias-r)"
                          title="Right: 1"></div>
                     
                     
@@ -1000,28 +1001,28 @@
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#4a78c8"></div>
+                        <div class="bsl-dot" style="background:var(--bias-lc)"></div>
                         <span>Lean L 4</span>
                     </div>
                     
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#505868"></div>
+                        <div class="bsl-dot" style="background:var(--bias-c)"></div>
                         <span>Center 7</span>
                     </div>
                     
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#c04040"></div>
+                        <div class="bsl-dot" style="background:var(--bias-rc)"></div>
                         <span>Lean R 1</span>
                     </div>
                     
                     
                     
                     <div class="bsl-item">
-                        <div class="bsl-dot" style="background:#883030"></div>
+                        <div class="bsl-dot" style="background:var(--bias-r)"></div>
                         <span>Right 1</span>
                     </div>
                     
@@ -1573,6 +1574,7 @@
                             <div class="mid-card" data-story-id="nc-18284" onclick="showNotCovered(18284)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Pentagon requests congressional approval for Department of War rename</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1622,6 +1624,7 @@
                             <div class="mid-card" data-story-id="nc-18262" onclick="showNotCovered(18262)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Andrzej Poczobut freed in Poland-Belarus prisoner swap</div>
                                     <p class="nc-brief">Prominent journalist Andrzej Poczobut was freed from prison in Belarus as part of a 10-person prisoner swap with Poland. The US brokered the diplomatic agreement that secured his release.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1667,6 +1670,7 @@
                             <div class="mid-card" data-story-id="nc-18267" onclick="showNotCovered(18267)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Ukraine accuses Israel of buying stolen grain</div>
                                     <p class="nc-brief">Ukraine&#39;s President Zelensky accused Israel of purchasing grain stolen by Russia from Ukrainian territories, deepening the diplomatic rift between the two nations. The accusation reflects tensions over Israel&#39;s grain imports amid the Ukraine-Russia conflict.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1714,6 +1718,7 @@
                             <div class="mid-card" data-story-id="nc-18280" onclick="showNotCovered(18280)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">King Charles addresses Congress on NATO and Ukraine support</div>
                                     <p class="nc-brief">King Charles delivered a speech to the US Congress during Trump&#39;s visit emphasizing NATO unity and Ukraine support.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1759,6 +1764,7 @@
                             <div class="mid-card" data-story-id="nc-18289" onclick="showNotCovered(18289)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">Trump claims King Charles agrees Iran nuclear ban</div>
                                     <p class="nc-brief">Trump claimed that King Charles agrees with him that Iran should not possess nuclear weapons.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1808,6 +1814,7 @@
                             <div class="mid-card" data-story-id="nc-18259" onclick="showNotCovered(18259)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c05858;flex-shrink:0"></span>GEOPOLITICS</span>
                                     <div class="mid-headline">US and allies support Panama sovereignty over canal</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -1964,6 +1971,7 @@
                             <div class="mid-card" data-story-id="nc-18293" onclick="showNotCovered(18293)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#4aaa78;flex-shrink:0"></span>ECONOMY</span>
                                     <div class="mid-headline">US consumer confidence rises April amid Iran tensions</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2011,6 +2019,7 @@
                             <div class="mid-card" data-story-id="nc-18294" onclick="showNotCovered(18294)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#4aaa78;flex-shrink:0"></span>ECONOMY</span>
                                     <div class="mid-headline">AI stocks decline while oil prices surge</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2364,6 +2373,7 @@
                             <div class="mid-card" data-story-id="nc-18317" onclick="showNotCovered(18317)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">King Charles III addresses U.S. Congress during state visit</div>
                                     <p class="nc-brief">King Charles III addressed a joint session of Congress during his US visit, with the event proceeding as scheduled without delays. The address marked a significant moment in the royal visit and US-UK relations.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2411,6 +2421,7 @@
                             <div class="mid-card" data-story-id="nc-18337" onclick="showNotCovered(18337)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">King Charles III White House state dinner with Trump</div>
                                     <p class="nc-brief">President Trump hosted a state dinner at the White House for King Charles III, featuring formal ceremonies and remarks. The dinner represents significant diplomatic engagement between the US and UK.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2454,6 +2465,7 @@
                             <div class="mid-card" data-story-id="nc-18332" onclick="showNotCovered(18332)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">FCC reviews Disney broadcast licenses after Kimmel Trump joke</div>
                                     <p class="nc-brief">The FCC ordered a review of Disney&#39;s broadcast station licenses following criticism from Trump regarding a Jimmy Kimmel joke about Melania Trump. The action has raised concerns about political interference in media regulation.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2501,6 +2513,7 @@
                             <div class="mid-card" data-story-id="nc-18339" onclick="showNotCovered(18339)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#8868c0;flex-shrink:0"></span>DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Republican disagreement over taxpayer funding Trump ballroom</div>
                                     
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2693,6 +2706,7 @@
                             <div class="mid-card" data-story-id="nc-18350" onclick="showNotCovered(18350)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#c07840;flex-shrink:0"></span>HEALTH</span>
                                     <div class="mid-headline">Alan Johnson stroke patient recovers from drug trial</div>
                                     <p class="nc-brief">Alan Johnson, a stroke patient, reported a remarkable recovery following participation in a drug trial.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -2825,6 +2839,7 @@
                             <div class="mid-card" data-story-id="nc-18356" onclick="showNotCovered(18356)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked · Scored</span>
+                                    <span class="story-tag" style="display:inline-flex;align-items:center;gap:0.2rem"><span style="display:inline-block;width:2px;height:0.6rem;border-radius:1px;background:#40a090;flex-shrink:0"></span>CLIMATE ENERGY</span>
                                     <div class="mid-headline">Electric air taxis debut in New York City</div>
                                     <p class="nc-brief">Electric air taxis operated their first flights in New York City.</p>
                                     <div class="story-metrics" style="margin-top:0.45rem">
@@ -3046,7 +3061,7 @@
   
 
   <div id="pool-seg-18273">
-    <div class="story-category">GEOPOLITICS</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS</div>
     <h1 class="story-headline">UAE Formally Exits OPEC Oil Cartel</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -4525,7 +4540,7 @@
   
 
   <div id="pool-seg-18326">
-    <div class="story-category">DOMESTIC_POLITICS</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS</div>
     <h1 class="story-headline">DOJ Secures Second Indictment Against James Comey</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -5687,7 +5702,7 @@
   
 
   <div id="pool-seg-18334">
-    <div class="story-category">DOMESTIC_POLITICS</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS</div>
     <h1 class="story-headline">FCC Orders ABC License Review Amid Trump Dispute</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6341,7 +6356,7 @@
   
 
   <div id="pool-dev-18328">
-    <div class="story-category">DOMESTIC_POLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · DEVELOPING</div>
     <h1 class="story-headline">Comey Charge Tied to Seashell Photo Post</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6448,7 +6463,7 @@
   
 
   <div id="pool-dev-18320">
-    <div class="story-category">DOMESTIC_POLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · DEVELOPING</div>
     <h1 class="story-headline">Appeals Court Rejects Trump Immigration Detention Policy</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6555,7 +6570,7 @@
   
 
   <div id="pool-dev-18315">
-    <div class="story-category">DOMESTIC_POLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · DEVELOPING</div>
     <h1 class="story-headline">King Charles Addresses Joint Session of Congress</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6662,7 +6677,7 @@
   
 
   <div id="pool-dev-18264">
-    <div class="story-category">GEOPOLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · DEVELOPING</div>
     <h1 class="story-headline">Charles Promotes US-UK Unity Amid Iran Tensions</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6769,7 +6784,7 @@
   
 
   <div id="pool-dev-18325">
-    <div class="story-category">DOMESTIC_POLITICS · DEVELOPING</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · DEVELOPING</div>
     <h1 class="story-headline">DOJ Charges Comey With Threat to Kill Trump</h1>
     <div class="story-meta-row">
       <span class="story-meta-item">2026-04-29</span>
@@ -6848,7 +6863,7 @@
   
   
   <div id="pool-nc-18336">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Fed Chair Powell Interest Rate Decision Term End</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -6944,7 +6959,7 @@
   </div>
   
   <div id="pool-nc-18317">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">King Charles III addresses U.S. Congress during state visit</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -7068,7 +7083,7 @@
   </div>
   
   <div id="pool-nc-18337">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">King Charles III White House state dinner with Trump</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
@@ -7174,7 +7189,7 @@
   </div>
   
   <div id="pool-nc-18333">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Nathan Chasing Horse sentenced life sexual assault</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7270,7 +7285,7 @@
   </div>
   
   <div id="pool-nc-18343">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">California gubernatorial debate lacks clear frontrunner</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7366,7 +7381,7 @@
   </div>
   
   <div id="pool-nc-18332">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">FCC reviews Disney broadcast licenses after Kimmel Trump joke</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -7490,7 +7505,7 @@
   </div>
   
   <div id="pool-nc-18324">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">South Korean court extends Lee Myung-bak&#39;s wife sentence</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7554,7 +7569,7 @@
   </div>
   
   <div id="pool-nc-18327">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Former FBI Director James Comey indicted by grand jury</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7638,7 +7653,7 @@
   </div>
   
   <div id="pool-nc-18339">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Republican disagreement over taxpayer funding Trump ballroom</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>10</strong> articles tracked</span>
@@ -7766,7 +7781,7 @@
   </div>
   
   <div id="pool-nc-18341">
-    <div class="story-category">DOMESTIC_POLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · NOT COVERED</div>
     <h1 class="story-headline">Trump-appointed judges overturn Texas ruling</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7854,7 +7869,7 @@
   
   
   <div id="pool-nc-18276">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">US soldier charged with Maduro prediction market betting</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -7950,7 +7965,7 @@
   </div>
   
   <div id="pool-nc-18284">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Pentagon requests congressional approval for Department of War rename</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>5</strong> articles tracked</span>
@@ -8051,7 +8066,7 @@
   </div>
   
   <div id="pool-nc-18262">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Andrzej Poczobut freed in Poland-Belarus prisoner swap</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -8176,7 +8191,7 @@
   </div>
   
   <div id="pool-nc-18267">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Ukraine accuses Israel of buying stolen grain</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -8300,7 +8315,7 @@
   </div>
   
   <div id="pool-nc-18282">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Austrian man admits Taylor Swift concert attack plot</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8396,7 +8411,7 @@
   </div>
   
   <div id="pool-nc-18280">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">King Charles addresses Congress on NATO and Ukraine support</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>3</strong> articles tracked</span>
@@ -8551,7 +8566,7 @@
   </div>
   
   <div id="pool-nc-18289">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Trump claims King Charles agrees Iran nuclear ban</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>5</strong> articles tracked</span>
@@ -8674,7 +8689,7 @@
   </div>
   
   <div id="pool-nc-18259">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">US and allies support Panama sovereignty over canal</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>5</strong> articles tracked</span>
@@ -8775,7 +8790,7 @@
   </div>
   
   <div id="pool-nc-18261">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">Trump administration deadlock with Iran nuclear negotiations</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8859,7 +8874,7 @@
   </div>
   
   <div id="pool-nc-18283">
-    <div class="story-category">GEOPOLITICS · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · NOT COVERED</div>
     <h1 class="story-headline">McConnell criticizes Pentagon delay on Ukraine military aid</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -8925,7 +8940,7 @@
   
   
   <div id="pool-nc-18293">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">US consumer confidence rises April amid Iran tensions</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -9027,7 +9042,7 @@
   </div>
   
   <div id="pool-nc-18294">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">AI stocks decline while oil prices surge</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>4</strong> articles tracked</span>
@@ -9129,7 +9144,7 @@
   </div>
   
   <div id="pool-nc-18308">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">New Zealand household living costs increase 2.1 percent</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9215,7 +9230,7 @@
   </div>
   
   <div id="pool-nc-18291">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Trump implements new import taxes after tariff rejection</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9341,7 +9356,7 @@
   </div>
   
   <div id="pool-nc-18299">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Eurozone inflation surge driven by energy costs</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9437,7 +9452,7 @@
   </div>
   
   <div id="pool-nc-18303">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Electric air taxis debut in New York City</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9513,7 +9528,7 @@
   </div>
   
   <div id="pool-nc-18304">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Duke Energy announces June rate increase plan</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9589,7 +9604,7 @@
   </div>
   
   <div id="pool-nc-18305">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Woodside Energy profits from Middle East conflict oil prices</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9696,7 +9711,7 @@
   </div>
   
   <div id="pool-nc-18307">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Australia Q1 inflation rises amid Middle East tensions</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9833,7 +9848,7 @@
   </div>
   
   <div id="pool-nc-18310">
-    <div class="story-category">ECONOMY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#4aaa78"></span>ECONOMY · NOT COVERED</div>
     <h1 class="story-headline">Federal Reserve holds rates steady under Powell leadership transition</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9909,7 +9924,7 @@
   
   
   <div id="pool-nc-18360">
-    <div class="story-category">CLIMATE_ENERGY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#40a090"></span>CLIMATE_ENERGY · NOT COVERED</div>
     <h1 class="story-headline">Sungrow hosts GRES 2026 renewable energy conference</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -9985,7 +10000,7 @@
   </div>
   
   <div id="pool-nc-18361">
-    <div class="story-category">CLIMATE_ENERGY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#40a090"></span>CLIMATE_ENERGY · NOT COVERED</div>
     <h1 class="story-headline">Europe experiences record-breaking heat throughout 2025</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -10071,7 +10086,7 @@
   </div>
   
   <div id="pool-nc-18362">
-    <div class="story-category">CLIMATE_ENERGY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#40a090"></span>CLIMATE_ENERGY · NOT COVERED</div>
     <h1 class="story-headline">Europe warming twice faster than global average</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -10157,7 +10172,7 @@
   </div>
   
   <div id="pool-nc-18356">
-    <div class="story-category">CLIMATE_ENERGY · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#40a090"></span>CLIMATE_ENERGY · NOT COVERED</div>
     <h1 class="story-headline">Electric air taxis debut in New York City</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>6</strong> articles tracked</span>
@@ -10311,7 +10326,7 @@
   
   
   <div id="pool-nc-18352">
-    <div class="story-category">HEALTH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c07840"></span>HEALTH · NOT COVERED</div>
     <h1 class="story-headline">Provincial funding expands primary care access to 11000 people</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -10387,7 +10402,7 @@
   </div>
   
   <div id="pool-nc-18353">
-    <div class="story-category">HEALTH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c07840"></span>HEALTH · NOT COVERED</div>
     <h1 class="story-headline">Canberra Hospital emergency department staffing crisis</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
@@ -10483,7 +10498,7 @@
   </div>
   
   <div id="pool-nc-18350">
-    <div class="story-category">HEALTH · NOT COVERED</div>
+    <div class="story-category"><span class="story-category-bar" style="background:#c07840"></span>HEALTH · NOT COVERED</div>
     <h1 class="story-headline">Alan Johnson stroke patient recovers from drug trial</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>27</strong> articles tracked</span>
