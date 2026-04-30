@@ -725,6 +725,16 @@
         #story-content .bias-tag.brc { background: #2a1808; color: var(--bias-rc); }
         #story-content .bias-tag.br  { background: #2a0808; color: var(--bias-r); }
         #story-content .claim-scores { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; font-size: 0.72rem; color: var(--text-dim); padding-top: 0.45rem; border-top: 1px solid var(--border-soft); }
+
+        /* Sonar citations */
+        #story-content .sonar-section { border-top: 1px solid var(--border-soft); margin-top: 0.55rem; padding-top: 0.55rem; }
+        #story-content .sonar-explanation { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin: 0.2rem 0 0.4rem; }
+        .sonar-badge { display: inline-flex; align-items: center; font-size: 0.63rem; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-right: 0.35rem; letter-spacing: 0.02em; }
+        .sonar-confirmed { background: #0a1f12; color: #3a8a50; border: 1px solid #1a3a22; }
+        .sonar-denied    { background: #1f0a0a; color: #a05050; border: 1px solid #3a1a1a; }
+        .sonar-uncertain { background: #111520; color: #5070a0; border: 1px solid #1e2840; }
+        .sonar-cite { background: #0c1220; color: #4468a0; border: 1px solid #1a2840; font-size: 0.7rem; }
+        .sonar-cite:hover { background: #0e1830; color: #6888c0; }
         #story-content .score-kv { display: flex; gap: 0.22rem; }
         #story-content .score-k { color: var(--text-dim); }
         #story-content .score-v { color: var(--text-muted); font-weight: 600; }
@@ -924,38 +934,38 @@
                 
                 
                 
-                <div class="cvs-row cvs-row-zero">
+                <div class="cvs-row">
                     <span class="cvs-row-tier" style="color:var(--v1,var(--text-muted))">V1</span>
-                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V1" style="width:0.0%"></div></div>
-                    <span class="cvs-row-count">—</span>
+                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V1" style="width:3.0%"></div></div>
+                    <span class="cvs-row-count">1</span>
                 </div>
                 
                 
                 <div class="cvs-row">
                     <span class="cvs-row-tier" style="color:var(--v2,var(--text-muted))">V2</span>
                     <div class="cvs-track"><div class="cvs-fill cvs-fill-V2" style="width:100.0%"></div></div>
-                    <span class="cvs-row-count">33</span>
+                    <span class="cvs-row-count">38</span>
                 </div>
                 
                 
                 <div class="cvs-row">
                     <span class="cvs-row-tier" style="color:var(--v3,var(--text-muted))">V3</span>
-                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V3" style="width:64.0%"></div></div>
+                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V3" style="width:55.0%"></div></div>
                     <span class="cvs-row-count">21</span>
                 </div>
                 
                 
-                <div class="cvs-row cvs-row-zero">
+                <div class="cvs-row">
                     <span class="cvs-row-tier" style="color:var(--v4,var(--text-muted))">V4</span>
-                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V4" style="width:0.0%"></div></div>
-                    <span class="cvs-row-count">—</span>
+                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V4" style="width:5.0%"></div></div>
+                    <span class="cvs-row-count">2</span>
                 </div>
                 
                 
                 <div class="cvs-row">
                     <span class="cvs-row-tier" style="color:var(--v5,var(--text-muted))">V5</span>
-                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V5" style="width:45.0%"></div></div>
-                    <span class="cvs-row-count">15</span>
+                    <div class="cvs-track"><div class="cvs-fill cvs-fill-V5" style="width:18.0%"></div></div>
+                    <span class="cvs-row-count">7</span>
                 </div>
                 
             </div>
@@ -2063,11 +2073,11 @@
                                         
                                     </div>
                                     <div class="cvs-mini-dist">
-                                        
-                                        
+                                        <span class="cvs-badge cvs-V1"><span class="cvs-dot cvs-dot-V1"></span>V1×1</span>
+                                        <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2×5</span>
                                         <span class="cvs-badge cvs-V3"><span class="cvs-dot cvs-dot-V3"></span>V3×2</span>
-                                        
-                                        <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5×15</span>
+                                        <span class="cvs-badge cvs-V4"><span class="cvs-dot cvs-dot-V4"></span>V4×2</span>
+                                        <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5×7</span>
                                     </div>
                                     
                                     
@@ -2782,6 +2792,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -2844,6 +2855,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -2908,6 +2920,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -2970,6 +2983,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3034,6 +3048,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3096,6 +3111,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3160,6 +3176,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3222,6 +3239,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3286,6 +3304,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3348,6 +3367,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3412,6 +3432,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3474,6 +3495,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3538,6 +3560,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3600,6 +3623,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
@@ -3664,6 +3688,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3727,6 +3752,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.719</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -3745,6 +3771,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Trump is weighing reducing American troop presence in Germany&rdquo;</p>
           <p class="claim-explanation">Claim appears in 6+ article titles from different sources with consistent attribution to Trump.</p>
+          
           
           
           <div class="claim-scores">
@@ -3767,6 +3794,7 @@
           <p class="claim-explanation">Multiple titles explicitly link the troop reduction consideration to an Iran-related dispute or feud.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -3785,6 +3813,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The troop reduction is connected to NATO tensions&rdquo;</p>
           <p class="claim-explanation">At least two titles reference NATO tensions in connection with the troop reduction announcement.</p>
+          
           
           
           <div class="claim-scores">
@@ -3822,11 +3851,11 @@
       <span class="story-meta-item">2026-04-29</span>
       <span class="story-meta-item"><strong>13</strong> outlets</span>
       <span class="story-meta-item srq-inline">SRQ <div class="srq-track-sm"><div class="srq-fill-sm" style="width:70.0%"></div></div><strong>0.70</strong></span>
-      
-      
+      <span class="cvs-badge cvs-V1"><span class="cvs-dot cvs-dot-V1"></span>V1×1</span>
+      <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2×5</span>
       <span class="cvs-badge cvs-V3"><span class="cvs-dot cvs-dot-V3"></span>V3×2</span>
-      
-      <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5×15</span>
+      <span class="cvs-badge cvs-V4"><span class="cvs-dot cvs-dot-V4"></span>V4×2</span>
+      <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5×7</span>
     </div>
     <div class="key-stat-box">13 articles · SRQ 0.699</div>
     <p class="story-brief">Jerome Powell will step down as Fed chair in May but stay on the board of governors through 2028, citing Trump administration legal actions as context for the decision.</p>
@@ -3891,13 +3920,13 @@
       
       <div class="claim-card" id="claim-3112">
         <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
+          <span class="cvs-badge cvs-V4"><span class="cvs-dot cvs-dot-V4"></span>V4 Contested</span>
           <span class="claim-type-tag">factual</span>
           <a class="claim-permalink" href="#claim-3112">#3112</a>
         </div>
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Kevin Warsh was confirmed by a Senate committee for Fed chair&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
+          <p class="claim-explanation">Contested — web sources contradict claim: Senate committee advanced Warsh&#39;s nomination but full Senate confirmation vote is pending; no sources confirm final approval.</p>
           
           
           <div class="sources-section">
@@ -3943,6 +3972,32 @@
             </div>
           </div>
           
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-denied">
+                ✗ Web-contested
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Senate committee advanced Warsh&#39;s nomination but full Senate confirmation vote is pending; no sources confirm final approval.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.politico.com/news/2026/04/29/warsh-senate-banking-fed-chair-powell-00898101" target="_blank" rel="noopener noreferrer">www.politico.com/news/2026/04/29/warsh-…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://abcnews.com/Business/fed-chair-nominee-kevin-warsh-advances-senate-confirmation/story?id=132490998" target="_blank" rel="noopener noreferrer">abcnews.com/Business/fed-chair-nominee-…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=dfGwfjXaBBw" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=dfGwfjXaBBw<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=fFL7hanZE58" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=fFL7hanZE58<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
@@ -3952,15 +4007,15 @@
         </div>
       </div>
       
-      <div class="claim-card" id="claim-3113">
+      <div class="claim-card" id="claim-3115">
         <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">attributional</span>
-          <a class="claim-permalink" href="#claim-3113">#3113</a>
+          <span class="cvs-badge cvs-V1"><span class="cvs-dot cvs-dot-V1"></span>V1 Verified</span>
+          <span class="claim-type-tag">factual</span>
+          <a class="claim-permalink" href="#claim-3115">#3115</a>
         </div>
         <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Jerome Powell will step aside as Fed chair when his term ends in May&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
+          <p class="claim-text">&ldquo;Jerome Powell&#39;s term as Federal Reserve Chair ends next month&rdquo;</p>
+          <p class="claim-explanation">Verified — confirmed by official source: Multiple credible sources, including Federal Reserve History and Brookings, confirm Jerome Powell&#39;s term as Fed Chair ends in May 2026, next month from April 30, 2026.</p>
           
           
           <div class="sources-section">
@@ -4002,6 +4057,572 @@
               
               <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
               
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Multiple credible sources, including Federal Reserve History and Brookings, confirm Jerome Powell&#39;s term as Fed Chair ends in May 2026, next month from April 30, 2026.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.chase.com/personal/investments/learning-and-insights/article/will-jerome-powell-remain-at-the-federal-reserve-after-his-term-as-chair-ends" target="_blank" rel="noopener noreferrer">www.chase.com/personal/investments/lear…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.federalreservehistory.org/people/jerome-h-powell" target="_blank" rel="noopener noreferrer">www.federalreservehistory.org/people/je…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://en.wikipedia.org/wiki/Jerome_Powell" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Jerome_Powell<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.brookings.edu/articles/who-has-to-leave-the-federal-reserve-next-2/" target="_blank" rel="noopener noreferrer">www.brookings.edu/articles/who-has-to-l…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.mufgamericas.com/sites/default/files/document/2024-05/Chart-of-the-Day_5_6_The-US-Election-and-Federal-Reserve-Independence.pdf" target="_blank" rel="noopener noreferrer">www.mufgamericas.com/sites/default/file…<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3116">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2 Corroborated</span>
+          <span class="claim-type-tag">attributional</span>
+          <a class="claim-permalink" href="#claim-3116">#3116</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Jerome Powell said he plans to stay on at the Federal Reserve as a governor after his term as chair ends&rdquo;</p>
+          <p class="claim-explanation">Corroborated — confirmed by 2 independent web sources: CBS News reports Powell stated on Wednesday he plans to remain as Fed governor after May term end; YouTube transcript confirms he will serve &#39;for a period of time&#39; post-chair term.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">CBS News reports Powell stated on Wednesday he plans to remain as Fed governor after May term end; YouTube transcript confirms he will serve &#39;for a period of time&#39; post-chair term.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.cbsnews.com/news/federal-reserve-fomc-meeting-today-rate-decision-jerome-powell-kevin-warsh/" target="_blank" rel="noopener noreferrer">www.cbsnews.com/news/federal-reserve-fo…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=zoR-s8xzCJI" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=zoR-s8xzCJI<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.federalreservehistory.org/people/jerome-h-powell" target="_blank" rel="noopener noreferrer">www.federalreservehistory.org/people/je…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://en.wikipedia.org/wiki/Federal_Reserve_Board_of_Governors" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/Federal_Reserve_B…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.mufgamericas.com/sites/default/files/document/2024-05/Chart-of-the-Day_5_6_The-US-Election-and-Federal-Reserve-Independence.pdf" target="_blank" rel="noopener noreferrer">www.mufgamericas.com/sites/default/file…<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3117">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2 Corroborated</span>
+          <span class="claim-type-tag">factual</span>
+          <a class="claim-permalink" href="#claim-3117">#3117</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Powell decided to stay on at the Fed&rdquo;</p>
+          <p class="claim-explanation">Corroborated — confirmed by 2 independent web sources: Multiple WSJ YouTube videos quote Powell stating he has &#39;no choice&#39; but to stay on the Fed Board as a governor until legal challenges resolve, beyond his chair term ending May 15.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Multiple WSJ YouTube videos quote Powell stating he has &#39;no choice&#39; but to stay on the Fed Board as a governor until legal challenges resolve, beyond his chair term ending May 15.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=jsWE2VbR6I8" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=jsWE2VbR6I8<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=MAfh3N_FnMs" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=MAfh3N_FnMs<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3118">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2 Corroborated</span>
+          <span class="claim-type-tag">attributional</span>
+          <a class="claim-permalink" href="#claim-3118">#3118</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Powell plans to remain on the Federal Reserve board&rdquo;</p>
+          <p class="claim-explanation">Corroborated — confirmed by 3 independent web sources: Multiple sources including AP report and video transcripts confirm Powell plans to remain on Fed Board of Governors after chair term ends May 15.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Multiple sources including AP report and video transcripts confirm Powell plans to remain on Fed Board of Governors after chair term ends May 15.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=GQmZU4IG-HQ" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=GQmZU4IG-HQ<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=OawR_vb7yUE" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=OawR_vb7yUE<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=lJwUt92nceQ" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=lJwUt92nceQ<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.timescolonist.com/national-business/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal-actions-by-administration-12210754" target="_blank" rel="noopener noreferrer">www.timescolonist.com/national-business…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.federalreserve.gov/newsevents.htm" target="_blank" rel="noopener noreferrer">www.federalreserve.gov/newsevents.htm<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3119">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2 Corroborated</span>
+          <span class="claim-type-tag">attributional</span>
+          <a class="claim-permalink" href="#claim-3119">#3119</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Powell plans to stay on at the Fed after his term as chair ends&rdquo;</p>
+          <p class="claim-explanation">Corroborated — confirmed by 3 independent web sources: Powell announced he will remain on the Fed board as governor after his chair term ends May 15, citing legal attacks on the Fed&#39;s independence.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Powell announced he will remain on the Fed board as governor after his chair term ends May 15, citing legal attacks on the Fed&#39;s independence.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.investmentexecutive.com/news/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal-actions-by-administration/" target="_blank" rel="noopener noreferrer">www.investmentexecutive.com/news/powell…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=L6MXFZhGY6Q" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=L6MXFZhGY6Q<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.foxnews.com/politics/powell-could-remain-fed-despite-looming-end-chair-term" target="_blank" rel="noopener noreferrer">www.foxnews.com/politics/powell-could-r…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=D6QCKy0V2uA" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=D6QCKy0V2uA<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3120">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2 Corroborated</span>
+          <span class="claim-type-tag">factual</span>
+          <a class="claim-permalink" href="#claim-3120">#3120</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Powell refuses to leave his position&rdquo;</p>
+          <p class="claim-explanation">Corroborated — confirmed by 3 independent web sources: Multiple news sources report Powell stating he has &#39;no intention&#39; of leaving the Fed and will not resign if asked by Trump, with his term ending May 2026.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-confirmed">
+                ✓ Web-confirmed
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Multiple news sources report Powell stating he has &#39;no intention&#39; of leaving the Fed and will not resign if asked by Trump, with his term ending May 2026.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.politico.com/news/2026/03/18/powell-fed-doj-investigation-trump-warsh-inflation-00834681" target="_blank" rel="noopener noreferrer">www.politico.com/news/2026/03/18/powell…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=nRCyQzBlIzw" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=nRCyQzBlIzw<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.cbsnews.com/news/fed-chair-jerome-powell-wont-resign-if-asked-by-trump/" target="_blank" rel="noopener noreferrer">www.cbsnews.com/news/fed-chair-jerome-p…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=qFNoeX7_lL8" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=qFNoeX7_lL8<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/shorts/hpx44e-LBno" target="_blank" rel="noopener noreferrer">www.youtube.com/shorts/hpx44e-LBno<span class="src-link-icon">↗</span></a>
+              
+            </div>
+          </div>
+          
+          <div class="claim-scores">
+            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
+            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
+            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
+            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="claim-card" id="claim-3113">
+        <div class="claim-card-header">
+          <span class="cvs-badge cvs-V4"><span class="cvs-dot cvs-dot-V4"></span>V4 Contested</span>
+          <span class="claim-type-tag">attributional</span>
+          <a class="claim-permalink" href="#claim-3113">#3113</a>
+        </div>
+        <div class="claim-card-body">
+          <p class="claim-text">&ldquo;Jerome Powell will step aside as Fed chair when his term ends in May&rdquo;</p>
+          <p class="claim-explanation">Contested — web sources contradict claim: Multiple sources confirm Powell plans to step aside as Fed chair in May but remain as a board governor until 2028.</p>
+          
+          
+          <div class="sources-section">
+            <div class="sources-header">Sources (6)</div>
+            <div class="sources-grid">
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
+              
+              
+              
+              
+              
+              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-denied">
+                ✗ Web-contested
+              </span>
+              Live Web Sources
+            </div>
+            <p class="sonar-explanation">Multiple sources confirm Powell plans to step aside as Fed chair in May but remain as a board governor until 2028.</p>
+            <div class="sources-grid">
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.cbsnews.com/news/federal-reserve-fomc-meeting-today-rate-decision-jerome-powell-kevin-warsh/" target="_blank" rel="noopener noreferrer">www.cbsnews.com/news/federal-reserve-fo…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.youtube.com/watch?v=p2Q0FyTa-cE" target="_blank" rel="noopener noreferrer">www.youtube.com/watch?v=p2Q0FyTa-cE<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.chase.com/personal/investments/learning-and-insights/article/will-jerome-powell-remain-at-the-federal-reserve-after-his-term-as-chair-ends" target="_blank" rel="noopener noreferrer">www.chase.com/personal/investments/lear…<span class="src-link-icon">↗</span></a>
+              
+              
+              <a class="src-chip sonar-cite" href="https://www.federalreservehistory.org/people/jerome-h-powell" target="_blank" rel="noopener noreferrer">www.federalreservehistory.org/people/je…<span class="src-link-icon">↗</span></a>
               
             </div>
           </div>
@@ -4069,380 +4690,25 @@
             </div>
           </div>
           
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3115">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">factual</span>
-          <a class="claim-permalink" href="#claim-3115">#3115</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Jerome Powell&#39;s term as Federal Reserve Chair ends next month&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
           
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
-            <div class="sources-grid">
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
-              
+          <div class="sources-section sonar-section">
+            <div class="sources-header">
+              <span class="sonar-badge sonar-uncertain">
+                ~ Web-checked
+              </span>
+              Live Web Sources
             </div>
-          </div>
-          
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3116">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">attributional</span>
-          <a class="claim-permalink" href="#claim-3116">#3116</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Jerome Powell said he plans to stay on at the Federal Reserve as a governor after his term as chair ends&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
-          
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
+            <p class="sonar-explanation">Powell&#39;s governor term ends Jan 31, 2028, but he has not confirmed staying post-chair term; tradition is to resign, though possible to remain.</p>
             <div class="sources-grid">
               
               
+              <a class="src-chip sonar-cite" href="https://newsroom.ap.org/detail/CriminalinvestigationraiseskeyquestionWhetherChairPowellleavesFedinMay/4c26310b28f64178a1f521d27d0c8db5/text" target="_blank" rel="noopener noreferrer">newsroom.ap.org/detail/Criminalinvestig…<span class="src-link-icon">↗</span></a>
               
               
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
+              <a class="src-chip sonar-cite" href="https://www.mufgamericas.com/sites/default/files/document/2024-05/Chart-of-the-Day_5_6_The-US-Election-and-Federal-Reserve-Independence.pdf" target="_blank" rel="noopener noreferrer">www.mufgamericas.com/sites/default/file…<span class="src-link-icon">↗</span></a>
               
               
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
-              
-            </div>
-          </div>
-          
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3117">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">factual</span>
-          <a class="claim-permalink" href="#claim-3117">#3117</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Powell decided to stay on at the Fed&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
-          
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
-            <div class="sources-grid">
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
-              
-            </div>
-          </div>
-          
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3118">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">attributional</span>
-          <a class="claim-permalink" href="#claim-3118">#3118</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Powell plans to remain on the Federal Reserve board&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
-          
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
-            <div class="sources-grid">
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
-              
-            </div>
-          </div>
-          
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3119">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">attributional</span>
-          <a class="claim-permalink" href="#claim-3119">#3119</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Powell plans to stay on at the Fed after his term as chair ends&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
-          
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
-            <div class="sources-grid">
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
-              
-            </div>
-          </div>
-          
-          <div class="claim-scores">
-            <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
-            <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
-            <span class="score-kv"><span class="score-k">Factuality</span><span class="score-v">0.59</span></span>
-            <span class="score-kv"><span class="score-k">Bias div</span><span class="score-v">0.30</span></span>
-          </div>
-        </div>
-      </div>
-      
-      <div class="claim-card" id="claim-3120">
-        <div class="claim-card-header">
-          <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5 Unverified</span>
-          <span class="claim-type-tag">factual</span>
-          <a class="claim-permalink" href="#claim-3120">#3120</a>
-        </div>
-        <div class="claim-card-body">
-          <p class="claim-text">&ldquo;Powell refuses to leave his position&rdquo;</p>
-          <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
-          
-          
-          <div class="sources-section">
-            <div class="sources-header">Sources (6)</div>
-            <div class="sources-grid">
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://www.pbs.org/newshour/show/powell-says-he-will-stay-on-fed-board-after-chair-term-ends-addressing-trumps-attacks" target="_blank" rel="noopener noreferrer">pbs.org<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip sc" href="https://thehill.com/business/5855705-powell-stays-federal-reserve/" target="_blank" rel="noopener noreferrer">thehill.com<span class="bias-tag bc">C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip slc" href="https://www.hindustantimes.com/world-news/us-news/powells-decision-to-stay-on-at-fed-ignites-new-trump-insult-101777502546538.html" target="_blank" rel="noopener noreferrer">hindustantimes.com<span class="bias-tag blc">L-C</span><span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://lasvegassun.com/news/2026/apr/28/powell-plans-to-remain-on-fed-board-cites-legal-ac/" target="_blank" rel="noopener noreferrer">lasvegassun.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.2news.com/news/national/powell-plans-to-stay-on-at-fed-after-his-term-as-chair-ends-citing-legal/article_32beb0d6-1d38-58b3-8338-a4c08b67a2c4.html" target="_blank" rel="noopener noreferrer">2news.com<span class="src-link-icon">↗</span></a>
-              
-              
-              
-              
-              
-              <a class="src-chip " href="https://www.investmentnews.com/fixed-income/powell-refuses-to-leave-trumps-legal-assault-on-the-fed-forces-an-unprecedented-stand/266370" target="_blank" rel="noopener noreferrer">investmentnews.com<span class="src-link-icon">↗</span></a>
-              
+              <a class="src-chip sonar-cite" href="https://www.federalreservehistory.org/people/jerome-h-powell" target="_blank" rel="noopener noreferrer">www.federalreservehistory.org/people/je…<span class="src-link-icon">↗</span></a>
               
             </div>
           </div>
@@ -4510,6 +4776,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
@@ -4572,6 +4839,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
@@ -4636,6 +4904,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
@@ -4698,6 +4967,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
@@ -4762,6 +5032,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.553</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5</span></span>
@@ -4780,6 +5051,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Jerome Powell plans to remain on the Federal Reserve board after his term as chair expires&rdquo;</p>
           <p class="claim-explanation">This decision is reported in 5+ article titles from different outlets with consistent framing.</p>
+          
           
           
           <div class="claim-scores">
@@ -4802,6 +5074,7 @@
           <p class="claim-explanation">Multiple titles specifically state Powell cited legal actions by the administration as justification.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -4820,6 +5093,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Powell&#39;s decision to remain at the Fed prompted criticism from Trump&rdquo;</p>
           <p class="claim-explanation">Only one title references Trump insult; cannot confirm from titles alone whether this was directed at Powell or his decision.</p>
+          
           
           
           <div class="claim-scores">
@@ -4972,6 +5246,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5028,6 +5303,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5086,6 +5362,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5142,6 +5419,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5200,6 +5478,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5256,6 +5535,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5314,6 +5594,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5370,6 +5651,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5428,6 +5710,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5484,6 +5767,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5542,6 +5826,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5598,6 +5883,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5656,6 +5942,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5712,6 +5999,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5770,6 +6058,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5826,6 +6115,7 @@
               
             </div>
           </div>
+          
           
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
@@ -5884,6 +6174,7 @@
             </div>
           </div>
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.696</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">3/5</span></span>
@@ -5902,6 +6193,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The U.S. has charged a Sinaloa state governor with drug trafficking offences&rdquo;</p>
           <p class="claim-explanation">Reported in 5 article titles from different sources with consistent framing of the charge.</p>
+          
           
           
           <div class="claim-scores">
@@ -5924,6 +6216,7 @@
           <p class="claim-explanation">Multiple titles confirm additional Mexican officials were charged in connection with the same case.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -5942,6 +6235,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The charged Mexican officials allegedly aided the Sinaloa Cartel&rdquo;</p>
           <p class="claim-explanation">At least two titles state the officials were charged with aiding or smuggling for the Sinaloa Cartel.</p>
+          
           
           
           <div class="claim-scores">
@@ -6011,6 +6305,7 @@
           <p class="claim-explanation">This indictment is reported in 5+ article titles with consistent framing.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6031,6 +6326,7 @@
           <p class="claim-explanation">Multiple titles state that officials characterize the post as a threat.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6049,6 +6345,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The former FBI director appeared in court on the charge&rdquo;</p>
           <p class="claim-explanation">At least three titles report the former director&#39;s court appearance.</p>
+          
           
           
           <div class="claim-scores">
@@ -6118,6 +6415,7 @@
           <p class="claim-explanation">Reported in 6 article titles from different sources.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6138,6 +6436,7 @@
           <p class="claim-explanation">Multiple titles state the map is designed to help Republicans or favor the party.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6156,6 +6455,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The map could help Republicans flip approximately 4 House seats&rdquo;</p>
           <p class="claim-explanation">At least three titles project the map could shift 4 House seats to Republicans.</p>
+          
           
           
           <div class="claim-scores">
@@ -6225,6 +6525,7 @@
           <p class="claim-explanation">Reported in 5 article titles as a congressional hearing or testimony.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6245,6 +6546,7 @@
           <p class="claim-explanation">At least one title specifies the six-hour duration; appears in multiple titles.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6263,6 +6565,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;The hearing revealed partisan divisions over Iran war strategy&rdquo;</p>
           <p class="claim-explanation">Multiple titles characterize the hearing as contentious and revealing partisan divide.</p>
+          
           
           
           <div class="claim-scores">
@@ -6332,6 +6635,7 @@
           <p class="claim-explanation">Reported in 6 article titles with consistent attribution to Trump&#39;s statement.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6350,6 +6654,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Trump characterizes this as agreement with his own position on Iran&#39;s nuclear capability&rdquo;</p>
           <p class="claim-explanation">Multiple titles frame the claim as Trump asserting agreement with his stance.</p>
+          
           
           
           <div class="claim-scores">
@@ -6419,6 +6724,7 @@
           <p class="claim-explanation">This core event fact appears across all three titles.</p>
           
           
+          
           <div class="claim-scores">
             <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.000</span></span>
             <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">0/5</span></span>
@@ -6437,6 +6743,7 @@
         <div class="claim-card-body">
           <p class="claim-text">&ldquo;Police declared the stabbing attack a terrorist incident.&rdquo;</p>
           <p class="claim-explanation">All titles explicitly state the police declaration.</p>
+          
           
           
           <div class="claim-scores">
