@@ -582,7 +582,8 @@
         .developing-section .cat-name { color: #8a7a30; }
         .developing-section .cat-heading { border-bottom-color: #222516; }
         .dev-notice { font-size: 0.77rem; color: #5a5030; background: #0a0c06; border: 1px solid #1a1c0a; border-radius: 3px; padding: 0.38rem 0.65rem; margin-bottom: 0.8rem; }
-        .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 0.65rem; }
+        .dev-carousel-header { display: flex; align-items: center; margin-bottom: 0.5rem; }
+        .dev-carousel-header .carousel-btns { margin-left: auto; }
 
         .dev-card {
             background: #111208;
@@ -591,8 +592,13 @@
             padding: 0.75rem 0.85rem;
             cursor: pointer;
             transition: border-color 0.15s;
+            flex-shrink: 0;
+            width: 260px;
+            scroll-snap-align: start;
         }
+        .dev-card.dev-card--overflow { cursor: default; opacity: 0.82; }
         .dev-card:hover { border-color: #5a5030; }
+        .dev-card.dev-card--overflow:hover { border-color: #1e2012; }
         .dev-badge { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #6a6030; display: block; margin-bottom: 0.3rem; }
         .dev-headline { font-size: 0.86rem; font-weight: 600; color: #b8b498; line-height: 1.35; margin-bottom: 0.3rem; }
         .dev-brief { font-size: 0.77rem; color: #5a5840; line-height: 1.55; }
@@ -847,6 +853,10 @@
                 
                 <option value="2026-W19" data-cadence="weekly" >2026-W19 (W)</option>
                 
+                <option value="2026-05-23" data-cadence="daily" >2026-05-23</option>
+                
+                <option value="2026-05-22" data-cadence="daily" selected>2026-05-22</option>
+                
                 <option value="2026-05-21" data-cadence="daily" >2026-05-21</option>
                 
                 <option value="2026-05-20" data-cadence="daily" >2026-05-20</option>
@@ -905,7 +915,7 @@
         
         
         <button onclick="scrollToCat('cat-tech')">
-            <span class="cat-pip" style="background:#5a88c8"></span>TECH (11)
+            <span class="cat-pip" style="background:#5a88c8"></span>TECH (5)
         </button>
         
         
@@ -915,7 +925,7 @@
         
         
         <button onclick="scrollToCat('cat-geopolitics')">
-            <span class="cat-pip" style="background:#c05858"></span>GEOPOLITICS (10)
+            <span class="cat-pip" style="background:#c05858"></span>GEOPOLITICS (9)
         </button>
         
         
@@ -945,7 +955,7 @@
         
         
         <button onclick="scrollToCat('cat-health')">
-            <span class="cat-pip" style="background:#c07840"></span>HEALTH (1)
+            <span class="cat-pip" style="background:#c07840"></span>HEALTH (2)
         </button>
         
         
@@ -955,7 +965,8 @@
         
         
         
-        <button class="dev-btn" onclick="scrollToCat('developing')">Developing (5)</button>
+        
+        <button class="dev-btn" onclick="scrollToCat('developing')">Developing (9)</button>
         
         
         
@@ -1124,27 +1135,6 @@
                     NASA reorganization to reduce bureaucracy and accelerate missions
                 </button>
                 
-                <button class="sb-link sb-mid" data-story-id="nc-23676" onclick="showNotCovered(23676)">
-                    Samsung memory chip workers negotiate $340,000 bonuses
-                </button>
-                
-                <button class="sb-link sb-mid" data-story-id="nc-23672" onclick="showNotCovered(23672)">
-                    Memory shortage causing consumer electronics repricing
-                </button>
-                
-                
-                <button class="sb-see-more" onclick="showSbPopup(this, 'also-tech')">+2 more</button>
-                <div class="sb-popup-data" id="also-tech" style="display:none">
-                    
-                    <button class="sb-link sb-mid" data-story-id="nc-23677" onclick="showNotCovered(23677);closeSbPopup()">
-                        Steve Wozniak discusses AI versus human intelligence with students
-                    </button>
-                    
-                    <button class="sb-link sb-mid" data-story-id="nc-23679" onclick="showNotCovered(23679);closeSbPopup()">
-                        AI multiplies effect on existing technical skills
-                    </button>
-                    
-                </div>
                 
             </div>
             
@@ -1184,7 +1174,7 @@
                 </button>
                 
                 
-                <button class="sb-see-more" onclick="showSbPopup(this, 'also-geopolitics')">+5 more</button>
+                <button class="sb-see-more" onclick="showSbPopup(this, 'also-geopolitics')">+4 more</button>
                 <div class="sb-popup-data" id="also-geopolitics" style="display:none">
                     
                     <button class="sb-link sb-mid" data-story-id="nc-23703" onclick="showNotCovered(23703);closeSbPopup()">
@@ -1201,10 +1191,6 @@
                     
                     <button class="sb-link sb-mid" data-story-id="nc-23702" onclick="showNotCovered(23702);closeSbPopup()">
                         Americans exposed to hantavirus quarantined in Nebraska
-                    </button>
-                    
-                    <button class="sb-link sb-mid" data-story-id="nc-23697" onclick="showNotCovered(23697);closeSbPopup()">
-                        Bun support limited and deprecated
                     </button>
                     
                 </div>
@@ -1307,6 +1293,16 @@
             </div>
             
             
+            <div class="sb-group-label">Also Tracked</div>
+            <div class="sidebar-stories">
+                
+                <button class="sb-link sb-mid" data-story-id="nc-23741" onclick="showNotCovered(23741)">
+                    First responders sickened by fentanyl in New Mexico
+                </button>
+                
+                
+            </div>
+            
         </div>
         
         
@@ -1384,14 +1380,6 @@
                     Cisco uses AI to write security incident reports
                 </button>
                 
-                <button class="sb-link sb-nc" data-story-id="nc-23675" onclick="showNotCovered(23675)">
-                    Microsoft 365 users targeted by phishing threat
-                </button>
-                
-                <button class="sb-link sb-nc" data-story-id="nc-23678" onclick="showNotCovered(23678)">
-                    Death of brick and mortar toy stores
-                </button>
-                
                 
             </div>
             
@@ -1429,8 +1417,8 @@
             </div>
             <div class="sidebar-stories">
                 
-                <button class="sb-link sb-nc" data-story-id="nc-23720" onclick="showNotCovered(23720)">
-                    Canadian Man Arrested for Operating Kimwolf Botnet
+                <button class="sb-link sb-nc" data-story-id="nc-23716" onclick="showNotCovered(23716)">
+                    Federal Reserve chief sworn in amid inflation concerns
                 </button>
                 
                 
@@ -1466,7 +1454,7 @@
                     <div class="cat-icon" style="background:#5a88c8"></div>
                     <span class="cat-name">TECH</span>
                     <span class="cat-count">
-                        1 in episode · 7 tracked · 3 on radar
+                        1 in episode · 3 tracked · 1 on radar
                     </span>
                 </div>
 
@@ -1564,7 +1552,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">TECH</span>
                                     <div class="mid-headline">Meta launches Forum combining Reddit Facebook Google features</div>
-                                    
+                                    <p class="nc-brief"># Meta Launches Forum Combining Reddit, Facebook, and Google Features
+
+Meta has introduced Forum, a new platform that integrates discussion features similar to Reddit, social networking capabilities from Facebook, and AI-powered summarization tools reminiscent of Google&#39;s AI Overview. This move signals Meta&#39;s strategy to compete directly with Reddit&#39;s community-driven model while leveraging its existing social network and advancing its AI capabilities to enhance user experience.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1584,7 +1574,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">TECH</span>
                                     <div class="mid-headline">Google AI glasses product review and assessment</div>
-                                    
+                                    <p class="nc-brief"># Google AI Glasses Review Summary
+
+Google has released AI-enabled glasses that reviewers describe as functionally promising but not yet market-ready, with capabilities in real-time translation, visual search, and contextual information display showing significant potential for augmented reality applications. The development matters because successful AI glasses could reshape human-computer interaction by enabling hands-free access to AI assistance and information overlays in everyday contexts, positioning Google to compete in the emerging wearable AI market alongside competitors like Meta and Apple.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1604,7 +1596,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">TECH</span>
                                     <div class="mid-headline">NASA reorganization to reduce bureaucracy and accelerate missions</div>
-                                    
+                                    <p class="nc-brief"># NASA Reorganization Summary
+
+NASA is restructuring its organizational hierarchy to eliminate redundant management layers and streamline decision-making processes, aiming to reduce the time and cost required to develop and launch missions. This reorganization matters because it addresses long-standing inefficiencies that have slowed innovation in space exploration and positions NASA to compete more effectively with commercial space companies while maximizing returns on its budget.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1612,70 +1606,6 @@
                                         <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.05</span></div>
                                         <div class="metric"><span style="color:var(--text-dim)">Factual.</span><span class="metric-val" style="color:#3d5840">0.62</span></div>
                                         <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
-                            </div>
-                            
-                            <div class="mid-card" data-story-id="nc-23676" onclick="showNotCovered(23676)">
-                                <div class="mid-card-body">
-                                    <span class="mid-badge">Also Tracked</span>
-                                    <span class="story-tag">TECH</span>
-                                    <div class="mid-headline">Samsung memory chip workers negotiate $340,000 bonuses</div>
-                                    
-                                    <div class="card-spacer"></div>
-                                    <div class="sub-metrics">
-                                        <div class="metric"><span class="metric-val">4</span><span style="color:var(--text-dim)"> articles</span></div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
-                            </div>
-                            
-                            <div class="mid-card" data-story-id="nc-23672" onclick="showNotCovered(23672)">
-                                <div class="mid-card-body">
-                                    <span class="mid-badge">Also Tracked</span>
-                                    <span class="story-tag">TECH</span>
-                                    <div class="mid-headline">Memory shortage causing consumer electronics repricing</div>
-                                    
-                                    <div class="card-spacer"></div>
-                                    <div class="sub-metrics">
-                                        <div class="metric"><span class="metric-val">6</span><span style="color:var(--text-dim)"> articles</span></div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
-                            </div>
-                            
-                            <div class="mid-card" data-story-id="nc-23677" onclick="showNotCovered(23677)">
-                                <div class="mid-card-body">
-                                    <span class="mid-badge">Also Tracked</span>
-                                    <span class="story-tag">TECH</span>
-                                    <div class="mid-headline">Steve Wozniak discusses AI versus human intelligence with students</div>
-                                    
-                                    <div class="card-spacer"></div>
-                                    <div class="sub-metrics">
-                                        <div class="metric"><span class="metric-val">3</span><span style="color:var(--text-dim)"> articles</span></div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
-                            </div>
-                            
-                            <div class="mid-card" data-story-id="nc-23679" onclick="showNotCovered(23679)">
-                                <div class="mid-card-body">
-                                    <span class="mid-badge">Also Tracked</span>
-                                    <span class="story-tag">TECH</span>
-                                    <div class="mid-headline">AI multiplies effect on existing technical skills</div>
-                                    
-                                    <div class="card-spacer"></div>
-                                    <div class="sub-metrics">
-                                        <div class="metric"><span class="metric-val">3</span><span style="color:var(--text-dim)"> articles</span></div>
                                         
                                     </div>
                                     
@@ -1697,25 +1627,9 @@
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
                             <div class="nc-headline">Cisco uses AI to write security incident reports</div>
-                            
-                        </div>
-                        <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
-                    </div>
-                    
-                    <div class="nc-card" data-story-id="nc-23675" onclick="showNotCovered(23675)">
-                        <div class="nc-card-body">
-                            <span class="nc-label">Signal</span>
-                            <div class="nc-headline">Microsoft 365 users targeted by phishing threat</div>
-                            
-                        </div>
-                        <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
-                    </div>
-                    
-                    <div class="nc-card" data-story-id="nc-23678" onclick="showNotCovered(23678)">
-                        <div class="nc-card-body">
-                            <span class="nc-label">Signal</span>
-                            <div class="nc-headline">Death of brick and mortar toy stores</div>
-                            
+                            <p class="nc-brief"># Cisco Uses AI to Write Security Incident Reports
+
+Cisco deployed AI to automatically generate security incident reports, but the system produced inconsistent and sometimes inaccurate results that required significant human review and correction. This highlights the current limitations of AI in handling critical security documentation, where accuracy and precision are essential for threat response and compliance.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1736,7 +1650,7 @@
                     <div class="cat-icon" style="background:#c05858"></div>
                     <span class="cat-name">GEOPOLITICS</span>
                     <span class="cat-count">
-                        0 in episode · 10 tracked
+                        0 in episode · 9 tracked
                     </span>
                 </div>
 
@@ -1767,7 +1681,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Greenlanders protest new US consulate opening in Nuuk</div>
-                                    
+                                    <p class="nc-brief"># Greenlanders Protest New US Consulate Opening in Nuuk
+
+Greenlanders are demonstrating against the opening of a new US consulate in their capital, reflecting concerns about increased American political and military presence on the island. The protests signal growing anxiety about foreign interference in Greenlandic autonomy at a time of heightened geopolitical competition over Arctic resources and strategic positioning.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1787,7 +1703,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Hajj pilgrimage and Eid al-Adha significance</div>
-                                    
+                                    <p class="nc-brief"># Hajj Pilgrimage and Eid al-Adha
+
+Millions of Muslims from diverse nations converge on Saudi Arabia annually for the Hajj pilgrimage, one of Islam&#39;s five pillars, followed by the celebration of Eid al-Adha, which commemorates Prophet Ibrahim&#39;s willingness to sacrifice his son. This religious gathering holds geopolitical significance as it temporarily unites Muslims across sectarian, ethnic, and national divides while positioning Saudi Arabia as custodian of Islam&#39;s holiest sites—a role central to its regional</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1807,7 +1725,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Trump considers military options against Iran</div>
-                                    
+                                    <p class="nc-brief"># Trump Considers Military Options Against Iran
+
+Former President Donald Trump is reportedly evaluating military actions to pressure Iran, potentially including strikes against Iranian nuclear facilities or military assets, amid escalating tensions over Iran&#39;s nuclear program advancement. This matters because direct military confrontation could destabilize the Middle East, trigger regional conflicts involving U.S. allies and Iranian proxies, and undermine ongoing diplomatic efforts to contain Iran&#39;s nuclear ambitions.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1827,7 +1747,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">US to send 5000 additional troops to Poland</div>
-                                    
+                                    <p class="nc-brief"># US to Send 5,000 Additional Troops to Poland
+
+The United States is deploying an additional 5,000 troops to Poland, strengthening NATO&#39;s eastern flank in response to regional security concerns. This deployment matters because it demonstrates U.S. commitment to NATO allies amid tensions with Russia and reinforces deterrence against potential aggression in Eastern Europe.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1847,7 +1769,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">China coal mine blast kills eight, traps dozens</div>
-                                    
+                                    <p class="nc-brief"># China Coal Mine Blast Summary
+
+A gas explosion at a Chinese coal mine has killed at least eight workers and trapped dozens more underground, highlighting the persistent safety hazards in China&#39;s mining industry despite regulatory efforts. This incident underscores the geopolitical significance of China&#39;s dependence on coal for energy production and the human cost of maintaining its industrial infrastructure to support economic growth and global supply chains.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1867,7 +1791,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Trump meets advisers weighing Iran military action</div>
-                                    
+                                    <p class="nc-brief"># Trump Meets Advisers on Potential Iran Military Action
+
+President Trump is meeting with senior advisers to evaluate military options against Iran as he prepares to return to office. This matters because any U.S. military action against Iran could destabilize the Middle East, affect global oil prices, and potentially trigger broader regional conflict involving allied and adversarial nations.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1887,7 +1813,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Iran and US diplomacy efforts ongoing without agreement</div>
-                                    
+                                    <p class="nc-brief"># Iran-US Diplomacy Summary
+
+Iran and the United States are engaged in ongoing diplomatic negotiations aimed at de-escalating tensions and potentially reviving a nuclear agreement, though neither side has yet reached a formal deal. These talks matter because a breakthrough could stabilize the Middle East, reduce the risk of military conflict, and address longstanding disagreements over Iran&#39;s nuclear program and US sanctions.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1907,7 +1835,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Iran and Oman discuss Strait of Hormuz toll system</div>
-                                    
+                                    <p class="nc-brief"># Strait of Hormuz Toll System Negotiations
+
+Iran and Oman are discussing a potential toll or payment system for ships transiting the Strait of Hormuz, one of the world&#39;s most critical chokepoints through which roughly 20% of global oil passes. This matters because such a system could give Iran significant leverage over international commerce and energy markets while raising concerns among Western nations and global trading partners about freedom of navigation and potential economic disruption.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1927,7 +1857,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Americans exposed to hantavirus quarantined in Nebraska</div>
-                                    
+                                    <p class="nc-brief"># Hantavirus Exposure Quarantine in Nebraska
+
+A group of Americans exposed to hantavirus aboard a ship are being quarantined in Nebraska while health officials monitor them for symptom development. This matter is significant because hantavirus is a serious disease with high mortality rates, making proper containment and medical oversight critical to prevent potential spread to the general population.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1935,22 +1867,6 @@
                                         <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.05</span></div>
                                         <div class="metric"><span style="color:var(--text-dim)">Factual.</span><span class="metric-val" style="color:#3d5840">0.44</span></div>
                                         <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
-                            </div>
-                            
-                            <div class="mid-card" data-story-id="nc-23697" onclick="showNotCovered(23697)">
-                                <div class="mid-card-body">
-                                    <span class="mid-badge">Also Tracked</span>
-                                    <span class="story-tag">GEOPOLITICS</span>
-                                    <div class="mid-headline">Bun support limited and deprecated</div>
-                                    
-                                    <div class="card-spacer"></div>
-                                    <div class="sub-metrics">
-                                        <div class="metric"><span class="metric-val">6</span><span style="color:var(--text-dim)"> articles</span></div>
                                         
                                     </div>
                                     
@@ -1999,7 +1915,9 @@
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
                             <div class="nc-headline">Warsh takes Federal Reserve leadership amid rising inflation</div>
-                            
+                            <p class="nc-brief"># Summary
+
+Kevin Warsh has assumed leadership of the Federal Reserve at a critical moment when inflation remains elevated and consumer confidence is declining, presenting an immediate policy challenge. His tenure matters because the Fed&#39;s decisions on interest rates and monetary policy will directly affect whether inflation can be brought under control without triggering a recession or further eroding household purchasing power.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2008,7 +1926,9 @@
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
                             <div class="nc-headline">Walsh inflation reduction strong economy growth</div>
-                            
+                            <p class="nc-brief"># Walsh on Inflation and Economic Growth
+
+Labor Secretary Walsh has stated that inflation can be reduced while maintaining strong economic growth, signaling the Biden administration&#39;s confidence in managing both priorities simultaneously. This matters because it addresses a central economic concern—that fighting inflation typically requires slowing growth—suggesting policymakers believe they can achieve the rare outcome of lower prices without triggering recession or job losses.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2127,7 +2047,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Senate blocks Trump&#39;s anti-weaponization fund proposal</div>
-                                    
+                                    <p class="nc-brief"># Senate Blocks Trump&#39;s Anti-Weaponization Fund Proposal
+
+The Senate rejected Trump&#39;s proposed $1.8 billion &#34;anti-weaponization&#34; fund within the budget reconciliation bill, with Republican opposition playing a key role in derailing the measure. The funding proposal, intended to counter what Trump characterized as politicized use of federal agencies, failed to secure sufficient support and became a sticking point that sank the broader reconciliation package.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2147,7 +2069,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Stephen Colbert&#39;s Final Late Show Episode on CBS</div>
-                                    
+                                    <p class="nc-brief"># Stephen Colbert&#39;s Final Late Show Episode on CBS
+
+Stephen Colbert aired his final episode of &#34;The Late Show&#34; on CBS after nine years, marking the end of a politically-charged late-night program that frequently critiqued Trump and Republican policies. The departure is significant because it removes a prominent media voice from the nightly political commentary landscape during a period of heightened partisan tension, while Colbert&#39;s choice to avoid politics in his final episode suggests a strategic shift in tone as he transitions away from the platform.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">3</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2167,7 +2091,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Trump directs Fed chair Warsh on monetary policy</div>
-                                    
+                                    <p class="nc-brief"># Summary
+
+Trump has directed Federal Reserve Chair Kevin Warsh not to consider political pressure when making monetary policy decisions, instructing him to focus solely on economic data. This statement matters because it clarifies Trump&#39;s expectations for Fed independence while raising questions about whether such directives themselves constitute the kind of political influence the instruction purports to reject.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2187,7 +2113,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Tillis criticizes Trump&#39;s compensation fund as stupid</div>
-                                    
+                                    <p class="nc-brief"># Summary
+
+Senator Thom Tillis criticized Trump&#39;s compensation fund for supporters affected by January 6th prosecutions as &#34;stupid&#34; and &#34;beyond the pale,&#34; prompting Trump to publicly attack Tillis as a &#34;nitpicker.&#34; This exchange highlights deepening fractures within the Republican Party over how to respond to legal consequences from the Capitol riot and reveals tensions between Trump and establishment GOP figures over party loyalty and policy direction.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2207,7 +2135,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">DNC leadership questioned over 2024 autopsy report timing</div>
-                                    
+                                    <p class="nc-brief"># DNC Leadership Questioned Over 2024 Autopsy Report Timing
+
+Democratic National Committee leadership is facing scrutiny over the timing and release of their 2024 election autopsy report, with critics like Michael Steele questioning why the party is publishing internal analysis during an active political cycle. The controversy matters because the report&#39;s findings on campaign failures and strategic missteps could influence current DNC direction and internal power dynamics while the party is still mobilizing for upcoming elections.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2227,7 +2157,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Trump declines to attend son&#39;s wedding</div>
-                                    
+                                    <p class="nc-brief"># Trump Declines to Attend Son&#39;s Wedding
+
+Former President Donald Trump announced he will not attend his son Donald Trump Jr.&#39;s wedding, citing unspecified circumstances related to government matters. The decision raises questions about Trump&#39;s legal and political obligations, given ongoing investigations and potential trials that may be demanding his attention during this personal family event.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2247,7 +2179,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Mahmoud Khalil appeals deportation case to Supreme Court</div>
-                                    
+                                    <p class="nc-brief"># Mahmoud Khalil Appeals Deportation Case to Supreme Court
+
+Mahmoud Khalil has filed an appeal to the Supreme Court in an attempt to prevent his deportation from the United States. The case matters because a Supreme Court decision could set precedent for immigration enforcement and potentially affect how similar deportation cases are handled nationwide.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2267,7 +2201,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Trump defends DOJ anti-weaponization fund allegations</div>
-                                    
+                                    <p class="nc-brief"># Summary
+
+Donald Trump is defending a Department of Justice initiative focused on investigating alleged political weaponization of federal prosecutions, while some Republican critics question its effectiveness and funding allocation. This matters because it reflects ongoing partisan disputes over whether the DOJ has been used to target political opponents, a central claim in Trump&#39;s legal defense strategy and broader debates about institutional integrity.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2287,7 +2223,9 @@
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">DOMESTIC POLITICS</span>
                                     <div class="mid-headline">Judge dismisses Michael Wolff lawsuit against Melania Trump</div>
-                                    
+                                    <p class="nc-brief"># Judge Dismisses Michael Wolff Lawsuit Against Melania Trump
+
+A federal judge dismissed author Michael Wolff&#39;s lawsuit against Melania Trump, criticizing the legal theory as &#34;contorted&#34; and outside the bounds of how courts operate. The dismissal represents a significant legal victory for the former first lady in her dispute with Wolff over his book about the Trump administration.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">3</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2312,11 +2250,13 @@
                 <div class="sub-label not-covered">On Our Radar This Week on Domestic Politics</div>
                 <div class="not-covered-grid">
                     
-                    <div class="nc-card" data-story-id="nc-23720" onclick="showNotCovered(23720)">
+                    <div class="nc-card" data-story-id="nc-23716" onclick="showNotCovered(23716)">
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
-                            <div class="nc-headline">Canadian Man Arrested for Operating Kimwolf Botnet</div>
-                            
+                            <div class="nc-headline">Federal Reserve chief sworn in amid inflation concerns</div>
+                            <p class="nc-brief"># Federal Reserve Chief Sworn In Amid Inflation Concerns
+
+A new Federal Reserve chief has been sworn in at the White House during a period of elevated inflation, taking leadership of the central bank at a time when economic pressures are intensifying. The appointment matters because the Fed chair controls monetary policy decisions that directly affect interest rates, inflation control, and economic stability, making this leadership transition critical for addressing current economic challenges.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -2337,7 +2277,7 @@
                     <div class="cat-icon" style="background:#c07840"></div>
                     <span class="cat-name">HEALTH</span>
                     <span class="cat-count">
-                        1 in episode
+                        1 in episode · 1 tracked
                     </span>
                 </div>
 
@@ -2425,6 +2365,28 @@
 
                             
                             
+                            <div class="mid-card" data-story-id="nc-23741" onclick="showNotCovered(23741)">
+                                <div class="mid-card-body">
+                                    <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag">HEALTH</span>
+                                    <div class="mid-headline">First responders sickened by fentanyl in New Mexico</div>
+                                    <p class="nc-brief"># First Responders Sickened by Fentanyl in New Mexico
+
+Multiple first responders in New Mexico were exposed to and sickened by illicit fentanyl while responding to an overdose call at a residence where both fentanyl and methamphetamine were found. This incident highlights the occupational health risks emergency personnel face when encountering synthetic opioids, as even minimal exposure to fentanyl can cause acute illness in unprotected responders.</p>
+                                    <div class="card-spacer"></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span class="metric-val">3</span><span style="color:var(--text-dim)"> articles</span></div>
+                                        
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factual.</span><span class="metric-val" style="color:#3d5840">0.43</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.5</span></div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -2444,55 +2406,101 @@
 
             
             
+            
             <section class="developing-section" id="developing">
                 <div class="cat-heading">
                     <div class="cat-icon" style="background:var(--dev-accent)"></div>
                     <span class="cat-name">Developing Stories</span>
-                    <span class="cat-count" style="color:#9a7a40">5</span>
+                    <span class="cat-count" style="color:#9a7a40">9</span>
+                    
+                    <div class="carousel-btns" style="margin-left:auto">
+                        <button class="carousel-btn" onclick="carouselMove('carousel-developing', -1)" title="Previous">&#8249;</button>
+                        <button class="carousel-btn" onclick="carouselMove('carousel-developing', 1)" title="Next">&#8250;</button>
+                    </div>
+                    
                 </div>
-                <p class="dev-notice">Significant but not yet meeting verification threshold for claim-level scoring.</p>
-                <div class="dev-grid">
-                    
-                    <div class="dev-card" data-story-id="dev-23738"
-                         onclick="loadStory('stories/dev-23738/index.html', 'Former CDC Official Warns Ebola Outbreak Will Worsen', 'dev-23738')">
-                        <span class="dev-badge">Developing</span>
-                        <div class="dev-headline">Former CDC Official Warns Ebola Outbreak Will Worsen</div>
-                        <p class="dev-brief">A former CDC epidemiologist warned that an ongoing Ebola outbreak will worsen before conditions improve, though figures and location details remain unconfirmed across sources.</p>
+                <p class="dev-notice">Significant but not yet meeting verification threshold for claim-level scoring. Episode features top 5; all 9 shown here.</p>
+                <div class="carousel-viewport" id="carousel-developing">
+                    <div class="carousel-track">
+                        
+                        <div class="dev-card" data-story-id="dev-23738"
+                             onclick="loadStory('stories/dev-23738/index.html', 'Former CDC Official Warns Ebola Outbreak Will Worsen', 'dev-23738')">
+                            <span class="dev-badge">In Episode</span>
+                            <div class="dev-headline">Former CDC Official Warns Ebola Outbreak Will Worsen</div>
+                            <p class="dev-brief">A former CDC epidemiologist warned that an ongoing Ebola outbreak will worsen before conditions improve, though figures and location details remain unconfirmed across sources.</p>
+                            
+                        </div>
+                        
+                        <div class="dev-card" data-story-id="dev-23688"
+                             onclick="loadStory('stories/dev-23688/index.html', 'Google Adds AI Option Directly to Main Search Box', 'dev-23688')">
+                            <span class="dev-badge">In Episode</span>
+                            <div class="dev-headline">Google Adds AI Option Directly to Main Search Box</div>
+                            <p class="dev-brief">Google is reportedly redesigning its main search interface to give users a more direct path to AI-generated answers, though rollout details have not been confirmed.</p>
+                            
+                        </div>
+                        
+                        <div class="dev-card" data-story-id="dev-23705"
+                             onclick="loadStory('stories/dev-23705/index.html', 'Trump Targets Republicans Blocking Anti-Weaponization Fund', 'dev-23705')">
+                            <span class="dev-badge">In Episode</span>
+                            <div class="dev-headline">Trump Targets Republicans Blocking Anti-Weaponization Fund</div>
+                            <p class="dev-brief">President Trump publicly criticized Republican lawmakers opposing an anti-weaponization fund included in his budget legislation, with details of the fund&#39;s scope still unconfirmed across sources.</p>
+                            
+                        </div>
+                        
+                        <div class="dev-card" data-story-id="dev-23714"
+                             onclick="loadStory('stories/dev-23714/index.html', 'UK Pitches Goods Single Market Deal With EU', 'dev-23714')">
+                            <span class="dev-badge">In Episode</span>
+                            <div class="dev-headline">UK Pitches Goods Single Market Deal With EU</div>
+                            <p class="dev-brief">The UK has reportedly proposed a single market arrangement for goods with the EU, a move that would significantly deepen post-Brexit trade ties, though the EU&#39;s response remains unconfirmed.</p>
+                            
+                        </div>
+                        
+                        <div class="dev-card" data-story-id="dev-23717"
+                             onclick="loadStory('stories/dev-23717/index.html', 'Kevin Warsh Reportedly Sworn In as Fed Chair', 'dev-23717')">
+                            <span class="dev-badge">In Episode</span>
+                            <div class="dev-headline">Kevin Warsh Reportedly Sworn In as Fed Chair</div>
+                            <p class="dev-brief">Kevin Warsh has reportedly been sworn in as the new Federal Reserve chair, replacing Jerome Powell, though the report from Al Jazeera has not been widely confirmed by additional outlets.</p>
+                            
+                        </div>
+                        
+                        
+                        <div class="dev-card dev-card--overflow">
+                            <span class="dev-badge">Developing</span>
+                            <div class="dev-headline">Cisco uses AI to write security incident reports</div>
+                            <p class="dev-brief"># Cisco Uses AI to Write Security Incident Reports
+
+Cisco deployed AI to automatically generate security incident reports, but the system produced inconsistent and sometimes inaccurate results that required significant human review and correction. This highlights the current limitations of AI in handling critical security documentation, where accuracy and precision are essential for threat response and compliance.</p>
+                            <p class="dev-meta">2 articles · SRQ 0.24</p>
+                        </div>
+                        
+                        <div class="dev-card dev-card--overflow">
+                            <span class="dev-badge">Developing</span>
+                            <div class="dev-headline">Federal Reserve chief sworn in amid inflation concerns</div>
+                            <p class="dev-brief"># Federal Reserve Chief Sworn In Amid Inflation Concerns
+
+A new Federal Reserve chief has been sworn in at the White House during a period of elevated inflation, taking leadership of the central bank at a time when economic pressures are intensifying. The appointment matters because the Fed chair controls monetary policy decisions that directly affect interest rates, inflation control, and economic stability, making this leadership transition critical for addressing current economic challenges.</p>
+                            <p class="dev-meta">2 articles · SRQ 0.21</p>
+                        </div>
+                        
+                        <div class="dev-card dev-card--overflow">
+                            <span class="dev-badge">Developing</span>
+                            <div class="dev-headline">Warsh takes Federal Reserve leadership amid rising inflation</div>
+                            <p class="dev-brief"># Summary
+
+Kevin Warsh has assumed leadership of the Federal Reserve at a critical moment when inflation remains elevated and consumer confidence is declining, presenting an immediate policy challenge. His tenure matters because the Fed&#39;s decisions on interest rates and monetary policy will directly affect whether inflation can be brought under control without triggering a recession or further eroding household purchasing power.</p>
+                            <p class="dev-meta">2 articles · SRQ 0.21</p>
+                        </div>
+                        
+                        <div class="dev-card dev-card--overflow">
+                            <span class="dev-badge">Developing</span>
+                            <div class="dev-headline">Walsh inflation reduction strong economy growth</div>
+                            <p class="dev-brief"># Walsh on Inflation and Economic Growth
+
+Labor Secretary Walsh has stated that inflation can be reduced while maintaining strong economic growth, signaling the Biden administration&#39;s confidence in managing both priorities simultaneously. This matters because it addresses a central economic concern—that fighting inflation typically requires slowing growth—suggesting policymakers believe they can achieve the rare outcome of lower prices without triggering recession or job losses.</p>
+                            <p class="dev-meta">2 articles · SRQ 0.21</p>
+                        </div>
                         
                     </div>
-                    
-                    <div class="dev-card" data-story-id="dev-23688"
-                         onclick="loadStory('stories/dev-23688/index.html', 'Google Adds AI Option Directly to Main Search Box', 'dev-23688')">
-                        <span class="dev-badge">Developing</span>
-                        <div class="dev-headline">Google Adds AI Option Directly to Main Search Box</div>
-                        <p class="dev-brief">Google is reportedly redesigning its main search interface to give users a more direct path to AI-generated answers, though rollout details have not been confirmed.</p>
-                        
-                    </div>
-                    
-                    <div class="dev-card" data-story-id="dev-23705"
-                         onclick="loadStory('stories/dev-23705/index.html', 'Trump Targets Republicans Blocking Anti-Weaponization Fund', 'dev-23705')">
-                        <span class="dev-badge">Developing</span>
-                        <div class="dev-headline">Trump Targets Republicans Blocking Anti-Weaponization Fund</div>
-                        <p class="dev-brief">President Trump publicly criticized Republican lawmakers opposing an anti-weaponization fund included in his budget legislation, with details of the fund&#39;s scope still unconfirmed across sources.</p>
-                        
-                    </div>
-                    
-                    <div class="dev-card" data-story-id="dev-23714"
-                         onclick="loadStory('stories/dev-23714/index.html', 'UK Pitches Goods Single Market Deal With EU', 'dev-23714')">
-                        <span class="dev-badge">Developing</span>
-                        <div class="dev-headline">UK Pitches Goods Single Market Deal With EU</div>
-                        <p class="dev-brief">The UK has reportedly proposed a single market arrangement for goods with the EU, a move that would significantly deepen post-Brexit trade ties, though the EU&#39;s response remains unconfirmed.</p>
-                        
-                    </div>
-                    
-                    <div class="dev-card" data-story-id="dev-23717"
-                         onclick="loadStory('stories/dev-23717/index.html', 'Kevin Warsh Reportedly Sworn In as Fed Chair', 'dev-23717')">
-                        <span class="dev-badge">Developing</span>
-                        <div class="dev-headline">Kevin Warsh Reportedly Sworn In as Fed Chair</div>
-                        <p class="dev-brief">Kevin Warsh has reportedly been sworn in as the new Federal Reserve chair, replacing Jerome Powell, though the report from Al Jazeera has not been widely confirmed by additional outlets.</p>
-                        
-                    </div>
-                    
                 </div>
             </section>
             
@@ -5397,6 +5405,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Greenlanders Protest New US Consulate Opening in Nuuk
+
+Greenlanders are demonstrating against the opening of a new US consulate in their capital, reflecting concerns about increased American political and military presence on the island. The protests signal growing anxiety about foreign interference in Greenlandic autonomy at a time of heightened geopolitical competition over Arctic resources and strategic positioning.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5445,6 +5457,10 @@
       <span class="story-meta-item">Relevance: <strong>0.36</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Hajj Pilgrimage and Eid al-Adha
+
+Millions of Muslims from diverse nations converge on Saudi Arabia annually for the Hajj pilgrimage, one of Islam&#39;s five pillars, followed by the celebration of Eid al-Adha, which commemorates Prophet Ibrahim&#39;s willingness to sacrifice his son. This religious gathering holds geopolitical significance as it temporarily unites Muslims across sectarian, ethnic, and national divides while positioning Saudi Arabia as custodian of Islam&#39;s holiest sites—a role central to its regional</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5495,6 +5511,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Trump Considers Military Options Against Iran
+
+Former President Donald Trump is reportedly evaluating military actions to pressure Iran, potentially including strikes against Iranian nuclear facilities or military assets, amid escalating tensions over Iran&#39;s nuclear program advancement. This matters because direct military confrontation could destabilize the Middle East, trigger regional conflicts involving U.S. allies and Iranian proxies, and undermine ongoing diplomatic efforts to contain Iran&#39;s nuclear ambitions.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5543,6 +5563,10 @@
       <span class="story-meta-item">Relevance: <strong>0.34</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># US to Send 5,000 Additional Troops to Poland
+
+The United States is deploying an additional 5,000 troops to Poland, strengthening NATO&#39;s eastern flank in response to regional security concerns. This deployment matters because it demonstrates U.S. commitment to NATO allies amid tensions with Russia and reinforces deterrence against potential aggression in Eastern Europe.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5593,6 +5617,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># China Coal Mine Blast Summary
+
+A gas explosion at a Chinese coal mine has killed at least eight workers and trapped dozens more underground, highlighting the persistent safety hazards in China&#39;s mining industry despite regulatory efforts. This incident underscores the geopolitical significance of China&#39;s dependence on coal for energy production and the human cost of maintaining its industrial infrastructure to support economic growth and global supply chains.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5641,6 +5669,10 @@
       <span class="story-meta-item">Relevance: <strong>0.34</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Trump Meets Advisers on Potential Iran Military Action
+
+President Trump is meeting with senior advisers to evaluate military options against Iran as he prepares to return to office. This matters because any U.S. military action against Iran could destabilize the Middle East, affect global oil prices, and potentially trigger broader regional conflict involving allied and adversarial nations.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5691,6 +5723,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Iran-US Diplomacy Summary
+
+Iran and the United States are engaged in ongoing diplomatic negotiations aimed at de-escalating tensions and potentially reviving a nuclear agreement, though neither side has yet reached a formal deal. These talks matter because a breakthrough could stabilize the Middle East, reduce the risk of military conflict, and address longstanding disagreements over Iran&#39;s nuclear program and US sanctions.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5730,6 +5766,10 @@
       <span class="story-meta-item">Relevance: <strong>0.31</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Strait of Hormuz Toll System Negotiations
+
+Iran and Oman are discussing a potential toll or payment system for ships transiting the Strait of Hormuz, one of the world&#39;s most critical chokepoints through which roughly 20% of global oil passes. This matters because such a system could give Iran significant leverage over international commerce and energy markets while raising concerns among Western nations and global trading partners about freedom of navigation and potential economic disruption.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5780,6 +5820,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Hantavirus Exposure Quarantine in Nebraska
+
+A group of Americans exposed to hantavirus aboard a ship are being quarantined in Nebraska while health officials monitor them for symptom development. This matter is significant because hantavirus is a serious disease with high mortality rates, making proper containment and medical oversight critical to prevent potential spread to the general population.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5820,46 +5864,6 @@
     </div>
   </div>
   
-  <div id="pool-nc-23697">
-    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · ON OUR RADAR</div>
-    <h1 class="story-headline">Bun support limited and deprecated</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>6</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.26</strong></span>
-      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Other stories scored higher on relevance and verifiability this week.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">6</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.04</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.26</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (1 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://news.ycombinator.com/item?id=48243434" target="_blank" rel="noopener noreferrer">HN comment: Bun support is now limited and deprecated</a>
-          
-        </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
-  
   
   
   <div id="pool-nc-23719">
@@ -5870,6 +5874,10 @@
       <span class="story-meta-item">Relevance: <strong>0.4</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Senate Blocks Trump&#39;s Anti-Weaponization Fund Proposal
+
+The Senate rejected Trump&#39;s proposed $1.8 billion &#34;anti-weaponization&#34; fund within the budget reconciliation bill, with Republican opposition playing a key role in derailing the measure. The funding proposal, intended to counter what Trump characterized as politicized use of federal agencies, failed to secure sufficient support and became a sticking point that sank the broader reconciliation package.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5920,6 +5928,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Stephen Colbert&#39;s Final Late Show Episode on CBS
+
+Stephen Colbert aired his final episode of &#34;The Late Show&#34; on CBS after nine years, marking the end of a politically-charged late-night program that frequently critiqued Trump and Republican policies. The departure is significant because it removes a prominent media voice from the nightly political commentary landscape during a period of heightened partisan tension, while Colbert&#39;s choice to avoid politics in his final episode suggests a strategic shift in tone as he transitions away from the platform.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -5968,6 +5980,10 @@
       <span class="story-meta-item">Relevance: <strong>0.34</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
+
+Trump has directed Federal Reserve Chair Kevin Warsh not to consider political pressure when making monetary policy decisions, instructing him to focus solely on economic data. This statement matters because it clarifies Trump&#39;s expectations for Fed independence while raising questions about whether such directives themselves constitute the kind of political influence the instruction purports to reject.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -6018,6 +6034,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
+
+Senator Thom Tillis criticized Trump&#39;s compensation fund for supporters affected by January 6th prosecutions as &#34;stupid&#34; and &#34;beyond the pale,&#34; prompting Trump to publicly attack Tillis as a &#34;nitpicker.&#34; This exchange highlights deepening fractures within the Republican Party over how to respond to legal consequences from the Capitol riot and reveals tensions between Trump and establishment GOP figures over party loyalty and policy direction.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -6058,6 +6078,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># DNC Leadership Questioned Over 2024 Autopsy Report Timing
+
+Democratic National Committee leadership is facing scrutiny over the timing and release of their 2024 election autopsy report, with critics like Michael Steele questioning why the party is publishing internal analysis during an active political cycle. The controversy matters because the report&#39;s findings on campaign failures and strategic missteps could influence current DNC direction and internal power dynamics while the party is still mobilizing for upcoming elections.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -6097,6 +6121,10 @@
       <span class="story-meta-item">Relevance: <strong>0.31</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Trump Declines to Attend Son&#39;s Wedding
+
+Former President Donald Trump announced he will not attend his son Donald Trump Jr.&#39;s wedding, citing unspecified circumstances related to government matters. The decision raises questions about Trump&#39;s legal and political obligations, given ongoing investigations and potential trials that may be demanding his attention during this personal family event.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -6147,6 +6175,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Mahmoud Khalil Appeals Deportation Case to Supreme Court
+
+Mahmoud Khalil has filed an appeal to the Supreme Court in an attempt to prevent his deportation from the United States. The case matters because a Supreme Court decision could set precedent for immigration enforcement and potentially affect how similar deportation cases are handled nationwide.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -6195,6 +6227,10 @@
       <span class="story-meta-item">Relevance: <strong>0.31</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
+
+Donald Trump is defending a Department of Justice initiative focused on investigating alleged political weaponization of federal prosecutions, while some Republican critics question its effectiveness and funding allocation. This matters because it reflects ongoing partisan disputes over whether the DOJ has been used to target political opponents, a central claim in Trump&#39;s legal defense strategy and broader debates about institutional integrity.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -6245,6 +6281,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Judge Dismisses Michael Wolff Lawsuit Against Melania Trump
+
+A federal judge dismissed author Michael Wolff&#39;s lawsuit against Melania Trump, criticizing the legal theory as &#34;contorted&#34; and outside the bounds of how courts operate. The dismissal represents a significant legal victory for the former first lady in her dispute with Wolff over his book about the Trump administration.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -6294,14 +6334,18 @@
     </div>
   </div>
   
-  <div id="pool-nc-23720">
+  <div id="pool-nc-23716">
     <div class="story-category"><span class="story-category-bar" style="background:#8868c0"></span>DOMESTIC_POLITICS · ON OUR RADAR</div>
-    <h1 class="story-headline">Canadian Man Arrested for Operating Kimwolf Botnet</h1>
+    <h1 class="story-headline">Federal Reserve chief sworn in amid inflation concerns</h1>
     <div class="story-meta-row">
       <span class="story-meta-item"><strong>2</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.29</strong></span>
+      <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Federal Reserve Chief Sworn In Amid Inflation Concerns
+
+A new Federal Reserve chief has been sworn in at the White House during a period of elevated inflation, taking leadership of the central bank at a time when economic pressures are intensifying. The appointment matters because the Fed chair controls monetary policy decisions that directly affect interest rates, inflation control, and economic stability, making this leadership transition critical for addressing current economic challenges.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
@@ -6309,30 +6353,21 @@
     </div>
     <div class="srq-breakdown">
       <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.09</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.29</div><div class="srq-card-label">Relevance</div></div>
+      <div class="srq-card"><div class="srq-card-val c-accent">0.21</div><div class="srq-card-label">SRQ</div></div>
+      <div class="srq-card"><div class="srq-card-val">0.21</div><div class="srq-card-label">Relevance</div></div>
       <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v4)">✗ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
     </div>
     
-    <div class="section-title">Tracked Coverage (2 articles)</div>
+    <div class="section-title">Tracked Coverage (1 articles)</div>
     <div class="nc-article-list">
       
       <div class="nc-article-item">
         <div class="nc-article-title">
           
-          <a href="https://www.securityweek.com/canadian-man-arrested-for-operating-kimwolf-botnet/" target="_blank" rel="noopener noreferrer">Canadian Man Arrested for Operating Kimwolf Botnet</a>
+          <a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxNRlZnSF9GVGR2Y004WWFkZWt1dldib1NmRk1YSDR5RHJMS2JiWEIxdVV6dUFGWUU3RUtxMVpzaG1oN3ZfTzZHRndMOHViMjFCeWhJR09ITDdnWExiZHJxSFVmSmY3RXoyNVFDVUJPekU2TnRJZVBsLUNTYUpZXzlKZTZFdDdURnBzcmc4M2hoWWVlSDAtUU43V1F5YjhFSVVHdkVnRWVlTnNPMVN6RmFZczhxSkptZw?oc=5" target="_blank" rel="noopener noreferrer">Fed chief sworn in at the White House, facing surging inflation - The Washington Post</a>
           
         </div>
-        <div class="nc-article-source">securityweek.com · 2026-05-22</div>
-      </div>
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/" target="_blank" rel="noopener noreferrer">US and Canada arrest and charge suspected Kimwolf botnet admin</a>
-          
-        </div>
-        <div class="nc-article-source">bleepingcomputer.com · 2026-05-22</div>
+        <div class="nc-article-source">news.google.com · 2026-05-22</div>
       </div>
       
     </div>
@@ -6353,6 +6388,10 @@
       <span class="story-meta-item">Relevance: <strong>0.34</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Meta Launches Forum Combining Reddit, Facebook, and Google Features
+
+Meta has introduced Forum, a new platform that integrates discussion features similar to Reddit, social networking capabilities from Facebook, and AI-powered summarization tools reminiscent of Google&#39;s AI Overview. This move signals Meta&#39;s strategy to compete directly with Reddit&#39;s community-driven model while leveraging its existing social network and advancing its AI capabilities to enhance user experience.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -6403,6 +6442,10 @@
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Google AI Glasses Review Summary
+
+Google has released AI-enabled glasses that reviewers describe as functionally promising but not yet market-ready, with capabilities in real-time translation, visual search, and contextual information display showing significant potential for augmented reality applications. The development matters because successful AI glasses could reshape human-computer interaction by enabling hands-free access to AI assistance and information overlays in everyday contexts, positioning Google to compete in the emerging wearable AI market alongside competitors like Meta and Apple.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
@@ -6451,6 +6494,10 @@
       <span class="story-meta-item">Relevance: <strong>0.34</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># NASA Reorganization Summary
+
+NASA is restructuring its organizational hierarchy to eliminate redundant management layers and streamline decision-making processes, aiming to reduce the time and cost required to develop and launch missions. This reorganization matters because it addresses long-standing inefficiencies that have slowed innovation in space exploration and positions NASA to compete more effectively with commercial space companies while maximizing returns on its budget.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -6501,6 +6548,10 @@
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Cisco Uses AI to Write Security Incident Reports
+
+Cisco deployed AI to automatically generate security incident reports, but the system produced inconsistent and sometimes inaccurate results that required significant human review and correction. This highlights the current limitations of AI in handling critical security documentation, where accuracy and precision are essential for threat response and compliance.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
       
@@ -6541,254 +6592,60 @@
     </div>
   </div>
   
-  <div id="pool-nc-23675">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">Microsoft 365 users targeted by phishing threat</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>2</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.29</strong></span>
-      <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.09</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.29</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v4)">✗ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (2 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://cyberscoop.com/fbi-phishing-kali365-microsoft365-access-tokens/" target="_blank" rel="noopener noreferrer">FBI warns about fast-growing phishing kit targeting Microsoft 365 users</a>
-          
-        </div>
-        <div class="nc-article-source">cyberscoop.com · 2026-05-22</div>
-      </div>
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://www.helpnetsecurity.com/2026/05/22/kali365-microsoft-365-phishing-fbi-warning/" target="_blank" rel="noopener noreferrer">Microsoft 365 users targeted by new phishing threat that bypasses MFA</a>
-          
-        </div>
-        <div class="nc-article-source">helpnetsecurity.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
   
-  <div id="pool-nc-23676">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">Samsung memory chip workers negotiate $340,000 bonuses</h1>
+  
+  <div id="pool-nc-23741">
+    <div class="story-category"><span class="story-category-bar" style="background:#c07840"></span>HEALTH · ON OUR RADAR</div>
+    <h1 class="story-headline">First responders sickened by fentanyl in New Mexico</h1>
     <div class="story-meta-row">
-      <span class="story-meta-item"><strong>4</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.29</strong></span>
+      <span class="story-meta-item"><strong>3</strong> articles tracked</span>
+      <span class="story-meta-item">Relevance: <strong>0.3</strong></span>
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># First Responders Sickened by Fentanyl in New Mexico
+
+Multiple first responders in New Mexico were exposed to and sickened by illicit fentanyl while responding to an overdose call at a residence where both fentanyl and methamphetamine were found. This incident highlights the occupational health risks emergency personnel face when encountering synthetic opioids, as even minimal exposure to fentanyl can cause acute illness in unprotected responders.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
       
     </div>
     <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">4</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.24</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.29</div><div class="srq-card-label">Relevance</div></div>
+      <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
+      <div class="srq-card"><div class="srq-card-val c-accent">0.3</div><div class="srq-card-label">SRQ</div></div>
+      <div class="srq-card"><div class="srq-card-val">0.3</div><div class="srq-card-label">Relevance</div></div>
       <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
     </div>
     
-    <div class="section-title">Tracked Coverage (2 articles)</div>
+    <div class="section-title">Tracked Coverage (3 articles)</div>
     <div class="nc-article-list">
       
       <div class="nc-article-item">
         <div class="nc-article-title">
           
-          <a href="https://news.ycombinator.com/item?id=48241345" target="_blank" rel="noopener noreferrer">HN comment: Samsung chip workers will get an average $340k bonus as AI profits soar</a>
+          <a href="https://www.foxnews.com/us/illicit-version-fentanyl-linked-deadly-new-mexico-incident-sickened-first-responders" target="_blank" rel="noopener noreferrer">&#39;Illicit&#39; version of fentanyl linked to deadly New Mexico incident that sickened first responders</a>
           
         </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
+        <div class="nc-article-source">foxnews.com · 2026-05-22</div>
       </div>
       
       <div class="nc-article-item">
         <div class="nc-article-title">
           
-          <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNNFBEVkZDVGRPMnh5OUF2Rl9vdjBnLXVua0JRYXJkbzQ1eG5oYzQteG5sdzJ4bThfQW1QSURhbXhUdTFERG5xOU1haW9DZWZmSzZuVmlZajJpUkNLSnhLbzdCOXdZNS1Cc05vZnFocThWcFU0bi1PdlJaR1NlOE95YjJCa2JPamItdnJvRw?oc=5" target="_blank" rel="noopener noreferrer">Samsung’s memory chip employees negotiated $340,000 bonuses this year - The Verge</a>
+          <a href="https://www.washingtontimes.com/news/2026/may/22/fentanyl-meth-found-house-new-mexico-responders-got-sick-answering/" target="_blank" rel="noopener noreferrer">Fentanyl, meth found at house where New Mexico responders got sick after answering overdose call</a>
+          
+        </div>
+        <div class="nc-article-source">washingtontimes.com · 2026-05-22</div>
+      </div>
+      
+      <div class="nc-article-item">
+        <div class="nc-article-title">
+          
+          <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNUGM0S2RPMDdFR09lcGpKUFRJWlB2NnVTck5vdUtxQl9Ob3EybHlDRFJDSEdTOHNYMFotalBHQ1lQRFJxYTFUajFJUXhveE42YTA0ZmN6NmhiN1hYYWM2UjNLUEh5N3NTeDdDeFY2MmRHMGlBd2Z5QkZDUTVoZWR6Ul9QY1JwZzdFQ0wzSDQ2bGw4d1JxcWpQdWJPYVhKcWt2Y2tDenByX2pxUnNv?oc=5" target="_blank" rel="noopener noreferrer">First responders exposed to fentanyl in deadly New Mexico incident, officials say - NBC News</a>
           
         </div>
         <div class="nc-article-source">news.google.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
-  
-  <div id="pool-nc-23678">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">Death of brick and mortar toy stores</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>2</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.29</strong></span>
-      <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.07</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.29</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v4)">✗ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (1 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://news.ycombinator.com/item?id=48236303" target="_blank" rel="noopener noreferrer">HN comment: The death of the brick and mortar toy store</a>
-          
-        </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
-  
-  <div id="pool-nc-23672">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">Memory shortage causing consumer electronics repricing</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>6</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.26</strong></span>
-      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Other stories scored higher on relevance and verifiability this week.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">6</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.04</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.26</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (1 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://news.ycombinator.com/item?id=48240141" target="_blank" rel="noopener noreferrer">HN comment: The memory shortage is causing a repricing of consumer electronics</a>
-          
-        </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
-  
-  <div id="pool-nc-23677">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">Steve Wozniak discusses AI versus human intelligence with students</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>3</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.26</strong></span>
-      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Other stories scored higher on relevance and verifiability this week.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.04</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.26</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (1 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://news.ycombinator.com/item?id=48243184" target="_blank" rel="noopener noreferrer">HN comment: Steve Wozniak cheered after telling students they have AI – actual intelligence</a>
-          
-        </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
-      </div>
-      
-    </div>
-    
-    
-    <div class="methodology-note">
-      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
-    </div>
-  </div>
-  
-  <div id="pool-nc-23679">
-    <div class="story-category"><span class="story-category-bar" style="background:#5a88c8"></span>TECH · ON OUR RADAR</div>
-    <h1 class="story-headline">AI multiplies effect on existing technical skills</h1>
-    <div class="story-meta-row">
-      <span class="story-meta-item"><strong>3</strong> articles tracked</span>
-      <span class="story-meta-item">Relevance: <strong>0.26</strong></span>
-      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
-    </div>
-    
-    <div class="not-covered-notice" style="margin-bottom:1.1rem">
-      Other stories scored higher on relevance and verifiability this week.
-      
-    </div>
-    <div class="srq-breakdown">
-      <div class="srq-card"><div class="srq-card-val">3</div><div class="srq-card-label">Articles</div></div>
-      <div class="srq-card"><div class="srq-card-val c-accent">0.04</div><div class="srq-card-label">SRQ</div></div>
-      <div class="srq-card"><div class="srq-card-val">0.26</div><div class="srq-card-label">Relevance</div></div>
-      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
-    </div>
-    
-    <div class="section-title">Tracked Coverage (1 articles)</div>
-    <div class="nc-article-list">
-      
-      <div class="nc-article-item">
-        <div class="nc-article-title">
-          
-          <a href="https://news.ycombinator.com/item?id=48242229" target="_blank" rel="noopener noreferrer">HN comment: AI has a multiplying effect on existing technical skills</a>
-          
-        </div>
-        <div class="nc-article-source">news.ycombinator.com · 2026-05-22</div>
       </div>
       
     </div>
@@ -6809,6 +6666,10 @@
       <span class="story-meta-item">Relevance: <strong>0.21</strong></span>
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
+
+Kevin Warsh has assumed leadership of the Federal Reserve at a critical moment when inflation remains elevated and consumer confidence is declining, presenting an immediate policy challenge. His tenure matters because the Fed&#39;s decisions on interest rates and monetary policy will directly affect whether inflation can be brought under control without triggering a recession or further eroding household purchasing power.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
@@ -6850,6 +6711,10 @@
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
     
+    <p class="story-brief" style="margin-bottom:1.1rem"># Walsh on Inflation and Economic Growth
+
+Labor Secretary Walsh has stated that inflation can be reduced while maintaining strong economic growth, signaling the Biden administration&#39;s confidence in managing both priorities simultaneously. This matters because it addresses a central economic concern—that fighting inflation typically requires slowing growth—suggesting policymakers believe they can achieve the rare outcome of lower prices without triggering recession or job losses.</p>
+    
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
       
@@ -6886,7 +6751,7 @@
 </div>
 
 <script>
-const __NC_DATA__ = {"domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": true, "headline": "Senate blocks Trump\u0027s anti-weaponization fund proposal", "id": 23719, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "GOP furor over Trump\u2019s \u2018anti-weaponization\u2019 fund sinks Senate budget reconciliation bill", "url": "https://thehill.com/homenews/senate/5890532-senate-republicans-trump-fund-blanche/"}, {"published_at": "2026-05-21", "source_domain": "aljazeera.com", "title": "US Senate pushes back against Trump\u2019s $1.8bn \u2018anti-weaponisation\u2019 fund", "url": "https://www.aljazeera.com/news/2026/5/22/us-senate-pushes-back-against-trumps-1-8bn-anti-weaponisation-fund?traffic_source=rss"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.37, "gate2_pass": true, "headline": "Stephen Colbert\u0027s Final Late Show Episode on CBS", "id": 23718, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.15, "srq_factuality": 0.65, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump: Stephen Colbert firing \u2018beginning of the end\u2019 for late-night hosts", "url": "https://thehill.com/homenews/media/5891092-stephen-colbert-late-show-finale-trump/"}, {"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "Fans react to Stephen Colbert\u2019s final show", "url": "https://www.bbc.com/news/videos/cvgz36rx755o?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Trump directs Fed chair Warsh on monetary policy", "id": 23730, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump to Fed chair Warsh: \"Don\u0027t look at me, don\u0027t look at anybody\" - Axios", "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxUnEyMEN3bktfM3VCMzdyVUF1MWtZSmlpVVJ6RDVCZ29femtXQVo1Ylh4S2MyUWxVVTVQS3d5UHpSZ1JlMGdWRG0wdnpTcll2Q0NXa0d2eGJZM0hVR2JSVnpsOUV4M0NtR3BEUQ?oc=5"}, {"published_at": "2026-05-22", "source_domain": "axios.com", "title": "Trump to Fed chair Warsh: \"Don\u0027t look at me, don\u0027t look at anybody\"", "url": "https://www.axios.com/2026/05/22/warsh-trump-federal-reserve"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.32, "gate2_pass": true, "headline": "Tillis criticizes Trump\u0027s compensation fund as stupid", "id": 23733, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump rips Tillis after compensation fund criticism: \u2018Nitpicker\u2019", "url": "https://thehill.com/homenews/administration/5891147-donald-trump-thom-tillis-doj-anti-weaponization-fund-criticism/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.32, "gate2_pass": true, "headline": "DNC leadership questioned over 2024 autopsy report timing", "id": 23734, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Steele questions DNC autopsy report timing: \u2018Why are you doing this today?\u2019", "url": "https://thehill.com/homenews/campaign/5890922-michael-steele-2024-dnc-autopsy-report-timing/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Trump declines to attend son\u0027s wedding", "id": 23727, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump says he will not attend son Donald Trump Jr.\u0027s wedding - Reuters", "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPakxXejJ4VWFsVUl4YWlMTmZvQzZNYVNLLVVuNVlxUnZaczFnT1oxcUdHNXIxemdORDRhdkVTbnkyNkNvYXNlbm9tekVWNFNzLVh5OGJ2TC1VSUNvaDB2b29aNnBhRC14cTZteXpkM2VQM0RhZGtsM05qaVZ0Yll6MHpTdGJWSnNGV2w5Nm40X096T0ZYU1ZPeFUyVmVuYUpwVEJ6SVV3?oc=5"}, {"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump says he won\u2019t attend Don Jr.\u2019s wedding, citing \u2018circumstances pertaining to Government\u2019", "url": "https://thehill.com/homenews/administration/5891676-trump-says-he-wont-attend-don-jr-s-wedding-citing-circumstances-pertaining-to-government/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Mahmoud Khalil appeals deportation case to Supreme Court", "id": 23728, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Mahmoud Khalil to Appeal to Supreme Court in Effort to Halt Deportation - The New York Times", "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOS0FjemJXTzExLW1ybjJWQlBfTjJkcDg4R0Y4OUxxYkRnaTMwOGFVV0hSMWNUVGFfOHVYaGlMWExEUkxzck5qUjZOWVdielpDUGhCdEVJeHh4UFNQWUd2aWNDdkpCdElILWVzSW5IUVViMTlsRXNEUVl4bzFJVGE1T0EyNA?oc=5"}, {"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Mahmoud Khalil to appeal US deportation case to Supreme Court", "url": "https://www.aljazeera.com/news/2026/5/22/mahmoud-khalil-to-appeal-us-deportation-case-to-supreme-court?traffic_source=rss"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Trump defends DOJ anti-weaponization fund allegations", "id": 23729, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "The DOJ Just Admitted to Weaponizing a Prosecution Against Trump\u2019s Foes - Slate", "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWTY4YTB1cjhQN3A3M1RHTW1hY3FNVS1RUUNSdUwyLUpEZ3FqdnZ6aFI0cC1Gb0ZlZ1g5T0xBc1d0QjdzR193ck1JelVqMUczM2RkQkhxOGZqeFJTUHFzVDhPWEVtb2VrVThDWlhlRzNtaXVIMHVaakoxc1BaaUtmekoxeUNGYllhakFXbFpRSU1xZ3h5RThuN0NPWFhCd2VsWjhaaXJOdw?oc=5"}, {"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump defends DOJ \u2018anti-weaponization\u2019 fund from GOP critics", "url": "https://thehill.com/homenews/administration/5891274-gop-senators-question-trump-fund/"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.3, "gate2_pass": true, "headline": "Judge dismisses Michael Wolff lawsuit against Melania Trump", "id": 23722, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.3, "srq_bias_div": 0.1, "srq_factuality": 0.43, "srq_independence": 0.5, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "foxnews.com", "title": "Judge tosses Michael Wolff\u0027s lawsuit against Melania Trump, calls it \u0027contorted\u0027 and not how \u0027courts work\u0027", "url": "https://www.foxnews.com/media/judge-tosses-michael-wolffs-lawsuit-melania-trump-calls-contorted-courts-work"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Melania Trump Scores Court Win as Judge Dismisses Michael Wolff Lawsuit - TMZ", "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWnNYN3UybzBuY09rNk10OFNpSFpvbnVvc0VKMTBnWlNodjVkdDZLaVV3XzlDYmhzSW5rN3JwUWRqTjJSd3JmTDJYc1JjOHJJUDg0VzFHdjJGdWtWMVFrdkN2Y2lWMUdUdXpLbDBwWXZLX1IzUVFPRXRqWEx6VmpGamotcw?oc=5"}, {"published_at": "2026-05-22", "source_domain": "washingtontimes.com", "title": "Judge throws out author Michael Wolff\u0027s lawsuit against Melania Trump", "url": "https://www.washingtontimes.com/news/2026/may/22/judge-throws-author-michael-wolffs-lawsuit-melania-trump/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.29, "gate2_pass": false, "headline": "Canadian Man Arrested for Operating Kimwolf Botnet", "id": 23720, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.09, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "securityweek.com", "title": "Canadian Man Arrested for Operating Kimwolf Botnet", "url": "https://www.securityweek.com/canadian-man-arrested-for-operating-kimwolf-botnet/"}, {"published_at": "2026-05-22", "source_domain": "bleepingcomputer.com", "title": "US and Canada arrest and charge suspected Kimwolf botnet admin", "url": "https://www.bleepingcomputer.com/news/security/us-and-canada-arrest-and-charge-suspected-kimwolf-botnet-admin/"}]}], "economy": [{"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Warsh takes Federal Reserve leadership amid rising inflation", "id": 23712, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Warsh takes the Fed\u0027s helm as inflation climbs, consumer sentiment dives - Reuters", "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOXp3UEo5UU5wdGRYSFlIZzNWeVdGcEZfdVZhTmtTLURUMVdhMVA2UEZnRXpVZm9uYUxOR0o1ZVU1OUIxYWIwY2xyWkJ4dVZvRURIZUJHTndCUUoxWGJfckhlT2NJUHcxNVNGX1ZJb0dMc1RMNnliSmhPWndtQUZ4SDBmOFVLdF95b3NOTEF0TXpFRlFuSnA4ZG43OXU1dm8?oc=5"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Walsh inflation reduction strong economy growth", "id": 23713, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Wosh: Inflation can be reduced, and the economy will grow strongly - WEEX", "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOWFdDTTdDY0U0dS03RVdkNG0weFhSMmtuRXB6ZG1NVHdRbGFBMmhqNE5XTktnVkJVOC0zRXdtNDhQN0N2anpoVENFRElFLW1MOFVmcWFSNG1PbG5vZDE0bG55TnY5clk5bjJnbHlXWk9DYVpKOFNRc0RUbVVTeWFTNzEwZmVxcXVwNS1JZXJwQllJMHItMjhBVk5RRGx3T3ZKMW1CNGRCRkZNT2FEbXhVMThzZTQ5VkViNktka2NDcw?oc=5"}]}], "geopolitics": [{"article_count": 2, "category": "geopolitics", "gate1_score": 0.43, "gate2_pass": true, "headline": "Greenlanders protest new US consulate opening in Nuuk", "id": 23694, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-21", "source_domain": "aljazeera.com", "title": "Greenlanders protest opening of new US consulate in Nuuk", "url": "https://www.aljazeera.com/video/newsfeed/2026/5/22/greenlanders-protest-opening-of-new-us-consulate-in-nuuk?traffic_source=rss"}, {"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "\u0027No means no\u0027: Greenlanders protest against Trump outside new US consulate", "url": "https://www.bbc.com/news/articles/cwy2gxvnq1zo?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.36, "gate2_pass": true, "headline": "Hajj pilgrimage and Eid al-Adha significance", "id": 23700, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.32, "srq_bias_div": 0.05, "srq_factuality": 0.7, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "pbs.org", "title": "What to know about the Hajj, Eid al-Adha and their significance to Muslims around the world", "url": "https://www.pbs.org/newshour/world/what-to-know-about-the-hajj-eid-al-adha-and-their-significance-to-muslims-around-the-world"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "A look at the Hajj pilgrimage and Eid al-Adha and their significance to Muslims around the world - AP News", "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzFkQkFsMkNrNV8yNEZ6cGFLNFZqNDFrTmlabnRUMF8wTXdoQW1zR1VoTjFTTUdvZC02OVBZTlNzWW9CYjNzUWVsTjNBX2FvTmRRRjkxU1VBN2RHY3YyeHRWWEN5aTZLalBnVXN1dzk5MXdmUURCMFpVYmdpcHV0Nk5hZG1CYzA5cUtBTTA4WDlQSE1yV1dtelAzVnc4SGJIUDZSck84X1RQZw?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.36, "gate2_pass": true, "headline": "Trump considers military options against Iran", "id": 23701, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.32, "srq_bias_div": 0.05, "srq_factuality": 0.7, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Donald Trump\u2019s risky military options to break Iran deadlock - Financial Times", "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wSVo2VnVBMzF4MHI4bTAzOXpVMWJIS0l0bFc0WE1HdUV4SUdKT0lpNVVnSWNvOVRwR3RJc3hadmtBSHZHSzBvZmVzcjhZTXlaeGdsWlVCM3VkeFA3Q0F2YXBZNWZrUFROQS1rSThqeHY?oc=5"}, {"published_at": "2026-05-22", "source_domain": "ft.com", "title": "Trump\u2019s risky military options to break Iran deadlock", "url": "https://www.ft.com/content/dbfb7578-e9aa-426a-8c8c-a439f589fbc5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "US to send 5000 additional troops to Poland", "id": 23691, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "US to send 5,000 more troops to Poland, Trump says", "url": "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-05-21", "source_domain": "news.google.com", "title": "Trump says U.S. will send 5,000 more troops to Poland - Axios", "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5kZFBmVE00UjB3bVl5ZHFmbTc5MXdlakFLYkJUZktOT2JMMFNTb2trbXBXaFR1aHF3UlZGMUFIdmhWSVZwdVNPWE5FYjN0WG9BOUNjVkZJeTRSckhlZWZ6MHROTkROZ2hmOXFjVDZ0TlNoNFU?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "China coal mine blast kills eight, traps dozens", "id": 23699, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "dw.com", "title": "China: At least 8 dead, dozens trapped in coal mine blast", "url": "https://www.dw.com/en/china-at-least-8-dead-dozens-trapped-in-coal-mine-blast/a-77270811?maca=en-rss-en-all-1573-rdf"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Eight dead, dozens trapped in Chinese coal mine after gas explosion - CNN", "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1mdlBYM1VzeEFHQ05ZUmFmbHg0VFIzWXdkVmp6LXNHNGliLTdMZTdadnVFNHA1VTZiRzN2eGxONXI3eHl2X19ucy0wZ0hsMFgxckpnVldNVzhDREw4ZlFEQXE1RVFFbHM3QWxfdjRPWjVVMFdGMHBHSFBreFZqZw?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Trump meets advisers weighing Iran military action", "id": 23703, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump met top advisers on Iran as he weighs return to war - Axios", "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4wcmJGaFl5Si0yaXRJSUcxYld4MFVzaTl2YW5Vb2ppSnBwdVdUeGEzX25KSHBTaWlod0JrQU03dTJzT0JvMXJUY0p5TmhkX0lUNkhlWmpPcThfNVRiRXotWjFuaFlLV3pkUlMyN2E2a3Nvczd0REE?oc=5"}, {"published_at": "2026-05-22", "source_domain": "axios.com", "title": "Trump met top advisers on Iran as he weighs return to war", "url": "https://www.axios.com/2026/05/22/trump-iran-meeting-resume-war-deal"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.32, "gate2_pass": true, "headline": "Iran and US diplomacy efforts ongoing without agreement", "id": 23695, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran says diplomacy continues but no deal yet with US", "url": "https://www.aljazeera.com/news/liveblog/2026/5/23/iran-war-live-tehran-says-diplomacy-continues-but-no-deal-yet-with-us?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Iran and Oman discuss Strait of Hormuz toll system", "id": 23692, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Iran, Oman discuss Strait of Hormuz toll system: Report", "url": "https://thehill.com/policy/international/5891356-strait-hormuz-toll-system-iran-oman/"}, {"published_at": "2026-05-21", "source_domain": "news.google.com", "title": "Iran and Oman in Talks Over Strait of Hormuz Ship Payment System - The New York Times", "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVGRCd0Yxdm1hZ2YyU3V5UTFFNjItTE9hQjJjVUo2dU9Kb1J4WUg5WmhUNHpTS0RUdlJ2LTJkakVMYzlHQVVRVDM4YTFBeDNkLTZ4U3c5bzA1UDh6U0FfRi1JMWpVYVdWakRpNDk3SF9qd040NEZzWEd1RUh0eDdDSnEyTmstZ0FwU0wxeA?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.28, "gate2_pass": true, "headline": "Americans exposed to hantavirus quarantined in Nebraska", "id": 23702, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.05, "srq_factuality": 0.44, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "washingtontimes.com", "title": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine", "url": "https://www.washingtontimes.com/news/2026/may/22/americans-exposed-hantavirus-ship-enjoy-nebraska-hospitality-waiting/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - Yahoo", "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMkRVaDhUbGtUMkk3YWxQN05RTk8yV2g1UVZzb3FBUUxzSzVZSFJxdXZtYVRKSnpBeXhINGNLeDI3N2VqYTR3XzN0cG1tN1N1dDVnR0NiNEZhNWZPWWx4VGdwTEtGal94NzVxRXIwaUdHcmxMMWdpTTdLTzRCb0paanFKbFhuaU1kdzlXSl93N2lPZmtXNVhqS0dwXzRPX2c?oc=5"}]}, {"article_count": 6, "category": "geopolitics", "gate1_score": 0.26, "gate2_pass": true, "headline": "Bun support limited and deprecated", "id": 23697, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.04, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: Bun support is now limited and deprecated", "url": "https://news.ycombinator.com/item?id=48243434"}]}], "tech": [{"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "Meta launches Forum combining Reddit Facebook Google features", "id": 23684, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Meta\u2019s Forum is part Reddit, part Facebook, and part Google AI Overview - The Verge", "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQS1kzY0dqMVphbmNuTHJsVTBHbjFqOFU3WlZkUllsNV9adnk0dmpVQS16bk9XZEdlVEEtRGdlTTBQSV9YdUlzXzZXVFJ5Xy1wSWVCUXZvZFV1ajg0MW5kbEZPVnJfZ09abkpUQkNXbVE1Zk91VXZFbGs3U0JYenc0WnVR?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theverge.com", "title": "Meta\u2019s Forum is part Reddit, part Facebook, and part Google AI Overview", "url": "https://www.theverge.com/tech/936290/meta-forum-facebook-groups-app-hands-on"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "Google AI glasses product review and assessment", "id": 23685, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "We tried Google\u2019s AI glasses and they\u2019re almost there - TechCrunch", "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlEVlp4R0hGZ3RFZ1QzRVp4a1NNVVpPUS1xNnowRlVLbEtwenN5T0xLNVdMLTlVSWQ3eWFtaFdPdUcySk41ZVBfX1JJbVBCXzR0Z2QxemxheW96VUdDeXM0YkNlZEFaS2NIeHJxNzFTTG1BN01xakVFUVZvaW1xZWs0OVJ0cTMtNS0yOWV6SQ?oc=5"}, {"published_at": "2026-05-22", "source_domain": "techcrunch.com", "title": "We tried Google\u2019s AI glasses and they\u2019re almost there", "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "NASA reorganization to reduce bureaucracy and accelerate missions", "id": 23686, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "arstechnica.com", "title": "NASA undertakes major reorganization to reduce bureaucracy and move faster", "url": "https://arstechnica.com/space/2026/05/to-achieve-major-goals-nasa-seeks-to-streamline-its-organization/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "NASA Announces Realignment to Accelerate Mission Delivery - NASA (.gov)", "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdHM3UThiNjFHZDFib1k1dW5XYVhtQ3kyaGlsMmtuSU1ESkxUVDcydjhhaTRLVkdaNHR6MTNoSUZlS3ZMcUlibGR3M01NbjJxa05SS0IxQ1B4RlY2WUJwdDZlQXBUSno2NnpSVWhEYTladDhGMktMdnZGZ2pPNTE1NEdIS3R4M3d5SXBYTEozWF9VWVhsZkZv?oc=5"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.29, "gate2_pass": false, "headline": "Cisco uses AI to write security incident reports", "id": 23674, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Cisco used AI to write security incident reports, with mixed results - The Register", "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdUhhcEY1VGE0M2tVdlNLdmhYakxKRkFiQUpxdVBiQXBMWlg1RzIzWDB0d0wwRGtxZTZ0aHlERkhsNlZud0hpTHppTnYtd2N5V2QwTWhDVVFUVlBPbEdiUXVBMnI4YUU3TE90X0h2RkJzNmpuTnR2dmU1eXAxelV3aEY0SlBGR2RpMmsyUkxQWFN2VUhXU0g3NmZ1ZEhBSHRJd09MSnF6c1NWN2RaOExHMkY4SkloeVVsc0YtaU00RVM?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theregister.com", "title": "Cisco used AI to write security incident reports, with mixed results", "url": "https://www.theregister.com/security/2026/05/22/cisco-used-ai-to-write-security-incident-reports-with-mixed-results/5244692"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.29, "gate2_pass": false, "headline": "Microsoft 365 users targeted by phishing threat", "id": 23675, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.09, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "cyberscoop.com", "title": "FBI warns about fast-growing phishing kit targeting Microsoft 365 users", "url": "https://cyberscoop.com/fbi-phishing-kali365-microsoft365-access-tokens/"}, {"published_at": "2026-05-22", "source_domain": "helpnetsecurity.com", "title": "Microsoft 365 users targeted by new phishing threat that bypasses MFA", "url": "https://www.helpnetsecurity.com/2026/05/22/kali365-microsoft-365-phishing-fbi-warning/"}]}, {"article_count": 4, "category": "tech", "gate1_score": 0.29, "gate2_pass": true, "headline": "Samsung memory chip workers negotiate $340,000 bonuses", "id": 23676, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: Samsung chip workers will get an average $340k bonus as AI profits soar", "url": "https://news.ycombinator.com/item?id=48241345"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Samsung\u2019s memory chip employees negotiated $340,000 bonuses this year - The Verge", "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNFBEVkZDVGRPMnh5OUF2Rl9vdjBnLXVua0JRYXJkbzQ1eG5oYzQteG5sdzJ4bThfQW1QSURhbXhUdTFERG5xOU1haW9DZWZmSzZuVmlZajJpUkNLSnhLbzdCOXdZNS1Cc05vZnFocThWcFU0bi1PdlJaR1NlOE95YjJCa2JPamItdnJvRw?oc=5"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.29, "gate2_pass": false, "headline": "Death of brick and mortar toy stores", "id": 23678, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.07, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: The death of the brick and mortar toy store", "url": "https://news.ycombinator.com/item?id=48236303"}]}, {"article_count": 6, "category": "tech", "gate1_score": 0.26, "gate2_pass": true, "headline": "Memory shortage causing consumer electronics repricing", "id": 23672, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.04, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: The memory shortage is causing a repricing of consumer electronics", "url": "https://news.ycombinator.com/item?id=48240141"}]}, {"article_count": 3, "category": "tech", "gate1_score": 0.26, "gate2_pass": true, "headline": "Steve Wozniak discusses AI versus human intelligence with students", "id": 23677, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.04, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: Steve Wozniak cheered after telling students they have AI \u2013 actual intelligence", "url": "https://news.ycombinator.com/item?id=48243184"}]}, {"article_count": 3, "category": "tech", "gate1_score": 0.26, "gate2_pass": true, "headline": "AI multiplies effect on existing technical skills", "id": 23679, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.04, "srq_bias_div": 0, "srq_factuality": 0, "srq_independence": 0.17, "story_summary": "", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.ycombinator.com", "title": "HN comment: AI has a multiplying effect on existing technical skills", "url": "https://news.ycombinator.com/item?id=48242229"}]}]};
+const __NC_DATA__ = {"domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": true, "headline": "Senate blocks Trump\u0027s anti-weaponization fund proposal", "id": 23719, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "# Senate Blocks Trump\u0027s Anti-Weaponization Fund Proposal\n\nThe Senate rejected Trump\u0027s proposed $1.8 billion \"anti-weaponization\" fund within the budget reconciliation bill, with Republican opposition playing a key role in derailing the measure. The funding proposal, intended to counter what Trump characterized as politicized use of federal agencies, failed to secure sufficient support and became a sticking point that sank the broader reconciliation package.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "GOP furor over Trump\u2019s \u2018anti-weaponization\u2019 fund sinks Senate budget reconciliation bill", "url": "https://thehill.com/homenews/senate/5890532-senate-republicans-trump-fund-blanche/"}, {"published_at": "2026-05-21", "source_domain": "aljazeera.com", "title": "US Senate pushes back against Trump\u2019s $1.8bn \u2018anti-weaponisation\u2019 fund", "url": "https://www.aljazeera.com/news/2026/5/22/us-senate-pushes-back-against-trumps-1-8bn-anti-weaponisation-fund?traffic_source=rss"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.37, "gate2_pass": true, "headline": "Stephen Colbert\u0027s Final Late Show Episode on CBS", "id": 23718, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.15, "srq_factuality": 0.65, "srq_independence": 0.33, "story_summary": "# Stephen Colbert\u0027s Final Late Show Episode on CBS\n\nStephen Colbert aired his final episode of \"The Late Show\" on CBS after nine years, marking the end of a politically-charged late-night program that frequently critiqued Trump and Republican policies. The departure is significant because it removes a prominent media voice from the nightly political commentary landscape during a period of heightened partisan tension, while Colbert\u0027s choice to avoid politics in his final episode suggests a strategic shift in tone as he transitions away from the platform.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump: Stephen Colbert firing \u2018beginning of the end\u2019 for late-night hosts", "url": "https://thehill.com/homenews/media/5891092-stephen-colbert-late-show-finale-trump/"}, {"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "Fans react to Stephen Colbert\u2019s final show", "url": "https://www.bbc.com/news/videos/cvgz36rx755o?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Trump directs Fed chair Warsh on monetary policy", "id": 23730, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# Summary\n\nTrump has directed Federal Reserve Chair Kevin Warsh not to consider political pressure when making monetary policy decisions, instructing him to focus solely on economic data. This statement matters because it clarifies Trump\u0027s expectations for Fed independence while raising questions about whether such directives themselves constitute the kind of political influence the instruction purports to reject.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump to Fed chair Warsh: \"Don\u0027t look at me, don\u0027t look at anybody\" - Axios", "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxUnEyMEN3bktfM3VCMzdyVUF1MWtZSmlpVVJ6RDVCZ29femtXQVo1Ylh4S2MyUWxVVTVQS3d5UHpSZ1JlMGdWRG0wdnpTcll2Q0NXa0d2eGJZM0hVR2JSVnpsOUV4M0NtR3BEUQ?oc=5"}, {"published_at": "2026-05-22", "source_domain": "axios.com", "title": "Trump to Fed chair Warsh: \"Don\u0027t look at me, don\u0027t look at anybody\"", "url": "https://www.axios.com/2026/05/22/warsh-trump-federal-reserve"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.32, "gate2_pass": true, "headline": "Tillis criticizes Trump\u0027s compensation fund as stupid", "id": 23733, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "# Summary\n\nSenator Thom Tillis criticized Trump\u0027s compensation fund for supporters affected by January 6th prosecutions as \"stupid\" and \"beyond the pale,\" prompting Trump to publicly attack Tillis as a \"nitpicker.\" This exchange highlights deepening fractures within the Republican Party over how to respond to legal consequences from the Capitol riot and reveals tensions between Trump and establishment GOP figures over party loyalty and policy direction.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump rips Tillis after compensation fund criticism: \u2018Nitpicker\u2019", "url": "https://thehill.com/homenews/administration/5891147-donald-trump-thom-tillis-doj-anti-weaponization-fund-criticism/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.32, "gate2_pass": true, "headline": "DNC leadership questioned over 2024 autopsy report timing", "id": 23734, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "# DNC Leadership Questioned Over 2024 Autopsy Report Timing\n\nDemocratic National Committee leadership is facing scrutiny over the timing and release of their 2024 election autopsy report, with critics like Michael Steele questioning why the party is publishing internal analysis during an active political cycle. The controversy matters because the report\u0027s findings on campaign failures and strategic missteps could influence current DNC direction and internal power dynamics while the party is still mobilizing for upcoming elections.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Steele questions DNC autopsy report timing: \u2018Why are you doing this today?\u2019", "url": "https://thehill.com/homenews/campaign/5890922-michael-steele-2024-dnc-autopsy-report-timing/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Trump declines to attend son\u0027s wedding", "id": 23727, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Trump Declines to Attend Son\u0027s Wedding\n\nFormer President Donald Trump announced he will not attend his son Donald Trump Jr.\u0027s wedding, citing unspecified circumstances related to government matters. The decision raises questions about Trump\u0027s legal and political obligations, given ongoing investigations and potential trials that may be demanding his attention during this personal family event.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump says he will not attend son Donald Trump Jr.\u0027s wedding - Reuters", "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPakxXejJ4VWFsVUl4YWlMTmZvQzZNYVNLLVVuNVlxUnZaczFnT1oxcUdHNXIxemdORDRhdkVTbnkyNkNvYXNlbm9tekVWNFNzLVh5OGJ2TC1VSUNvaDB2b29aNnBhRC14cTZteXpkM2VQM0RhZGtsM05qaVZ0Yll6MHpTdGJWSnNGV2w5Nm40X096T0ZYU1ZPeFUyVmVuYUpwVEJ6SVV3?oc=5"}, {"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump says he won\u2019t attend Don Jr.\u2019s wedding, citing \u2018circumstances pertaining to Government\u2019", "url": "https://thehill.com/homenews/administration/5891676-trump-says-he-wont-attend-don-jr-s-wedding-citing-circumstances-pertaining-to-government/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Mahmoud Khalil appeals deportation case to Supreme Court", "id": 23728, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Mahmoud Khalil Appeals Deportation Case to Supreme Court\n\nMahmoud Khalil has filed an appeal to the Supreme Court in an attempt to prevent his deportation from the United States. The case matters because a Supreme Court decision could set precedent for immigration enforcement and potentially affect how similar deportation cases are handled nationwide.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Mahmoud Khalil to Appeal to Supreme Court in Effort to Halt Deportation - The New York Times", "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOS0FjemJXTzExLW1ybjJWQlBfTjJkcDg4R0Y4OUxxYkRnaTMwOGFVV0hSMWNUVGFfOHVYaGlMWExEUkxzck5qUjZOWVdielpDUGhCdEVJeHh4UFNQWUd2aWNDdkpCdElILWVzSW5IUVViMTlsRXNEUVl4bzFJVGE1T0EyNA?oc=5"}, {"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Mahmoud Khalil to appeal US deportation case to Supreme Court", "url": "https://www.aljazeera.com/news/2026/5/22/mahmoud-khalil-to-appeal-us-deportation-case-to-supreme-court?traffic_source=rss"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Trump defends DOJ anti-weaponization fund allegations", "id": 23729, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Summary\n\nDonald Trump is defending a Department of Justice initiative focused on investigating alleged political weaponization of federal prosecutions, while some Republican critics question its effectiveness and funding allocation. This matters because it reflects ongoing partisan disputes over whether the DOJ has been used to target political opponents, a central claim in Trump\u0027s legal defense strategy and broader debates about institutional integrity.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "The DOJ Just Admitted to Weaponizing a Prosecution Against Trump\u2019s Foes - Slate", "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPWTY4YTB1cjhQN3A3M1RHTW1hY3FNVS1RUUNSdUwyLUpEZ3FqdnZ6aFI0cC1Gb0ZlZ1g5T0xBc1d0QjdzR193ck1JelVqMUczM2RkQkhxOGZqeFJTUHFzVDhPWEVtb2VrVThDWlhlRzNtaXVIMHVaakoxc1BaaUtmekoxeUNGYllhakFXbFpRSU1xZ3h5RThuN0NPWFhCd2VsWjhaaXJOdw?oc=5"}, {"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump defends DOJ \u2018anti-weaponization\u2019 fund from GOP critics", "url": "https://thehill.com/homenews/administration/5891274-gop-senators-question-trump-fund/"}]}, {"article_count": 3, "category": "domestic_politics", "gate1_score": 0.3, "gate2_pass": true, "headline": "Judge dismisses Michael Wolff lawsuit against Melania Trump", "id": 23722, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.3, "srq_bias_div": 0.1, "srq_factuality": 0.43, "srq_independence": 0.5, "story_summary": "# Judge Dismisses Michael Wolff Lawsuit Against Melania Trump\n\nA federal judge dismissed author Michael Wolff\u0027s lawsuit against Melania Trump, criticizing the legal theory as \"contorted\" and outside the bounds of how courts operate. The dismissal represents a significant legal victory for the former first lady in her dispute with Wolff over his book about the Trump administration.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "foxnews.com", "title": "Judge tosses Michael Wolff\u0027s lawsuit against Melania Trump, calls it \u0027contorted\u0027 and not how \u0027courts work\u0027", "url": "https://www.foxnews.com/media/judge-tosses-michael-wolffs-lawsuit-melania-trump-calls-contorted-courts-work"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Melania Trump Scores Court Win as Judge Dismisses Michael Wolff Lawsuit - TMZ", "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOWnNYN3UybzBuY09rNk10OFNpSFpvbnVvc0VKMTBnWlNodjVkdDZLaVV3XzlDYmhzSW5rN3JwUWRqTjJSd3JmTDJYc1JjOHJJUDg0VzFHdjJGdWtWMVFrdkN2Y2lWMUdUdXpLbDBwWXZLX1IzUVFPRXRqWEx6VmpGamotcw?oc=5"}, {"published_at": "2026-05-22", "source_domain": "washingtontimes.com", "title": "Judge throws out author Michael Wolff\u0027s lawsuit against Melania Trump", "url": "https://www.washingtontimes.com/news/2026/may/22/judge-throws-author-michael-wolffs-lawsuit-melania-trump/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.21, "gate2_pass": false, "headline": "Federal Reserve chief sworn in amid inflation concerns", "id": 23716, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "# Federal Reserve Chief Sworn In Amid Inflation Concerns\n\nA new Federal Reserve chief has been sworn in at the White House during a period of elevated inflation, taking leadership of the central bank at a time when economic pressures are intensifying. The appointment matters because the Fed chair controls monetary policy decisions that directly affect interest rates, inflation control, and economic stability, making this leadership transition critical for addressing current economic challenges.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Fed chief sworn in at the White House, facing surging inflation - The Washington Post", "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRlZnSF9GVGR2Y004WWFkZWt1dldib1NmRk1YSDR5RHJMS2JiWEIxdVV6dUFGWUU3RUtxMVpzaG1oN3ZfTzZHRndMOHViMjFCeWhJR09ITDdnWExiZHJxSFVmSmY3RXoyNVFDVUJPekU2TnRJZVBsLUNTYUpZXzlKZTZFdDdURnBzcmc4M2hoWWVlSDAtUU43V1F5YjhFSVVHdkVnRWVlTnNPMVN6RmFZczhxSkptZw?oc=5"}]}], "economy": [{"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Warsh takes Federal Reserve leadership amid rising inflation", "id": 23712, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "# Summary\n\nKevin Warsh has assumed leadership of the Federal Reserve at a critical moment when inflation remains elevated and consumer confidence is declining, presenting an immediate policy challenge. His tenure matters because the Fed\u0027s decisions on interest rates and monetary policy will directly affect whether inflation can be brought under control without triggering a recession or further eroding household purchasing power.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Warsh takes the Fed\u0027s helm as inflation climbs, consumer sentiment dives - Reuters", "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOXp3UEo5UU5wdGRYSFlIZzNWeVdGcEZfdVZhTmtTLURUMVdhMVA2UEZnRXpVZm9uYUxOR0o1ZVU1OUIxYWIwY2xyWkJ4dVZvRURIZUJHTndCUUoxWGJfckhlT2NJUHcxNVNGX1ZJb0dMc1RMNnliSmhPWndtQUZ4SDBmOFVLdF95b3NOTEF0TXpFRlFuSnA4ZG43OXU1dm8?oc=5"}]}, {"article_count": 2, "category": "economy", "gate1_score": 0.21, "gate2_pass": false, "headline": "Walsh inflation reduction strong economy growth", "id": 23713, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "# Walsh on Inflation and Economic Growth\n\nLabor Secretary Walsh has stated that inflation can be reduced while maintaining strong economic growth, signaling the Biden administration\u0027s confidence in managing both priorities simultaneously. This matters because it addresses a central economic concern\u2014that fighting inflation typically requires slowing growth\u2014suggesting policymakers believe they can achieve the rare outcome of lower prices without triggering recession or job losses.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Wosh: Inflation can be reduced, and the economy will grow strongly - WEEX", "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOWFdDTTdDY0U0dS03RVdkNG0weFhSMmtuRXB6ZG1NVHdRbGFBMmhqNE5XTktnVkJVOC0zRXdtNDhQN0N2anpoVENFRElFLW1MOFVmcWFSNG1PbG5vZDE0bG55TnY5clk5bjJnbHlXWk9DYVpKOFNRc0RUbVVTeWFTNzEwZmVxcXVwNS1JZXJwQllJMHItMjhBVk5RRGx3T3ZKMW1CNGRCRkZNT2FEbXhVMThzZTQ5VkViNktka2NDcw?oc=5"}]}], "geopolitics": [{"article_count": 2, "category": "geopolitics", "gate1_score": 0.43, "gate2_pass": true, "headline": "Greenlanders protest new US consulate opening in Nuuk", "id": 23694, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.36, "srq_bias_div": 0.2, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "# Greenlanders Protest New US Consulate Opening in Nuuk\n\nGreenlanders are demonstrating against the opening of a new US consulate in their capital, reflecting concerns about increased American political and military presence on the island. The protests signal growing anxiety about foreign interference in Greenlandic autonomy at a time of heightened geopolitical competition over Arctic resources and strategic positioning.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-21", "source_domain": "aljazeera.com", "title": "Greenlanders protest opening of new US consulate in Nuuk", "url": "https://www.aljazeera.com/video/newsfeed/2026/5/22/greenlanders-protest-opening-of-new-us-consulate-in-nuuk?traffic_source=rss"}, {"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "\u0027No means no\u0027: Greenlanders protest against Trump outside new US consulate", "url": "https://www.bbc.com/news/articles/cwy2gxvnq1zo?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.36, "gate2_pass": true, "headline": "Hajj pilgrimage and Eid al-Adha significance", "id": 23700, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.32, "srq_bias_div": 0.05, "srq_factuality": 0.7, "srq_independence": 0.33, "story_summary": "# Hajj Pilgrimage and Eid al-Adha\n\nMillions of Muslims from diverse nations converge on Saudi Arabia annually for the Hajj pilgrimage, one of Islam\u0027s five pillars, followed by the celebration of Eid al-Adha, which commemorates Prophet Ibrahim\u0027s willingness to sacrifice his son. This religious gathering holds geopolitical significance as it temporarily unites Muslims across sectarian, ethnic, and national divides while positioning Saudi Arabia as custodian of Islam\u0027s holiest sites\u2014a role central to its regional", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "pbs.org", "title": "What to know about the Hajj, Eid al-Adha and their significance to Muslims around the world", "url": "https://www.pbs.org/newshour/world/what-to-know-about-the-hajj-eid-al-adha-and-their-significance-to-muslims-around-the-world"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "A look at the Hajj pilgrimage and Eid al-Adha and their significance to Muslims around the world - AP News", "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNXzFkQkFsMkNrNV8yNEZ6cGFLNFZqNDFrTmlabnRUMF8wTXdoQW1zR1VoTjFTTUdvZC02OVBZTlNzWW9CYjNzUWVsTjNBX2FvTmRRRjkxU1VBN2RHY3YyeHRWWEN5aTZLalBnVXN1dzk5MXdmUURCMFpVYmdpcHV0Nk5hZG1CYzA5cUtBTTA4WDlQSE1yV1dtelAzVnc4SGJIUDZSck84X1RQZw?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.36, "gate2_pass": true, "headline": "Trump considers military options against Iran", "id": 23701, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.32, "srq_bias_div": 0.05, "srq_factuality": 0.7, "srq_independence": 0.33, "story_summary": "# Trump Considers Military Options Against Iran\n\nFormer President Donald Trump is reportedly evaluating military actions to pressure Iran, potentially including strikes against Iranian nuclear facilities or military assets, amid escalating tensions over Iran\u0027s nuclear program advancement. This matters because direct military confrontation could destabilize the Middle East, trigger regional conflicts involving U.S. allies and Iranian proxies, and undermine ongoing diplomatic efforts to contain Iran\u0027s nuclear ambitions.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Donald Trump\u2019s risky military options to break Iran deadlock - Financial Times", "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8wSVo2VnVBMzF4MHI4bTAzOXpVMWJIS0l0bFc0WE1HdUV4SUdKT0lpNVVnSWNvOVRwR3RJc3hadmtBSHZHSzBvZmVzcjhZTXlaeGdsWlVCM3VkeFA3Q0F2YXBZNWZrUFROQS1rSThqeHY?oc=5"}, {"published_at": "2026-05-22", "source_domain": "ft.com", "title": "Trump\u2019s risky military options to break Iran deadlock", "url": "https://www.ft.com/content/dbfb7578-e9aa-426a-8c8c-a439f589fbc5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "US to send 5000 additional troops to Poland", "id": 23691, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# US to Send 5,000 Additional Troops to Poland\n\nThe United States is deploying an additional 5,000 troops to Poland, strengthening NATO\u0027s eastern flank in response to regional security concerns. This deployment matters because it demonstrates U.S. commitment to NATO allies amid tensions with Russia and reinforces deterrence against potential aggression in Eastern Europe.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-21", "source_domain": "bbc.com", "title": "US to send 5,000 more troops to Poland, Trump says", "url": "https://www.bbc.com/news/articles/cedpz9669deo?at_medium=RSS\u0026at_campaign=rss"}, {"published_at": "2026-05-21", "source_domain": "news.google.com", "title": "Trump says U.S. will send 5,000 more troops to Poland - Axios", "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5kZFBmVE00UjB3bVl5ZHFmbTc5MXdlakFLYkJUZktOT2JMMFNTb2trbXBXaFR1aHF3UlZGMUFIdmhWSVZwdVNPWE5FYjN0WG9BOUNjVkZJeTRSckhlZWZ6MHROTkROZ2hmOXFjVDZ0TlNoNFU?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "China coal mine blast kills eight, traps dozens", "id": 23699, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# China Coal Mine Blast Summary\n\nA gas explosion at a Chinese coal mine has killed at least eight workers and trapped dozens more underground, highlighting the persistent safety hazards in China\u0027s mining industry despite regulatory efforts. This incident underscores the geopolitical significance of China\u0027s dependence on coal for energy production and the human cost of maintaining its industrial infrastructure to support economic growth and global supply chains.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "dw.com", "title": "China: At least 8 dead, dozens trapped in coal mine blast", "url": "https://www.dw.com/en/china-at-least-8-dead-dozens-trapped-in-coal-mine-blast/a-77270811?maca=en-rss-en-all-1573-rdf"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Eight dead, dozens trapped in Chinese coal mine after gas explosion - CNN", "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1mdlBYM1VzeEFHQ05ZUmFmbHg0VFIzWXdkVmp6LXNHNGliLTdMZTdadnVFNHA1VTZiRzN2eGxONXI3eHl2X19ucy0wZ0hsMFgxckpnVldNVzhDREw4ZlFEQXE1RVFFbHM3QWxfdjRPWjVVMFdGMHBHSFBreFZqZw?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Trump meets advisers weighing Iran military action", "id": 23703, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# Trump Meets Advisers on Potential Iran Military Action\n\nPresident Trump is meeting with senior advisers to evaluate military options against Iran as he prepares to return to office. This matters because any U.S. military action against Iran could destabilize the Middle East, affect global oil prices, and potentially trigger broader regional conflict involving allied and adversarial nations.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Trump met top advisers on Iran as he weighs return to war - Axios", "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4wcmJGaFl5Si0yaXRJSUcxYld4MFVzaTl2YW5Vb2ppSnBwdVdUeGEzX25KSHBTaWlod0JrQU03dTJzT0JvMXJUY0p5TmhkX0lUNkhlWmpPcThfNVRiRXotWjFuaFlLV3pkUlMyN2E2a3Nvczd0REE?oc=5"}, {"published_at": "2026-05-22", "source_domain": "axios.com", "title": "Trump met top advisers on Iran as he weighs return to war", "url": "https://www.axios.com/2026/05/22/trump-iran-meeting-resume-war-deal"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.32, "gate2_pass": true, "headline": "Iran and US diplomacy efforts ongoing without agreement", "id": 23695, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.28, "srq_bias_div": 0.1, "srq_factuality": 0.6, "srq_independence": 0.17, "story_summary": "# Iran-US Diplomacy Summary\n\nIran and the United States are engaged in ongoing diplomatic negotiations aimed at de-escalating tensions and potentially reviving a nuclear agreement, though neither side has yet reached a formal deal. These talks matter because a breakthrough could stabilize the Middle East, reduce the risk of military conflict, and address longstanding disagreements over Iran\u0027s nuclear program and US sanctions.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran says diplomacy continues but no deal yet with US", "url": "https://www.aljazeera.com/news/liveblog/2026/5/23/iran-war-live-tehran-says-diplomacy-continues-but-no-deal-yet-with-us?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Iran and Oman discuss Strait of Hormuz toll system", "id": 23692, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Strait of Hormuz Toll System Negotiations\n\nIran and Oman are discussing a potential toll or payment system for ships transiting the Strait of Hormuz, one of the world\u0027s most critical chokepoints through which roughly 20% of global oil passes. This matters because such a system could give Iran significant leverage over international commerce and energy markets while raising concerns among Western nations and global trading partners about freedom of navigation and potential economic disruption.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Iran, Oman discuss Strait of Hormuz toll system: Report", "url": "https://thehill.com/policy/international/5891356-strait-hormuz-toll-system-iran-oman/"}, {"published_at": "2026-05-21", "source_domain": "news.google.com", "title": "Iran and Oman in Talks Over Strait of Hormuz Ship Payment System - The New York Times", "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVGRCd0Yxdm1hZ2YyU3V5UTFFNjItTE9hQjJjVUo2dU9Kb1J4WUg5WmhUNHpTS0RUdlJ2LTJkakVMYzlHQVVRVDM4YTFBeDNkLTZ4U3c5bzA1UDh6U0FfRi1JMWpVYVdWakRpNDk3SF9qd040NEZzWEd1RUh0eDdDSnEyTmstZ0FwU0wxeA?oc=5"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.28, "gate2_pass": true, "headline": "Americans exposed to hantavirus quarantined in Nebraska", "id": 23702, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.05, "srq_factuality": 0.44, "srq_independence": 0.33, "story_summary": "# Hantavirus Exposure Quarantine in Nebraska\n\nA group of Americans exposed to hantavirus aboard a ship are being quarantined in Nebraska while health officials monitor them for symptom development. This matter is significant because hantavirus is a serious disease with high mortality rates, making proper containment and medical oversight critical to prevent potential spread to the general population.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "washingtontimes.com", "title": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine", "url": "https://www.washingtontimes.com/news/2026/may/22/americans-exposed-hantavirus-ship-enjoy-nebraska-hospitality-waiting/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Americans exposed to hantavirus on ship enjoy some Nebraska hospitality while waiting in quarantine - Yahoo", "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMkRVaDhUbGtUMkk3YWxQN05RTk8yV2g1UVZzb3FBUUxzSzVZSFJxdXZtYVRKSnpBeXhINGNLeDI3N2VqYTR3XzN0cG1tN1N1dDVnR0NiNEZhNWZPWWx4VGdwTEtGal94NzVxRXIwaUdHcmxMMWdpTTdLTzRCb0paanFKbFhuaU1kdzlXSl93N2lPZmtXNVhqS0dwXzRPX2c?oc=5"}]}], "health": [{"article_count": 3, "category": "health", "gate1_score": 0.3, "gate2_pass": true, "headline": "First responders sickened by fentanyl in New Mexico", "id": 23741, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.3, "srq_bias_div": 0.1, "srq_factuality": 0.43, "srq_independence": 0.5, "story_summary": "# First Responders Sickened by Fentanyl in New Mexico\n\nMultiple first responders in New Mexico were exposed to and sickened by illicit fentanyl while responding to an overdose call at a residence where both fentanyl and methamphetamine were found. This incident highlights the occupational health risks emergency personnel face when encountering synthetic opioids, as even minimal exposure to fentanyl can cause acute illness in unprotected responders.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "foxnews.com", "title": "\u0027Illicit\u0027 version of fentanyl linked to deadly New Mexico incident that sickened first responders", "url": "https://www.foxnews.com/us/illicit-version-fentanyl-linked-deadly-new-mexico-incident-sickened-first-responders"}, {"published_at": "2026-05-22", "source_domain": "washingtontimes.com", "title": "Fentanyl, meth found at house where New Mexico responders got sick after answering overdose call", "url": "https://www.washingtontimes.com/news/2026/may/22/fentanyl-meth-found-house-new-mexico-responders-got-sick-answering/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "First responders exposed to fentanyl in deadly New Mexico incident, officials say - NBC News", "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUGM0S2RPMDdFR09lcGpKUFRJWlB2NnVTck5vdUtxQl9Ob3EybHlDRFJDSEdTOHNYMFotalBHQ1lQRFJxYTFUajFJUXhveE42YTA0ZmN6NmhiN1hYYWM2UjNLUEh5N3NTeDdDeFY2MmRHMGlBd2Z5QkZDUTVoZWR6Ul9QY1JwZzdFQ0wzSDQ2bGw4d1JxcWpQdWJPYVhKcWt2Y2tDenByX2pxUnNv?oc=5"}]}], "tech": [{"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "Meta launches Forum combining Reddit Facebook Google features", "id": 23684, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# Meta Launches Forum Combining Reddit, Facebook, and Google Features\n\nMeta has introduced Forum, a new platform that integrates discussion features similar to Reddit, social networking capabilities from Facebook, and AI-powered summarization tools reminiscent of Google\u0027s AI Overview. This move signals Meta\u0027s strategy to compete directly with Reddit\u0027s community-driven model while leveraging its existing social network and advancing its AI capabilities to enhance user experience.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Meta\u2019s Forum is part Reddit, part Facebook, and part Google AI Overview - The Verge", "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQS1kzY0dqMVphbmNuTHJsVTBHbjFqOFU3WlZkUllsNV9adnk0dmpVQS16bk9XZEdlVEEtRGdlTTBQSV9YdUlzXzZXVFJ5Xy1wSWVCUXZvZFV1ajg0MW5kbEZPVnJfZ09abkpUQkNXbVE1Zk91VXZFbGs3U0JYenc0WnVR?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theverge.com", "title": "Meta\u2019s Forum is part Reddit, part Facebook, and part Google AI Overview", "url": "https://www.theverge.com/tech/936290/meta-forum-facebook-groups-app-hands-on"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "Google AI glasses product review and assessment", "id": 23685, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# Google AI Glasses Review Summary\n\nGoogle has released AI-enabled glasses that reviewers describe as functionally promising but not yet market-ready, with capabilities in real-time translation, visual search, and contextual information display showing significant potential for augmented reality applications. The development matters because successful AI glasses could reshape human-computer interaction by enabling hands-free access to AI assistance and information overlays in everyday contexts, positioning Google to compete in the emerging wearable AI market alongside competitors like Meta and Apple.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "We tried Google\u2019s AI glasses and they\u2019re almost there - TechCrunch", "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPeVlEVlp4R0hGZ3RFZ1QzRVp4a1NNVVpPUS1xNnowRlVLbEtwenN5T0xLNVdMLTlVSWQ3eWFtaFdPdUcySk41ZVBfX1JJbVBCXzR0Z2QxemxheW96VUdDeXM0YkNlZEFaS2NIeHJxNzFTTG1BN01xakVFUVZvaW1xZWs0OVJ0cTMtNS0yOWV6SQ?oc=5"}, {"published_at": "2026-05-22", "source_domain": "techcrunch.com", "title": "We tried Google\u2019s AI glasses and they\u2019re almost there", "url": "https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.34, "gate2_pass": true, "headline": "NASA reorganization to reduce bureaucracy and accelerate missions", "id": 23686, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# NASA Reorganization Summary\n\nNASA is restructuring its organizational hierarchy to eliminate redundant management layers and streamline decision-making processes, aiming to reduce the time and cost required to develop and launch missions. This reorganization matters because it addresses long-standing inefficiencies that have slowed innovation in space exploration and positions NASA to compete more effectively with commercial space companies while maximizing returns on its budget.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "arstechnica.com", "title": "NASA undertakes major reorganization to reduce bureaucracy and move faster", "url": "https://arstechnica.com/space/2026/05/to-achieve-major-goals-nasa-seeks-to-streamline-its-organization/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "NASA Announces Realignment to Accelerate Mission Delivery - NASA (.gov)", "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdHM3UThiNjFHZDFib1k1dW5XYVhtQ3kyaGlsMmtuSU1ESkxUVDcydjhhaTRLVkdaNHR6MTNoSUZlS3ZMcUlibGR3M01NbjJxa05SS0IxQ1B4RlY2WUJwdDZlQXBUSno2NnpSVWhEYTladDhGMktMdnZGZ2pPNTE1NEdIS3R4M3d5SXBYTEozWF9VWVhsZkZv?oc=5"}]}, {"article_count": 2, "category": "tech", "gate1_score": 0.29, "gate2_pass": false, "headline": "Cisco uses AI to write security incident reports", "id": 23674, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.33, "story_summary": "# Cisco Uses AI to Write Security Incident Reports\n\nCisco deployed AI to automatically generate security incident reports, but the system produced inconsistent and sometimes inaccurate results that required significant human review and correction. This highlights the current limitations of AI in handling critical security documentation, where accuracy and precision are essential for threat response and compliance.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Cisco used AI to write security incident reports, with mixed results - The Register", "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdUhhcEY1VGE0M2tVdlNLdmhYakxKRkFiQUpxdVBiQXBMWlg1RzIzWDB0d0wwRGtxZTZ0aHlERkhsNlZud0hpTHppTnYtd2N5V2QwTWhDVVFUVlBPbEdiUXVBMnI4YUU3TE90X0h2RkJzNmpuTnR2dmU1eXAxelV3aEY0SlBGR2RpMmsyUkxQWFN2VUhXU0g3NmZ1ZEhBSHRJd09MSnF6c1NWN2RaOExHMkY4SkloeVVsc0YtaU00RVM?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theregister.com", "title": "Cisco used AI to write security incident reports, with mixed results", "url": "https://www.theregister.com/security/2026/05/22/cisco-used-ai-to-write-security-incident-reports-with-mixed-results/5244692"}]}]};
 // Flatten to id→object map for panel title lookup
 const __NC_MAP__ = {};
 Object.values(__NC_DATA__).forEach(items => items.forEach(nc => { __NC_MAP__[nc.id] = nc; }));
