@@ -853,6 +853,8 @@
                 
                 <option value="2026-W19" data-cadence="weekly" >2026-W19 (W)</option>
                 
+                <option value="2026-05-24" data-cadence="daily" >2026-05-24</option>
+                
                 <option value="2026-05-23" data-cadence="daily" selected>2026-05-23</option>
                 
                 <option value="2026-05-22" data-cadence="daily" >2026-05-22</option>
@@ -921,7 +923,7 @@
         
         
         <button onclick="scrollToCat('cat-geopolitics')">
-            <span class="cat-pip" style="background:#c05858"></span>GEOPOLITICS (6)
+            <span class="cat-pip" style="background:#c05858"></span>GEOPOLITICS (8)
         </button>
         
         
@@ -1133,6 +1135,14 @@
             <div class="sb-group-label">Also Tracked</div>
             <div class="sidebar-stories">
                 
+                <button class="sb-link sb-mid" data-story-id="nc-23779" onclick="showNotCovered(23779)">
+                    REPEAT
+                </button>
+                
+                <button class="sb-link sb-mid" data-story-id="nc-23780" onclick="showNotCovered(23780)">
+                    Iran-US deal details emerge as Trump negotiates
+                </button>
+                
                 <button class="sb-link sb-mid" data-story-id="nc-23781" onclick="showNotCovered(23781)">
                     Trump claims Iran deal largely negotiated; Pakistan hosts talks
                 </button>
@@ -1145,14 +1155,19 @@
                     Iran US diplomacy continues without agreement reached
                 </button>
                 
-                <button class="sb-link sb-mid" data-story-id="nc-23777" onclick="showNotCovered(23777)">
-                    Police detain Gaza flotilla activists at airport
-                </button>
                 
-                <button class="sb-link sb-mid" data-story-id="nc-23775" onclick="showNotCovered(23775)">
-                    Tens of thousands rally against Serbian President Vucic
-                </button>
-                
+                <button class="sb-see-more" onclick="showSbPopup(this, 'also-geopolitics')">+2 more</button>
+                <div class="sb-popup-data" id="also-geopolitics" style="display:none">
+                    
+                    <button class="sb-link sb-mid" data-story-id="nc-23777" onclick="showNotCovered(23777);closeSbPopup()">
+                        Police detain Gaza flotilla activists at airport
+                    </button>
+                    
+                    <button class="sb-link sb-mid" data-story-id="nc-23775" onclick="showNotCovered(23775);closeSbPopup()">
+                        Tens of thousands rally against Serbian President Vucic
+                    </button>
+                    
+                </div>
                 
             </div>
             
@@ -1358,7 +1373,7 @@
                     <div class="cat-icon" style="background:#c05858"></div>
                     <span class="cat-name">GEOPOLITICS</span>
                     <span class="cat-count">
-                        1 in episode · 5 tracked
+                        1 in episode · 7 tracked
                     </span>
                 </div>
 
@@ -1451,14 +1466,52 @@
 
                             
                             
+                            <div class="mid-card" data-story-id="nc-23779" onclick="showNotCovered(23779)">
+                                <div class="mid-card-body">
+                                    <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag">GEOPOLITICS</span>
+                                    <div class="mid-headline">REPEAT</div>
+                                    <p class="nc-brief">Following his return to the presidency, Trump is expected to pursue a hardline approach toward Iran, potentially including increased sanctions, withdrawal from diplomatic agreements, and strengthened military posturing in the region. This matters because it could escalate tensions in the Middle East, affect global oil prices, and determine whether nuclear negotiations resume or further deteriorate.</p>
+                                    <div class="card-spacer"></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
+                                        
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.05</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factual.</span><span class="metric-val" style="color:#3d5840">0.7</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
+                            </div>
+                            
+                            <div class="mid-card" data-story-id="nc-23780" onclick="showNotCovered(23780)">
+                                <div class="mid-card-body">
+                                    <span class="mid-badge">Also Tracked</span>
+                                    <span class="story-tag">GEOPOLITICS</span>
+                                    <div class="mid-headline">Iran-US deal details emerge as Trump negotiates</div>
+                                    <p class="nc-brief">Trump administration officials are reportedly negotiating a potential agreement with Iran that would address nuclear restrictions and sanctions, with details emerging through both U.S. and Iranian sources. This matters because any Iran nuclear deal would significantly impact regional stability in the Middle East, global oil markets, and U.S. foreign policy toward a major geopolitical adversary.</p>
+                                    <div class="card-spacer"></div>
+                                    <div class="sub-metrics">
+                                        <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
+                                        
+                                        <div class="metric"><span style="color:var(--text-dim)">Bias div.</span><span class="metric-val" style="color:#3a4870">0.1</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Factual.</span><span class="metric-val" style="color:#3d5840">0.68</span></div>
+                                        <div class="metric"><span style="color:var(--text-dim)">Indep.</span><span class="metric-val" style="color:#3d5060">0.33</span></div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="mid-card-footer"><span class="mid-cta">View sources →</span></div>
+                            </div>
+                            
                             <div class="mid-card" data-story-id="nc-23781" onclick="showNotCovered(23781)">
                                 <div class="mid-card-body">
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Trump claims Iran deal largely negotiated; Pakistan hosts talks</div>
-                                    <p class="nc-brief"># Summary
-
-Trump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan&#39;s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.</p>
+                                    <p class="nc-brief">Trump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan&#39;s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1478,9 +1531,7 @@ Trump claims substantial progress has been made on a new Iran nuclear agreement,
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Luhansk strike sparks Russian accusations and retaliation vow</div>
-                                    <p class="nc-brief"># Luhansk Strike Summary
-
-Russia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.</p>
+                                    <p class="nc-brief">Russia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1500,9 +1551,7 @@ Russia has accused Ukraine of conducting a strike in the Luhansk region and vowe
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Iran US diplomacy continues without agreement reached</div>
-                                    <p class="nc-brief"># Iran-US Diplomacy Continues Without Breakthrough
-
-Iran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.</p>
+                                    <p class="nc-brief">Iran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1522,9 +1571,7 @@ Iran and the United States are maintaining diplomatic negotiations, with both si
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Police detain Gaza flotilla activists at airport</div>
-                                    <p class="nc-brief"># Gaza Flotilla Activists Detained at Airport
-
-Spanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.</p>
+                                    <p class="nc-brief">Spanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1544,9 +1591,7 @@ Spanish police detained and physically confronted activists returning from a Gaz
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">GEOPOLITICS</span>
                                     <div class="mid-headline">Tens of thousands rally against Serbian President Vucic</div>
-                                    <p class="nc-brief"># Serbian Protests Against President Vučić
-
-Tens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vučić&#39;s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country&#39;s political stability and democratic institutions remain contested despite its path toward EU integration.</p>
+                                    <p class="nc-brief">Tens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vučić&#39;s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country&#39;s political stability and democratic institutions remain contested despite its path toward EU integration.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1689,9 +1734,7 @@ Tens of thousands of Serbians have taken to the streets in large-scale anti-gove
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
                             <div class="nc-headline">Trump posts AI video throwing Colbert in dumpster</div>
-                            <p class="nc-brief"># Summary
-
-Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
+                            <p class="nc-brief">Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1700,9 +1743,7 @@ Former President Trump shared an AI-generated video on social media depicting hi
                         <div class="nc-card-body">
                             <span class="nc-label">Signal</span>
                             <div class="nc-headline">Woman charged after shooting attorneys at Raleigh courthouse</div>
-                            <p class="nc-brief"># Raleigh Courthouse Shooting Summary
-
-A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
+                            <p class="nc-brief">A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
                         </div>
                         <div class="nc-card-footer"><span class="nc-cta">View details →</span></div>
                     </div>
@@ -1754,9 +1795,7 @@ A woman has been charged with attempted murder after shooting two attorneys at t
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">HEALTH</span>
                                     <div class="mid-headline">Chemical tank leak forces 40,000 evacuation orders</div>
-                                    <p class="nc-brief"># Chemical Tank Leak Forces Mass Evacuation in Southern California
-
-A chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.</p>
+                                    <p class="nc-brief">A chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">4</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1776,9 +1815,7 @@ A chemical tank in Orange County, California has prompted evacuation orders for 
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">HEALTH</span>
                                     <div class="mid-headline">Congo Ebola outbreak amid rare strain emergence</div>
-                                    <p class="nc-brief"># Congo Ebola Outbreak Summary
-
-A rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a &#34;very high&#34; risk level and the US to demand Congo&#39;s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust—evidenced by mobs burning treatment centers—hampers containment efforts and increases outbreak severity.</p>
+                                    <p class="nc-brief">A rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a &#34;very high&#34; risk level and the US to demand Congo&#39;s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust—evidenced by mobs burning treatment centers—hampers containment efforts and increases outbreak severity.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1798,9 +1835,7 @@ A rare strain of Ebola has emerged in the Democratic Republic of Congo, promptin
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">HEALTH</span>
                                     <div class="mid-headline">US adds Atlanta airport enhanced Ebola screening</div>
-                                    <p class="nc-brief"># US Adds Atlanta Airport Enhanced Ebola Screening
-
-The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world&#39;s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.</p>
+                                    <p class="nc-brief">The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world&#39;s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -1820,9 +1855,7 @@ The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as 
                                     <span class="mid-badge">Also Tracked</span>
                                     <span class="story-tag">HEALTH</span>
                                     <div class="mid-headline">Gunman dead after firing near White House checkpoint</div>
-                                    <p class="nc-brief"># Summary
-
-A gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation&#39;s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.</p>
+                                    <p class="nc-brief">A gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation&#39;s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.</p>
                                     <div class="card-spacer"></div>
                                     <div class="sub-metrics">
                                         <div class="metric"><span class="metric-val">2</span><span style="color:var(--text-dim)"> articles</span></div>
@@ -2021,18 +2054,14 @@ A gunman opened fire near a White House security checkpoint and was fatally shot
                         <div class="dev-card dev-card--overflow">
                             <span class="dev-badge">Developing</span>
                             <div class="dev-headline">Trump posts AI video throwing Colbert in dumpster</div>
-                            <p class="dev-brief"># Summary
-
-Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
+                            <p class="dev-brief">Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
                             <p class="dev-meta">2 articles · SRQ 0.34</p>
                         </div>
                         
                         <div class="dev-card dev-card--overflow">
                             <span class="dev-badge">Developing</span>
                             <div class="dev-headline">Woman charged after shooting attorneys at Raleigh courthouse</div>
-                            <p class="dev-brief"># Raleigh Courthouse Shooting Summary
-
-A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
+                            <p class="dev-brief">A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
                             <p class="dev-meta">2 articles · SRQ 0.21</p>
                         </div>
                         
@@ -5239,9 +5268,7 @@ A woman has been charged with attempted murder after shooting two attorneys at t
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Chemical Tank Leak Forces Mass Evacuation in Southern California
-
-A chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">A chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5310,9 +5337,7 @@ A chemical tank in Orange County, California has prompted evacuation orders for 
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Congo Ebola Outbreak Summary
-
-A rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a &#34;very high&#34; risk level and the US to demand Congo&#39;s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust—evidenced by mobs burning treatment centers—hampers containment efforts and increases outbreak severity.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">A rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a &#34;very high&#34; risk level and the US to demand Congo&#39;s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust—evidenced by mobs burning treatment centers—hampers containment efforts and increases outbreak severity.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5363,9 +5388,7 @@ A rare strain of Ebola has emerged in the Democratic Republic of Congo, promptin
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># US Adds Atlanta Airport Enhanced Ebola Screening
-
-The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world&#39;s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world&#39;s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5416,9 +5439,7 @@ The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as 
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
-
-A gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation&#39;s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">A gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation&#39;s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5471,9 +5492,7 @@ A gunman opened fire near a White House security checkpoint and was fatally shot
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
-
-Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
@@ -5524,9 +5543,7 @@ Former President Trump shared an AI-generated video on social media depicting hi
       <span class="story-meta-item" style="color:var(--v4)">Below verification threshold</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Raleigh Courthouse Shooting Summary
-
-A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Below verification threshold (needs 3+ sources from 2+ bias categories) — not selected for this episode.
@@ -5561,6 +5578,108 @@ A woman has been charged with attempted murder after shooting two attorneys at t
   
   
   
+  <div id="pool-nc-23779">
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · ON OUR RADAR</div>
+    <h1 class="story-headline">REPEAT</h1>
+    <div class="story-meta-row">
+      <span class="story-meta-item"><strong>2</strong> articles tracked</span>
+      <span class="story-meta-item">Relevance: <strong>0.36</strong></span>
+      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
+    </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem">Following his return to the presidency, Trump is expected to pursue a hardline approach toward Iran, potentially including increased sanctions, withdrawal from diplomatic agreements, and strengthened military posturing in the region. This matters because it could escalate tensions in the Middle East, affect global oil prices, and determine whether nuclear negotiations resume or further deteriorate.</p>
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
+    </div>
+    <div class="srq-breakdown">
+      <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
+      <div class="srq-card"><div class="srq-card-val c-accent">0.32</div><div class="srq-card-label">SRQ</div></div>
+      <div class="srq-card"><div class="srq-card-val">0.36</div><div class="srq-card-label">Relevance</div></div>
+      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
+    </div>
+    
+    <div class="section-title">Tracked Coverage (2 articles)</div>
+    <div class="nc-article-list">
+      
+      <div class="nc-article-item">
+        <div class="nc-article-title">
+          
+          <a href="https://news.google.com/rss/articles/CBMickFVX3lxTE5oR0txWXloWDk4OFlOcll6LUZud0N1N1ZPYWR4ZkVMZkRSRDVoVVdPZ3pLZ1dWUnZKd3lGbjh3VkFFalN2TTJkSWlEMXg3dFhDbzFVeFF6SFRBenZLUzJCUWsyRU1CQ29aVEg2eXd3bG1UUQ?oc=5" target="_blank" rel="noopener noreferrer">What will Trump do next with Iran? - NPR</a>
+          
+        </div>
+        <div class="nc-article-source">news.google.com · 2026-05-23</div>
+      </div>
+      
+      <div class="nc-article-item">
+        <div class="nc-article-title">
+          
+          <a href="https://www.npr.org/2026/05/23/nx-s1-5832542/trump-iran-decision" target="_blank" rel="noopener noreferrer">What will Trump do next with Iran?</a>
+          
+        </div>
+        <div class="nc-article-source">npr.org · 2026-05-23</div>
+      </div>
+      
+    </div>
+    
+    
+    <div class="methodology-note">
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
+    </div>
+  </div>
+  
+  <div id="pool-nc-23780">
+    <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · ON OUR RADAR</div>
+    <h1 class="story-headline">Iran-US deal details emerge as Trump negotiates</h1>
+    <div class="story-meta-row">
+      <span class="story-meta-item"><strong>2</strong> articles tracked</span>
+      <span class="story-meta-item">Relevance: <strong>0.35</strong></span>
+      <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
+    </div>
+    
+    <p class="story-brief" style="margin-bottom:1.1rem">Trump administration officials are reportedly negotiating a potential agreement with Iran that would address nuclear restrictions and sanctions, with details emerging through both U.S. and Iranian sources. This matters because any Iran nuclear deal would significantly impact regional stability in the Middle East, global oil markets, and U.S. foreign policy toward a major geopolitical adversary.</p>
+    
+    <div class="not-covered-notice" style="margin-bottom:1.1rem">
+      Other stories scored higher on relevance and verifiability this week.
+      
+    </div>
+    <div class="srq-breakdown">
+      <div class="srq-card"><div class="srq-card-val">2</div><div class="srq-card-label">Articles</div></div>
+      <div class="srq-card"><div class="srq-card-val c-accent">0.33</div><div class="srq-card-label">SRQ</div></div>
+      <div class="srq-card"><div class="srq-card-val">0.35</div><div class="srq-card-label">Relevance</div></div>
+      <div class="srq-card"><div class="srq-card-val" style="font-size:1rem;padding-top:0.35rem"><span style="color:var(--v1)">✓ Gate 2</span></div><div class="srq-card-label">Verifiability</div></div>
+    </div>
+    
+    <div class="section-title">Tracked Coverage (2 articles)</div>
+    <div class="nc-article-list">
+      
+      <div class="nc-article-item">
+        <div class="nc-article-title">
+          
+          <a href="https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear" target="_blank" rel="noopener noreferrer">Exclusive: What&#39;s inside the Iran deal Trump is close to signing</a>
+          
+        </div>
+        <div class="nc-article-source">axios.com · 2026-05-23</div>
+      </div>
+      
+      <div class="nc-article-item">
+        <div class="nc-article-title">
+          
+          <a href="https://www.aljazeera.com/video/newsfeed/2026/5/24/iranian-sources-lay-out-iran-us-deal-details?traffic_source=rss" target="_blank" rel="noopener noreferrer">Iranian sources lay out Iran-US deal details</a>
+          
+        </div>
+        <div class="nc-article-source">aljazeera.com · 2026-05-23</div>
+      </div>
+      
+    </div>
+    
+    
+    <div class="methodology-note">
+      <p><strong style="color:var(--accent)">SRQ</strong> measures journalism quality. <strong style="color:var(--v1)">CVS</strong> measures truth. Not-covered stories have preliminary claim scoring only — full verification requires episode selection.</p>
+    </div>
+  </div>
+  
   <div id="pool-nc-23781">
     <div class="story-category"><span class="story-category-bar" style="background:#c05858"></span>GEOPOLITICS · ON OUR RADAR</div>
     <h1 class="story-headline">Trump claims Iran deal largely negotiated; Pakistan hosts talks</h1>
@@ -5570,9 +5689,7 @@ A woman has been charged with attempted murder after shooting two attorneys at t
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Summary
-
-Trump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan&#39;s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Trump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan&#39;s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5623,9 +5740,7 @@ Trump claims substantial progress has been made on a new Iran nuclear agreement,
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Luhansk Strike Summary
-
-Russia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Russia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5676,9 +5791,7 @@ Russia has accused Ukraine of conducting a strike in the Luhansk region and vowe
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Iran-US Diplomacy Continues Without Breakthrough
-
-Iran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Iran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5729,9 +5842,7 @@ Iran and the United States are maintaining diplomatic negotiations, with both si
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Gaza Flotilla Activists Detained at Airport
-
-Spanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Spanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5782,9 +5893,7 @@ Spanish police detained and physically confronted activists returning from a Gaz
       <span class="story-meta-item" style="color:var(--v2)">Verification threshold ✓</span>
     </div>
     
-    <p class="story-brief" style="margin-bottom:1.1rem"># Serbian Protests Against President Vučić
-
-Tens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vučić&#39;s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country&#39;s political stability and democratic institutions remain contested despite its path toward EU integration.</p>
+    <p class="story-brief" style="margin-bottom:1.1rem">Tens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vučić&#39;s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country&#39;s political stability and democratic institutions remain contested despite its path toward EU integration.</p>
     
     <div class="not-covered-notice" style="margin-bottom:1.1rem">
       Other stories scored higher on relevance and verifiability this week.
@@ -5831,7 +5940,7 @@ Tens of thousands of Serbians have taken to the streets in large-scale anti-gove
 </div>
 
 <script>
-const __NC_DATA__ = {"domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "Trump posts AI video throwing Colbert in dumpster", "id": 23792, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "# Summary\n\nFormer President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump posts AI video depicting him throwing Colbert in a dumpster and dancing", "url": "https://thehill.com/homenews/administration/5892405-trump-shares-ai-video-colbert/"}, {"published_at": "2026-05-22", "source_domain": "washingtonexaminer.com", "title": "Trump posts AI-generated video of him throwing Stephen Colbert in dumpster", "url": "https://www.washingtonexaminer.com/news/white-house/4580469/trump-ai-video-stephen-colbert-dumpster/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.21, "gate2_pass": false, "headline": "Woman charged after shooting attorneys at Raleigh courthouse", "id": 23790, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "# Raleigh Courthouse Shooting Summary\n\nA woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Woman accused of shooting attorneys at Raleigh courthouse has history of lawsuits - Raleigh News \u0026 Observer", "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1FSU9xNmpNNXZYUHF5aFEyZG5mUGo3SVJqeTBNTnlGS0lKNC1IajJkVHJhU2VHZFo4WDdsc01zYWlZR2MwVEh6aS1JMlZjY2NSZWt6SFdrdWtWeXh2LS1QWkpmazZ2Y2ZxR1prOE9HYXlhZS0tQkHSAXZBVV95cUxNLW1LTkE3LWdINjBNMllNeVFqdTFtWTE5eE9sdmZIOEZ2aU5GcUtBRVI0c3FfeWpsYktOYjVsbUQ0REhvUTdTM0xLM0s1ZF9ieUlZWnFSd1ptOHlLNndHbU4yNHBLV1pPbjFXbEUyVUxrT2VMakZR?oc=5"}]}], "geopolitics": [{"article_count": 2, "category": "geopolitics", "gate1_score": 0.35, "gate2_pass": true, "headline": "Trump claims Iran deal largely negotiated; Pakistan hosts talks", "id": 23781, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.33, "srq_bias_div": 0.1, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "# Summary\n\nTrump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan\u0027s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-24", "source_domain": "theguardian.com", "title": "Middle East crisis live: Pakistan hopes to host US-Iran peace talks \u2018very soon\u2019, says PM, after Trump claims Tehran deal \u2018largely negotiated\u2019", "url": "https://www.theguardian.com/world/live/2026/may/24/iran-deal-strait-of-hormuz-trump-middle-east-crisis-live"}, {"published_at": "2026-05-24", "source_domain": "aljazeera.com", "title": "LIVE: Trump says Iran deal \u2018largely negotiated\u2019; Pakistan says talks soon", "url": "https://www.aljazeera.com/news/liveblog/2026/5/24/live-trump-says-new-iran-deal-largely-negotiated-with-talks-very-soon?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Luhansk strike sparks Russian accusations and retaliation vow", "id": 23776, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "# Luhansk Strike Summary\n\nRussia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Rosenberg: Luhansk strike sparks Russian accusations and vow to retaliate - BBC", "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9oVm80R1FkUnZ2RUoweDRHRGZUak1XOF9VWS1YaVZYaE92OUFZUzJqcWNFeEZDdGZva3FEcUgtemgwXzBfOXBidk9NR3B1ZXZidFlzcGExZmt1Zw?oc=5"}, {"published_at": "2026-05-23", "source_domain": "bbc.com", "title": "Rosenberg: Luhansk strike sparks Russian accusations and vow to retaliate", "url": "https://www.bbc.com/news/articles/cvgz05jyrrpo?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Iran US diplomacy continues without agreement reached", "id": 23764, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Iran-US Diplomacy Continues Without Breakthrough\n\nIran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Iran, US Signal Progress in Peace Talks as Issues Unresolved - Bloomberg", "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS2JzSHkwc0hhcV80U2ttMUEzYWlMVlJBSDM5Q0d3cVJfT2stYkZxYnVkZ2Z1OHVkd05DVTdNRnJwQnJ1U0xqOHVXTXR4Uzc0OTdKaHZGQlpWTUwyQzZpMlFkSnNueVpUaDNGWXN2UzJYT0EzXzE4Z0NmWERObzBMa0sxLW9QMUdxaWlnRlFHSFJlclNBYjUzRkt2VFZacEM0SUpzLUc4eG5SV0w1YUtN?oc=5"}, {"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran says diplomacy continues but no deal yet with US", "url": "https://www.aljazeera.com/news/liveblog/2026/5/23/iran-war-live-tehran-says-diplomacy-continues-but-no-deal-yet-with-us?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Police detain Gaza flotilla activists at airport", "id": 23777, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Gaza Flotilla Activists Detained at Airport\n\nSpanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Spanish police beat and detain returning Gaza flotilla activists amid clashes at airport - The Times of Israel", "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNHA2ZXVzMXB4RVhDdURqU1l2VllmRG1NX1NmOUZxUmlobzEtTTE0bXJ1aEpDQ2NURXdqZzFsNVROM19RQmZ3WC1MN1ptWlVXbW0tSzhaOEdUMU1MVFBMUEtRYnRIUzVRSnc2MGw0SVN6Qm1aTms0djNGOGN3OFVHck53OE5MdEpySm5CZE5yQ2dtWW9VcnJRZEx6YWVVS29KRnVKa0h5SUhjOTFVMXfSAbMBQVVfeXFMT29SZE54a0FlS2RIVUNxVW5TU1NFNUtlRmNkRVU5bUwwQk9CMHJLR0J6dTlaajFXTlNCRDBrZ191cXU4UElMbnpPZDAzamdWamswemxSbTZxeUVRcmJfWlpQOU9DTThRbER3VUNnRUc5VUtVU2pQNXNDd2xlaEk2Tmo5ckloYUpXalAzYWxscEQzTHFCdHo5bXB6SFRDLUd4NFlLR3dRU0xKMGhKendxZGNpYVU?oc=5"}, {"published_at": "2026-05-23", "source_domain": "aljazeera.com", "title": "Police beat and detain Gaza flotilla activists at airport", "url": "https://www.aljazeera.com/video/newsfeed/2026/5/23/police-beat-and-detain-gaza-flotilla-activists-at-airport?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.28, "gate2_pass": true, "headline": "Tens of thousands rally against Serbian President Vucic", "id": 23775, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.05, "srq_factuality": 0.44, "srq_independence": 0.33, "story_summary": "# Serbian Protests Against President Vu\u010di\u0107\n\nTens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vu\u010di\u0107\u0027s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country\u0027s political stability and democratic institutions remain contested despite its path toward EU integration.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Tens of thousands rally in Serbia for antigovernment demonstrations - Al Jazeera", "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbjRLVGRfTDVnc0VCdzBVR0N1Z1YxYV8xQ19NcXpJTXVGSnR6SFVSdkNONlBIRnpCWjBrazZYckc4U2FpUXF5VC1lNXBva3dsNXEzMEFNVHlIYkxUcXhNNkpDd1F3QlAzM1Z1RHpjM3VRQk9Va2ZZQTdEZWxaZXVyZjM1ZVVJdmg3eVB4Sm5ENVR5WDF4V2NQSFFxc2swR2lSb0QtSzlESHJ3Ulhr0gGyAUFVX3lxTE5kQjllT3lKLUs4clZmX1NhamxXZ3Jpd3ZmVjdhZzN6c1FUbldfMVJvMjRRVjRWLVVYNExWQ3kxZDJmRFNVazB1OThGcklSaTMwaHRNN1d3SGY3UTctTFNuaFVOMXlzMTFPSi1xRTZGM2JfaWcwSWREUDRyMU43SFpJV3oxNzh4eWM2enFYUnY0cjExUDRGVUlmR2tlZFNDbFlfSXVrUXMyOXZLaXloekVKSEE?oc=5"}, {"published_at": "2026-05-23", "source_domain": "washingtontimes.com", "title": "Tens of thousands rally in Serbia against authoritarian President Vucic", "url": "https://www.washingtontimes.com/news/2026/may/23/tens-thousands-rally-serbia-authoritarian-president-vucic/"}]}], "health": [{"article_count": 4, "category": "health", "gate1_score": 0.53, "gate2_pass": true, "headline": "Chemical tank leak forces 40,000 evacuation orders", "id": 23808, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.51, "srq_bias_div": 0.3, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "# Chemical Tank Leak Forces Mass Evacuation in Southern California\n\nA chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "pbs.org", "title": "40,000 under evacuation orders after chemical tank leak in Southern California", "url": "https://www.pbs.org/newshour/nation/40000-under-evacuation-orders-after-chemical-tank-leak-in-southern-california"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "40,000 evacuated in California chemical leak as Orange County officials warn tank \"is going to fail,\" may explode - CBS News", "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYWpIRE8wajgzQlVFOWV1X2p5a2hQU0VHTFVjdmY0cm41M1YxdHZvR09uaF95cjdLVHVUQkFkUlE5V2s4bFFSY3h1dGkyTnI0YkU4eUtHcHNRM1ZNX18wUTFwYTVaTjd1TS02ODdmVEZJZzI4RjlsdlZ1Wm84cnNnV01FTEVObVVHRm9OaTViT1ZUZ1drZFlBZ0phQVhGckg1akVkRA?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theguardian.com", "title": "California: 40,000 people ordered to evacuate over chemical leak fears", "url": "https://www.theguardian.com/us-news/2026/may/22/california-orange-county-chemical-tank"}, {"published_at": "2026-05-22", "source_domain": "npr.org", "title": "40,000 people under evacuation orders after chemical tank leak in Southern California", "url": "https://www.npr.org/2026/05/22/g-s1-124082/garden-grove-chemical-tank-leak"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.31, "gate2_pass": true, "headline": "Congo Ebola outbreak amid rare strain emergence", "id": 23806, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# Congo Ebola Outbreak Summary\n\nA rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a \"very high\" risk level and the US to demand Congo\u0027s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust\u2014evidenced by mobs burning treatment centers\u2014hampers containment efforts and increases outbreak severity.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "washingtonexaminer.com", "title": "WHO declares Ebola \u2018very high\u2019 risk in the Congo as US demands country\u2019s World Cup team isolate", "url": "https://www.washingtonexaminer.com/news/world/4580716/who-ebola-very-high-risk-congo-world-cup-team-isolate/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Mob Burns Congo Ebola Center Amid Rare Strain Outbreak - The New York Times", "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcG5LRWtMY1MzdnpHVzFCQkNRS3BQeTNyNk9ibGNzc2tSR3dCcHB2akowM3RKMEY4YVUteUNTeUhpR0pCazZkdDl2bXgyLUgxUnRtOWNuQU1sNXFOQ3IzakhNUTZCS0tFTjdzdjZjYjdDZUdPbG5SaU1zZVhsMDU5c1A0aEprU2l3LTBWVTFJWVM?oc=5"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.31, "gate2_pass": true, "headline": "US adds Atlanta airport enhanced Ebola screening", "id": 23817, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "# US Adds Atlanta Airport Enhanced Ebola Screening\n\nThe U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world\u0027s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "thehill.com", "title": "US adds Atlanta airport as enhanced screening location for travelers from Ebola outbreak countries", "url": "https://thehill.com/policy/healthcare/5892834-ebola-screening-atlanta-airport/"}, {"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "U.S. adds Atlanta area airport for Ebola screening, CDC says - CNBC", "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVnV4bkpGXzZUcnVYVHZ1MWdJdGR3bml2eDJQWVJJTkM1MEtSS0diR3BTb2xzekNwWFRiQXdnNjlXbDhFdnNUTkFwSlRTWnZNQXYwcW55WXVKMV9VU2F0Z0lwbnkwUFFLM0lScTFjX0dPY19zS2dFOXpoMzdaLU1VSTlST3RNNUJxLWpIdGIxUUtoLVFtYWV0Vm9R0gGfAUFVX3lxTE9JdjJGZEtoUm9WU1hWem55elM5TXpsNEhaZWs5RXBScTNDbVY4YmktckhfMHluNDhUcDBhY1JlbGFIQ1VyVW1sR214eUs1T05HN29pZTE5bEdYOHA1Y1N1a05idDZheEJEZDM5b0N5bWZsZ05PazcweDI5SU1HZHZOdklNQ3N3YkJFU0Z6eGpTbTdpaWl2bno2QmNNRXdabw?oc=5"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.26, "gate2_pass": true, "headline": "Gunman dead after firing near White House checkpoint", "id": 23820, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.1, "srq_factuality": 0.4, "srq_independence": 0.33, "story_summary": "# Summary\n\nA gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation\u0027s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "washingtontimes.com", "title": "Suspect dead after opening fire near White House security checkpoint, Secret Service says", "url": "https://www.washingtontimes.com/news/2026/may/23/suspect-fatally-shot-opening-fire-near-white-house-security/"}, {"published_at": "2026-05-23", "source_domain": "foxnews.com", "title": "Gunman dead after opening fire near White House checkpoint, Secret Service says", "url": "https://www.foxnews.com/us/white-house-lockdown-after-shots-fired-reported-near-executive-mansion"}]}]};
+const __NC_DATA__ = {"domestic_politics": [{"article_count": 2, "category": "domestic_politics", "gate1_score": 0.4, "gate2_pass": false, "headline": "Trump posts AI video throwing Colbert in dumpster", "id": 23792, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.34, "srq_bias_div": 0.2, "srq_factuality": 0.6, "srq_independence": 0.33, "story_summary": "Former President Trump shared an AI-generated video on social media depicting him physically throwing late-night host Stephen Colbert into a dumpster, exemplifying the increasing use of synthetic media in political discourse. The incident raises concerns about the normalization of AI-fabricated violent imagery in political communication and its potential impact on public discourse and media literacy.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-22", "source_domain": "thehill.com", "title": "Trump posts AI video depicting him throwing Colbert in a dumpster and dancing", "url": "https://thehill.com/homenews/administration/5892405-trump-shares-ai-video-colbert/"}, {"published_at": "2026-05-22", "source_domain": "washingtonexaminer.com", "title": "Trump posts AI-generated video of him throwing Stephen Colbert in dumpster", "url": "https://www.washingtonexaminer.com/news/white-house/4580469/trump-ai-video-stephen-colbert-dumpster/"}]}, {"article_count": 2, "category": "domestic_politics", "gate1_score": 0.21, "gate2_pass": false, "headline": "Woman charged after shooting attorneys at Raleigh courthouse", "id": 23790, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.21, "srq_bias_div": 0, "srq_factuality": 0.5, "srq_independence": 0.17, "story_summary": "A woman has been charged with attempted murder after shooting two attorneys at the Raleigh courthouse following a legal hearing, according to court records and law enforcement. The incident matters because it represents a violent escalation involving the judicial system and highlights potential risks to legal professionals during court proceedings.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Woman accused of shooting attorneys at Raleigh courthouse has history of lawsuits - Raleigh News \u0026 Observer", "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1FSU9xNmpNNXZYUHF5aFEyZG5mUGo3SVJqeTBNTnlGS0lKNC1IajJkVHJhU2VHZFo4WDdsc01zYWlZR2MwVEh6aS1JMlZjY2NSZWt6SFdrdWtWeXh2LS1QWkpmazZ2Y2ZxR1prOE9HYXlhZS0tQkHSAXZBVV95cUxNLW1LTkE3LWdINjBNMllNeVFqdTFtWTE5eE9sdmZIOEZ2aU5GcUtBRVI0c3FfeWpsYktOYjVsbUQ0REhvUTdTM0xLM0s1ZF9ieUlZWnFSd1ptOHlLNndHbU4yNHBLV1pPbjFXbEUyVUxrT2VMakZR?oc=5"}]}], "geopolitics": [{"article_count": 2, "category": "geopolitics", "gate1_score": 0.36, "gate2_pass": true, "headline": "REPEAT", "id": 23779, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.32, "srq_bias_div": 0.05, "srq_factuality": 0.7, "srq_independence": 0.33, "story_summary": "Following his return to the presidency, Trump is expected to pursue a hardline approach toward Iran, potentially including increased sanctions, withdrawal from diplomatic agreements, and strengthened military posturing in the region. This matters because it could escalate tensions in the Middle East, affect global oil prices, and determine whether nuclear negotiations resume or further deteriorate.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "What will Trump do next with Iran? - NPR", "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oR0txWXloWDk4OFlOcll6LUZud0N1N1ZPYWR4ZkVMZkRSRDVoVVdPZ3pLZ1dWUnZKd3lGbjh3VkFFalN2TTJkSWlEMXg3dFhDbzFVeFF6SFRBenZLUzJCUWsyRU1CQ29aVEg2eXd3bG1UUQ?oc=5"}, {"published_at": "2026-05-23", "source_domain": "npr.org", "title": "What will Trump do next with Iran?", "url": "https://www.npr.org/2026/05/23/nx-s1-5832542/trump-iran-decision"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.35, "gate2_pass": true, "headline": "Iran-US deal details emerge as Trump negotiates", "id": 23780, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.33, "srq_bias_div": 0.1, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "Trump administration officials are reportedly negotiating a potential agreement with Iran that would address nuclear restrictions and sanctions, with details emerging through both U.S. and Iranian sources. This matters because any Iran nuclear deal would significantly impact regional stability in the Middle East, global oil markets, and U.S. foreign policy toward a major geopolitical adversary.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "axios.com", "title": "Exclusive: What\u0027s inside the Iran deal Trump is close to signing", "url": "https://www.axios.com/2026/05/24/iran-deal-strait-hormuz-sanctions-nuclear"}, {"published_at": "2026-05-23", "source_domain": "aljazeera.com", "title": "Iranian sources lay out Iran-US deal details", "url": "https://www.aljazeera.com/video/newsfeed/2026/5/24/iranian-sources-lay-out-iran-us-deal-details?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.35, "gate2_pass": true, "headline": "Trump claims Iran deal largely negotiated; Pakistan hosts talks", "id": 23781, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.33, "srq_bias_div": 0.1, "srq_factuality": 0.68, "srq_independence": 0.33, "story_summary": "Trump claims substantial progress has been made on a new Iran nuclear agreement, while Pakistan\u0027s Prime Minister indicates the country is prepared to facilitate direct US-Iran negotiations in the near term. This development matters because a negotiated Iran deal could reshape Middle East geopolitics, reduce nuclear proliferation risks, and potentially ease regional tensions that have escalated since the US withdrew from the previous 2015 agreement.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-24", "source_domain": "theguardian.com", "title": "Middle East crisis live: Pakistan hopes to host US-Iran peace talks \u2018very soon\u2019, says PM, after Trump claims Tehran deal \u2018largely negotiated\u2019", "url": "https://www.theguardian.com/world/live/2026/may/24/iran-deal-strait-of-hormuz-trump-middle-east-crisis-live"}, {"published_at": "2026-05-24", "source_domain": "aljazeera.com", "title": "LIVE: Trump says Iran deal \u2018largely negotiated\u2019; Pakistan says talks soon", "url": "https://www.aljazeera.com/news/liveblog/2026/5/24/live-trump-says-new-iran-deal-largely-negotiated-with-talks-very-soon?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.34, "gate2_pass": true, "headline": "Luhansk strike sparks Russian accusations and retaliation vow", "id": 23776, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.29, "srq_bias_div": 0.05, "srq_factuality": 0.62, "srq_independence": 0.33, "story_summary": "Russia has accused Ukraine of conducting a strike in the Luhansk region and vowed retaliatory measures, escalating military tensions in eastern Ukraine where Russian forces control significant territory. This incident matters because it demonstrates the cycle of attack and counter-attack that sustains the conflict and raises the risk of further escalation between the two nations.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Rosenberg: Luhansk strike sparks Russian accusations and vow to retaliate - BBC", "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9oVm80R1FkUnZ2RUoweDRHRGZUak1XOF9VWS1YaVZYaE92OUFZUzJqcWNFeEZDdGZva3FEcUgtemgwXzBfOXBidk9NR3B1ZXZidFlzcGExZmt1Zw?oc=5"}, {"published_at": "2026-05-23", "source_domain": "bbc.com", "title": "Rosenberg: Luhansk strike sparks Russian accusations and vow to retaliate", "url": "https://www.bbc.com/news/articles/cvgz05jyrrpo?at_medium=RSS\u0026at_campaign=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Iran US diplomacy continues without agreement reached", "id": 23764, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "Iran and the United States are maintaining diplomatic negotiations, with both sides signaling constructive engagement despite failing to reach an agreement on unspecified core issues. These talks matter because they could determine whether tensions escalate into military conflict or whether sanctions and nuclear program disputes can be resolved through dialogue.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Iran, US Signal Progress in Peace Talks as Issues Unresolved - Bloomberg", "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPS2JzSHkwc0hhcV80U2ttMUEzYWlMVlJBSDM5Q0d3cVJfT2stYkZxYnVkZ2Z1OHVkd05DVTdNRnJwQnJ1U0xqOHVXTXR4Uzc0OTdKaHZGQlpWTUwyQzZpMlFkSnNueVpUaDNGWXN2UzJYT0EzXzE4Z0NmWERObzBMa0sxLW9QMUdxaWlnRlFHSFJlclNBYjUzRkt2VFZacEM0SUpzLUc4eG5SV0w1YUtN?oc=5"}, {"published_at": "2026-05-22", "source_domain": "aljazeera.com", "title": "Iran war live: Tehran says diplomacy continues but no deal yet with US", "url": "https://www.aljazeera.com/news/liveblog/2026/5/23/iran-war-live-tehran-says-diplomacy-continues-but-no-deal-yet-with-us?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.31, "gate2_pass": true, "headline": "Police detain Gaza flotilla activists at airport", "id": 23777, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "Spanish police detained and physically confronted activists returning from a Gaza-bound flotilla at an airport, according to reports from The Times of Israel. The incident highlights escalating tensions between pro-Palestinian activists attempting to deliver humanitarian aid to Gaza and authorities, raising questions about protest rights and police conduct in Europe.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Spanish police beat and detain returning Gaza flotilla activists amid clashes at airport - The Times of Israel", "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQNHA2ZXVzMXB4RVhDdURqU1l2VllmRG1NX1NmOUZxUmlobzEtTTE0bXJ1aEpDQ2NURXdqZzFsNVROM19RQmZ3WC1MN1ptWlVXbW0tSzhaOEdUMU1MVFBMUEtRYnRIUzVRSnc2MGw0SVN6Qm1aTms0djNGOGN3OFVHck53OE5MdEpySm5CZE5yQ2dtWW9VcnJRZEx6YWVVS29KRnVKa0h5SUhjOTFVMXfSAbMBQVVfeXFMT29SZE54a0FlS2RIVUNxVW5TU1NFNUtlRmNkRVU5bUwwQk9CMHJLR0J6dTlaajFXTlNCRDBrZ191cXU4UElMbnpPZDAzamdWamswemxSbTZxeUVRcmJfWlpQOU9DTThRbER3VUNnRUc5VUtVU2pQNXNDd2xlaEk2Tmo5ckloYUpXalAzYWxscEQzTHFCdHo5bXB6SFRDLUd4NFlLR3dRU0xKMGhKendxZGNpYVU?oc=5"}, {"published_at": "2026-05-23", "source_domain": "aljazeera.com", "title": "Police beat and detain Gaza flotilla activists at airport", "url": "https://www.aljazeera.com/video/newsfeed/2026/5/23/police-beat-and-detain-gaza-flotilla-activists-at-airport?traffic_source=rss"}]}, {"article_count": 2, "category": "geopolitics", "gate1_score": 0.28, "gate2_pass": true, "headline": "Tens of thousands rally against Serbian President Vucic", "id": 23775, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.05, "srq_factuality": 0.44, "srq_independence": 0.33, "story_summary": "Tens of thousands of Serbians have taken to the streets in large-scale anti-government demonstrations opposing President Aleksandar Vu\u010di\u0107\u0027s rule, citing concerns over democratic backsliding, media freedom, and authoritarian governance. These protests matter because Serbia is a candidate for European Union membership, and widespread domestic unrest signals that the country\u0027s political stability and democratic institutions remain contested despite its path toward EU integration.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "Tens of thousands rally in Serbia for antigovernment demonstrations - Al Jazeera", "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbjRLVGRfTDVnc0VCdzBVR0N1Z1YxYV8xQ19NcXpJTXVGSnR6SFVSdkNONlBIRnpCWjBrazZYckc4U2FpUXF5VC1lNXBva3dsNXEzMEFNVHlIYkxUcXhNNkpDd1F3QlAzM1Z1RHpjM3VRQk9Va2ZZQTdEZWxaZXVyZjM1ZVVJdmg3eVB4Sm5ENVR5WDF4V2NQSFFxc2swR2lSb0QtSzlESHJ3Ulhr0gGyAUFVX3lxTE5kQjllT3lKLUs4clZmX1NhamxXZ3Jpd3ZmVjdhZzN6c1FUbldfMVJvMjRRVjRWLVVYNExWQ3kxZDJmRFNVazB1OThGcklSaTMwaHRNN1d3SGY3UTctTFNuaFVOMXlzMTFPSi1xRTZGM2JfaWcwSWREUDRyMU43SFpJV3oxNzh4eWM2enFYUnY0cjExUDRGVUlmR2tlZFNDbFlfSXVrUXMyOXZLaXloekVKSEE?oc=5"}, {"published_at": "2026-05-23", "source_domain": "washingtontimes.com", "title": "Tens of thousands rally in Serbia against authoritarian President Vucic", "url": "https://www.washingtontimes.com/news/2026/may/23/tens-thousands-rally-serbia-authoritarian-president-vucic/"}]}], "health": [{"article_count": 4, "category": "health", "gate1_score": 0.53, "gate2_pass": true, "headline": "Chemical tank leak forces 40,000 evacuation orders", "id": 23808, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.51, "srq_bias_div": 0.3, "srq_factuality": 0.76, "srq_independence": 0.67, "story_summary": "A chemical tank in Orange County, California has prompted evacuation orders for 40,000 residents due to risk of structural failure and potential explosion. The incident poses immediate health and safety risks to a large population and demonstrates the dangers of industrial chemical storage facilities located near residential areas.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "pbs.org", "title": "40,000 under evacuation orders after chemical tank leak in Southern California", "url": "https://www.pbs.org/newshour/nation/40000-under-evacuation-orders-after-chemical-tank-leak-in-southern-california"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "40,000 evacuated in California chemical leak as Orange County officials warn tank \"is going to fail,\" may explode - CBS News", "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYWpIRE8wajgzQlVFOWV1X2p5a2hQU0VHTFVjdmY0cm41M1YxdHZvR09uaF95cjdLVHVUQkFkUlE5V2s4bFFSY3h1dGkyTnI0YkU4eUtHcHNRM1ZNX18wUTFwYTVaTjd1TS02ODdmVEZJZzI4RjlsdlZ1Wm84cnNnV01FTEVObVVHRm9OaTViT1ZUZ1drZFlBZ0phQVhGckg1akVkRA?oc=5"}, {"published_at": "2026-05-22", "source_domain": "theguardian.com", "title": "California: 40,000 people ordered to evacuate over chemical leak fears", "url": "https://www.theguardian.com/us-news/2026/may/22/california-orange-county-chemical-tank"}, {"published_at": "2026-05-22", "source_domain": "npr.org", "title": "40,000 people under evacuation orders after chemical tank leak in Southern California", "url": "https://www.npr.org/2026/05/22/g-s1-124082/garden-grove-chemical-tank-leak"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.31, "gate2_pass": true, "headline": "Congo Ebola outbreak amid rare strain emergence", "id": 23806, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "A rare strain of Ebola has emerged in the Democratic Republic of Congo, prompting the WHO to declare a \"very high\" risk level and the US to demand Congo\u0027s World Cup team isolate. The outbreak matters because rare Ebola strains may have different transmission patterns or treatment responses, while public distrust\u2014evidenced by mobs burning treatment centers\u2014hampers containment efforts and increases outbreak severity.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "washingtonexaminer.com", "title": "WHO declares Ebola \u2018very high\u2019 risk in the Congo as US demands country\u2019s World Cup team isolate", "url": "https://www.washingtonexaminer.com/news/world/4580716/who-ebola-very-high-risk-congo-world-cup-team-isolate/"}, {"published_at": "2026-05-22", "source_domain": "news.google.com", "title": "Mob Burns Congo Ebola Center Amid Rare Strain Outbreak - The New York Times", "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPcG5LRWtMY1MzdnpHVzFCQkNRS3BQeTNyNk9ibGNzc2tSR3dCcHB2akowM3RKMEY4YVUteUNTeUhpR0pCazZkdDl2bXgyLUgxUnRtOWNuQU1sNXFOQ3IzakhNUTZCS0tFTjdzdjZjYjdDZUdPbG5SaU1zZVhsMDU5c1A0aEprU2l3LTBWVTFJWVM?oc=5"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.31, "gate2_pass": true, "headline": "US adds Atlanta airport enhanced Ebola screening", "id": 23817, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.27, "srq_bias_div": 0.05, "srq_factuality": 0.54, "srq_independence": 0.33, "story_summary": "The U.S. CDC has designated Hartsfield-Jackson Atlanta International Airport as an additional screening location for travelers arriving from countries experiencing Ebola outbreaks, joining other major U.S. entry points in monitoring for the virus. This expansion matters because Atlanta is one of the world\u0027s busiest airports and a major international hub, making enhanced screening there critical to detecting and containing potential Ebola cases before they spread domestically.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "thehill.com", "title": "US adds Atlanta airport as enhanced screening location for travelers from Ebola outbreak countries", "url": "https://thehill.com/policy/healthcare/5892834-ebola-screening-atlanta-airport/"}, {"published_at": "2026-05-23", "source_domain": "news.google.com", "title": "U.S. adds Atlanta area airport for Ebola screening, CDC says - CNBC", "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOVnV4bkpGXzZUcnVYVHZ1MWdJdGR3bml2eDJQWVJJTkM1MEtSS0diR3BTb2xzekNwWFRiQXdnNjlXbDhFdnNUTkFwSlRTWnZNQXYwcW55WXVKMV9VU2F0Z0lwbnkwUFFLM0lScTFjX0dPY19zS2dFOXpoMzdaLU1VSTlST3RNNUJxLWpIdGIxUUtoLVFtYWV0Vm9R0gGfAUFVX3lxTE9JdjJGZEtoUm9WU1hWem55elM5TXpsNEhaZWs5RXBScTNDbVY4YmktckhfMHluNDhUcDBhY1JlbGFIQ1VyVW1sR214eUs1T05HN29pZTE5bEdYOHA1Y1N1a05idDZheEJEZDM5b0N5bWZsZ05PazcweDI5SU1HZHZOdklNQ3N3YkJFU0Z6eGpTbTdpaWl2bno2QmNNRXdabw?oc=5"}]}, {"article_count": 2, "category": "health", "gate1_score": 0.26, "gate2_pass": true, "headline": "Gunman dead after firing near White House checkpoint", "id": 23820, "lite_claims": [], "processing_status": "unprocessed", "srq": 0.24, "srq_bias_div": 0.1, "srq_factuality": 0.4, "srq_independence": 0.33, "story_summary": "A gunman opened fire near a White House security checkpoint and was fatally shot by Secret Service agents in response. The incident matters because it represents a direct security threat to the nation\u0027s most heavily protected government building and raises concerns about perimeter vulnerabilities despite extensive security measures.", "story_summary_long": "", "top_articles": [{"published_at": "2026-05-23", "source_domain": "washingtontimes.com", "title": "Suspect dead after opening fire near White House security checkpoint, Secret Service says", "url": "https://www.washingtontimes.com/news/2026/may/23/suspect-fatally-shot-opening-fire-near-white-house-security/"}, {"published_at": "2026-05-23", "source_domain": "foxnews.com", "title": "Gunman dead after opening fire near White House checkpoint, Secret Service says", "url": "https://www.foxnews.com/us/white-house-lockdown-after-shots-fired-reported-near-executive-mansion"}]}]};
 // Flatten to id→object map for panel title lookup
 const __NC_MAP__ = {};
 Object.values(__NC_DATA__).forEach(items => items.forEach(nc => { __NC_MAP__[nc.id] = nc; }));
