@@ -1,0 +1,2542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Refuses To Renew USMCA Trade Pact — ThreadRoK</title>
+    <meta name="description" content="The Trump administration announced it will not renew the USMCA in its current form, opening formal renegotiation talks with Mexico and Canada.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #0d0e14;
+            --surface:     #13141e;
+            --surface-2:   #1a1c28;
+            --card:        #161824;
+            --border:      #252840;
+            --border-soft: #1e2035;
+            --text:        #dde0f0;
+            --text-muted:  #7880a0;
+            --text-dim:    #444860;
+            --accent:      #4f9cf9;
+            --accent-dim:  #0e1f3a;
+            --brand-red:   #ef4444;
+            --v1: #4ade80; --v1-bg: #0c2a18;
+            --v2: #60a5fa; --v2-bg: #0c1e38;
+            --v3: #94a3b8; --v3-bg: #1a1f2e;
+            --v4: #9a7520; --v4-bg: #201a04;
+            --v5: #52576c; --v5-bg: #131520;
+            --bias-l:  #2563eb;
+            --bias-lc: #60a5fa;
+            --bias-c:  #6b7280;
+            --bias-rc: #f97316;
+            --bias-r:  #dc2626;
+            --bias-u:  #374151;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .brand-wordmark { font-family: "Inter", sans-serif; line-height: 1; }
+        .brand-thread {
+            color: #ffffff;
+            font-weight: 200;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+        .brand-thread::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: -3px;
+            height: 1.5px;
+            background: var(--brand-red);
+        }
+        .brand-rok {
+            color: var(--brand-red);
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -1px;
+            position: relative;
+            top: 1px;
+            margin-left: -3px;
+        }
+
+        /* ── Site header ─────────────────────────────────── */
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 1.5rem;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.15s;
+            white-space: nowrap;
+        }
+        .back-link:hover { color: var(--accent); }
+        .back-link::before { content: "←"; }
+
+        .header-brand-sm { font-size: 1.1rem; margin-left: auto; }
+
+        /* ── Story article ───────────────────────────────── */
+        .article-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .story-category {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+
+        .story-headline {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+        }
+
+        .story-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .story-meta-item { font-size: 0.78rem; color: var(--text-muted); }
+        .story-meta-item strong { color: var(--text); }
+
+        .srq-inline { display: inline-flex; align-items: center; gap: 0.4rem; }
+        .srq-track-sm { width: 48px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+        .srq-fill-sm { height: 100%; border-radius: 2px; background: linear-gradient(to right, #3b82f6, #4ade80); }
+
+        /* Key stat */
+        .key-stat-box {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-dim);
+            border: 1px solid #1e3a5e;
+            border-radius: 5px;
+            padding: 0.3rem 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Story brief */
+        .story-brief {
+            font-size: 1rem;
+            color: #a8adc8;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--brand-red);
+        }
+
+        /* Section dividers */
+        .section-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border-soft); }
+
+        /* Full narration */
+        .narration-block {
+            font-size: 0.95rem;
+            color: #9097b8;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        /* Bias distribution */
+        .bias-section { margin-bottom: 2rem; }
+
+        .bias-bar-full {
+            display: flex;
+            height: 24px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.6rem;
+        }
+
+        .bseg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.9);
+            padding: 0 4px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .bseg.bl  { background: var(--bias-l); }
+        .bseg.blc { background: var(--bias-lc); color: #1a3a60; }
+        .bseg.bc  { background: var(--bias-c); }
+        .bseg.brc { background: var(--bias-rc); }
+        .bseg.br  { background: var(--bias-r); }
+        .bseg.bu  { background: var(--bias-u); }
+
+        .bias-legend { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .bias-legend-item { display: flex; align-items: center; gap: 0.25rem; font-size: 0.74rem; color: var(--text-muted); }
+        .bias-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+        /* SRQ breakdown */
+        .srq-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .srq-card {
+            background: var(--card);
+            border: 1px solid var(--border-soft);
+            border-radius: 6px;
+            padding: 0.75rem 0.9rem;
+            text-align: center;
+        }
+
+        .srq-card-val { font-size: 1.5rem; font-weight: 700; color: var(--text); line-height: 1; }
+        .srq-card-val.c-blue { color: var(--v2); }
+        .srq-card-val.c-green { color: var(--v1); }
+        .srq-card-val.c-accent { color: var(--accent); }
+        .srq-card-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); margin-top: 0.25rem; }
+
+        /* Claims */
+        .claims-list { display: flex; flex-direction: column; gap: 0.85rem; }
+
+        .claim-card {
+            background: var(--card);
+            border: 1px solid var(--border-soft);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .claim-card-header {
+            padding: 0.7rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .claim-type-tag { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); }
+        .claim-permalink { font-size: 0.65rem; color: var(--text-dim); text-decoration: none; margin-left: auto; }
+        .claim-permalink:hover { color: var(--accent); }
+
+        .claim-card-body { padding: 0.9rem 1rem; }
+
+        .claim-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+        }
+
+        .claim-explanation {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0.65rem;
+        }
+
+        .claim-conflicting {
+            font-size: 0.82rem;
+            color: var(--v4);
+            background: var(--v4-bg);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.65rem;
+        }
+
+        /* Sources */
+        .sources-section { margin-bottom: 0.75rem; }
+        .sources-header { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.4rem; }
+
+        .sources-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .src-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            padding: 3px 9px;
+            border-radius: 4px;
+            background: var(--surface-2);
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        a.src-chip { cursor: pointer; }
+        a.src-chip:hover { color: var(--accent); border-color: var(--accent); }
+        .src-chip .src-link-icon { font-size: 0.6rem; opacity: 0.6; }
+        a.src-chip:hover .src-link-icon { opacity: 1; }
+        .src-chip .src-date { font-size: 0.6rem; opacity: 0.55; margin-left: 0.15rem; }
+
+        .src-chip.sl  { border-color: #1d3a6e; }
+        .src-chip.slc { border-color: #1a3058; }
+        .src-chip.sc  { border-color: #2a2d3e; }
+        .src-chip.src { border-color: #3a2010; }
+        .src-chip.sr  { border-color: #3a1010; }
+
+        .bias-tag {
+            font-size: 0.62rem;
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .bias-tag.bl  { background: #1d2d50; color: var(--bias-l); }
+        .bias-tag.blc { background: #1a2840; color: var(--bias-lc); }
+        .bias-tag.bc  { background: #1e2025; color: var(--bias-c); }
+        .bias-tag.brc { background: #2a1808; color: var(--bias-rc); }
+        .bias-tag.br  { background: #2a0808; color: var(--bias-r); }
+
+        /* Scores */
+        .claim-scores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1rem;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .score-kv { display: flex; gap: 0.25rem; }
+        .score-k { color: var(--text-dim); }
+        .score-v { color: var(--text-muted); font-weight: 600; }
+
+        /* CVS badges */
+        .cvs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .cvs-V1 { background: var(--v1-bg); color: var(--v1); }
+        .cvs-V2 { background: var(--v2-bg); color: var(--v2); }
+        .cvs-V3 { background: var(--v3-bg); color: var(--v3); }
+        .cvs-V4 { background: var(--v4-bg); color: var(--v4); }
+        .cvs-V5 { background: var(--v5-bg); color: var(--v5); border: 1px dashed #333; }
+
+        .cvs-dot { width: 6px; height: 6px; border-radius: 50%; }
+        .cvs-dot-V1 { background: var(--v1); }
+        .cvs-dot-V2 { background: var(--v2); }
+        .cvs-dot-V3 { background: var(--v3); }
+        .cvs-dot-V4 { background: var(--v4); }
+        .cvs-dot-V5 { background: var(--v5); }
+
+        /* ── Footer ──────────────────────────────────────── */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .footer-brand { font-size: 1.4rem; }
+        .footer-disclaimer { font-size: 0.7rem; color: var(--text-dim); flex: 1; text-align: center; padding: 0 1rem; }
+        .footer-nav { display: flex; gap: 1rem; }
+        .footer-nav a { font-size: 0.74rem; color: var(--text-muted); text-decoration: none; }
+        .footer-nav a:hover { color: var(--accent); }
+
+        @media (max-width: 640px) {
+            .article-wrap { padding: 1.25rem 1rem 2rem; }
+            .story-headline { font-size: 1.35rem; }
+            .srq-breakdown { grid-template-columns: 1fr 1fr; }
+            .site-footer { flex-direction: column; text-align: center; }
+            .footer-disclaimer { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="back-link" href="../../index.html">July 1, 2026</a>
+        <div class="header-brand-sm brand-wordmark">
+            <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span>
+        </div>
+    </div>
+</header>
+
+
+<div class="article-wrap">
+
+    <div class="story-category">GEOPOLITICS</div>
+    <h1 class="story-headline">US Refuses To Renew USMCA Trade Pact</h1>
+
+    <div class="story-meta-row">
+        <span class="story-meta-item">2026-07-01</span>
+        <span class="story-meta-item"><strong>5</strong> outlets</span>
+        
+        <span class="story-meta-item srq-inline">
+            SRQ
+            <div class="srq-track-sm">
+                <div class="srq-fill-sm" style="width:64.0%"></div>
+            </div>
+            <strong>0.64</strong>
+        </span>
+        
+        
+        
+        
+        <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2×19</span>
+        
+        
+        <span class="cvs-badge cvs-V5"><span class="cvs-dot cvs-dot-V5"></span>V5×1</span>
+    </div>
+
+    
+    <div class="key-stat-box">5 articles · SRQ 0.638</div>
+    
+
+    
+    <p class="story-brief">The Trump administration announced it will not renew the USMCA in its current form, opening formal renegotiation talks with Mexico and Canada.</p>
+    
+
+    
+    
+    <div class="section-title">Full Narration</div>
+    <p class="narration-block">The US will not renew the USMCA. The Trump administration announced Wednesday it&#39;s walking away from the current North American trade pact with Mexico and Canada — and pushing for a renegotiation. All 3 countries are now entering formal talks to replace the deal. The administration is seeking changes to the existing agreement, which has governed trade across North America since 2020. What this means for businesses on both sides of both borders depends entirely on how fast those negotiations move — and how far apart the 3 parties turn out to be. No timeline for a new deal has been set.</p>
+    
+
+    
+    
+    <div class="section-title">Source Bias Distribution</div>
+    <div class="bias-section">
+        <div class="bias-bar-full">
+            
+            
+            
+            
+            
+            
+            <div class="bseg blc" style="flex:1"
+                 title="Lean Left: 1">
+                Lean Left (1)
+            </div>
+            
+            
+            
+            
+            <div class="bseg bc" style="flex:4"
+                 title="Center: 4">
+                Center (4)
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        <div class="bias-legend">
+            
+            
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-lc)"></div>
+                <span>Lean Left: 1</span>
+            </div>
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-c)"></div>
+                <span>Center: 4</span>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="section-title">Source Quality Metrics</div>
+    <div class="srq-breakdown">
+        <div class="srq-card">
+            <div class="srq-card-val c-accent">0.64</div>
+            <div class="srq-card-label">Story SRQ</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val c-blue">0.50</div>
+            <div class="srq-card-label">Avg Bias Diversity</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val c-green">0.79</div>
+            <div class="srq-card-label">Avg Factuality</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val">5</div>
+            <div class="srq-card-label">Outlets</div>
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="section-title">20 Claims Analyzed</div>
+    <div class="claims-list">
+        
+        <div class="claim-card" id="claim-21582">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21582">#21582</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The US has declined to renew the USMCA trade pact with Mexico and Canada.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21583">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-21583">#21583</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The Trump administration announced on Wednesday that it will not renew the USMCA in its current form.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21584">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21584">#21584</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The US will not renew Trump&#39;s trade deal with Mexico and Canada&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21585">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21585">#21585</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The U.S., Canada and Mexico are beginning negotiations to renew a North American trade pact.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21586">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21586">#21586</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The Trump administration is seeking changes to the USMCA trade deal with Mexico and Canada.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21587">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21587">#21587</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Trump refused to renew the United States-Mexico-Canada Agreement (USMCA)&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21588">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21588">#21588</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Trump opted to keep USMCA alive through annual reviews rather than a longer-term renewal&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21589">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21589">#21589</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Wednesday marked the deadline to renew the USMCA trade agreement.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21590">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21590">#21590</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The US will hold annual reviews on trade terms with Mexico and Canada&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21591">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21591">#21591</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The USMCA trade deal has streamlined supply chains across North America.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21592">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21592">#21592</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Wednesday was the deadline built into the USMCA for renewal decisions&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21593">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21593">#21593</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;President Trump struck the USMCA with Canada and Mexico during his first administration.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21594">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-21594">#21594</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Trump previously championed USMCA as his signature deal&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21595">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-21595">#21595</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;U.S. Trade Representative Jamieson Greer made a statement regarding the USMCA renewal decision.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21596">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21596">#21596</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Mexico and Canada are the US&#39;s biggest trading partners&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21597">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21597">#21597</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Canadian auto parts feed factories in the American Midwest.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21598">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21598">#21598</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;American auto parts feed factories in Canada.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21599">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V5">
+                    <span class="cvs-dot cvs-dot-V5"></span>
+                    V5 Unverified
+                </span>
+                <span class="claim-type-tag">predictive</span>
+                <a class="claim-permalink" href="#claim-21599">#21599</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Lengthy negotiations are expected regarding the USMCA trade deal.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Unverified — insufficient evidence to assess</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21600">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21600">#21600</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Tourists from Chattanooga check into beach resorts in Cancun.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-21601">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-21601">#21601</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Mexican tequila and mezcal are consumed at bars in Seattle.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — 5 independent sources across 2 bias categories</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (5)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.ft.com/content/2c7b4dc8-1b1c-49f4-b51a-0dee0c1d216a" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            ft.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/world/u-s-canada-and-mexico-begin-bumpy-negotiations-to-renew-north-american-trade-pact" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/us-declines-to-renew-usmca-trade-pact-with-mexico-canada/a-77793686?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://thehill.com/homenews/administration/5949845-trump-administration-usmca-renewal/" target="_blank" rel="noopener noreferrer"
+                           title="Center · mostly-factual">
+                            thehill.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip slc" href="https://www.theguardian.com/us-news/2026/jul/01/trump-usmca-trade-treaty" target="_blank" rel="noopener noreferrer"
+                           title="Lean Left · high">
+                            theguardian.com
+                            <span class="bias-tag blc">L-C</span>
+                            <span class="src-date">07/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.638</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">2/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.79</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.50</span></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    
+    <div style="margin-top:2.5rem;padding:1rem 1.25rem;background:var(--accent-dim);border:1px solid #1e3a5e;border-radius:8px;">
+        <p style="font-size:0.82rem;color:#8ab4e0;line-height:1.6;">
+            <strong style="color:var(--accent)">SRQ</strong> (Source Reporting Quality) measures journalism quality.
+            <strong style="color:var(--v1)">CVS</strong> (Claim Verification Status) measures truth.
+            These are never combined.
+            <a href="None" style="color:var(--accent);text-decoration:none;">Full methodology &#8594;</a>
+        </p>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <div class="footer-brand brand-wordmark">
+        <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span>
+    </div>
+    <p class="footer-disclaimer">
+        AI-assisted. Claims verified via automated source analysis. Bias ratings from Media Bias / Fact Check.
+    </p>
+    <nav class="footer-nav">
+        <a href="https://threadrok.github.io/evidence/">All Episodes</a>
+        <a href="None">Methodology</a>
+        <a href="https://youtube.com/@threadrok">YouTube</a>
+    </nav>
+</footer>
+
+</body>
+</html>
