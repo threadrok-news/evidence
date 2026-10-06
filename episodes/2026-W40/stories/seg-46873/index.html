@@ -1,0 +1,3129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennessee Execution Fails After Two Lethal Injections — ThreadRoK</title>
+    <meta name="description" content="Tennessee&#39;s execution of convicted murderer Christa Pike was halted Wednesday after two doses of anesthetic failed to cause death, the second failed execution in the state this year.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:          #0d0e14;
+            --surface:     #13141e;
+            --surface-2:   #1a1c28;
+            --card:        #161824;
+            --border:      #252840;
+            --border-soft: #1e2035;
+            --text:        #dde0f0;
+            --text-muted:  #7880a0;
+            --text-dim:    #444860;
+            --accent:      #4f9cf9;
+            --accent-dim:  #0e1f3a;
+            --brand-red:   #ef4444;
+            --v1: #4ade80; --v1-bg: #0c2a18;
+            --v2: #60a5fa; --v2-bg: #0c1e38;
+            --v3: #94a3b8; --v3-bg: #1a1f2e;
+            --v4: #9a7520; --v4-bg: #201a04;
+            --v5: #52576c; --v5-bg: #131520;
+            --bias-l:  #2563eb;
+            --bias-lc: #60a5fa;
+            --bias-c:  #6b7280;
+            --bias-rc: #f97316;
+            --bias-r:  #dc2626;
+            --bias-u:  #374151;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .brand-wordmark { font-family: "Inter", sans-serif; line-height: 1; }
+        .brand-thread {
+            color: #ffffff;
+            font-weight: 200;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+        .brand-thread::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: -3px;
+            height: 1.5px;
+            background: var(--brand-red);
+        }
+        .brand-rok {
+            color: var(--brand-red);
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: -1px;
+            position: relative;
+            top: 1px;
+            margin-left: -3px;
+        }
+
+        /* ── Site header ─────────────────────────────────── */
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.9rem 1.5rem;
+        }
+
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.15s;
+            white-space: nowrap;
+        }
+        .back-link:hover { color: var(--accent); }
+        .back-link::before { content: "←"; }
+
+        .header-brand-sm { font-size: 1.1rem; margin-left: auto; }
+
+        /* ── Story article ───────────────────────────────── */
+        .article-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .story-category {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.6rem;
+        }
+
+        .story-headline {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+        }
+
+        .story-meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem 1.25rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .story-meta-item { font-size: 0.78rem; color: var(--text-muted); }
+        .story-meta-item strong { color: var(--text); }
+
+        .srq-inline { display: inline-flex; align-items: center; gap: 0.4rem; }
+        .srq-track-sm { width: 48px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+        .srq-fill-sm { height: 100%; border-radius: 2px; background: linear-gradient(to right, #3b82f6, #4ade80); }
+
+        /* Key stat */
+        .key-stat-box {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: var(--accent-dim);
+            border: 1px solid #1e3a5e;
+            border-radius: 5px;
+            padding: 0.3rem 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Story brief */
+        .story-brief {
+            font-size: 1rem;
+            color: #a8adc8;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--brand-red);
+        }
+
+        /* Section dividers */
+        .section-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border-soft); }
+
+        /* Full narration */
+        .narration-block {
+            font-size: 0.95rem;
+            color: #9097b8;
+            line-height: 1.85;
+            margin-bottom: 1rem;
+        }
+
+        /* Bias distribution */
+        .bias-section { margin-bottom: 2rem; }
+
+        .bias-bar-full {
+            display: flex;
+            height: 24px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.6rem;
+        }
+
+        .bseg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.9);
+            padding: 0 4px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .bseg.bl  { background: var(--bias-l); }
+        .bseg.blc { background: var(--bias-lc); color: #1a3a60; }
+        .bseg.bc  { background: var(--bias-c); }
+        .bseg.brc { background: var(--bias-rc); }
+        .bseg.br  { background: var(--bias-r); }
+        .bseg.bu  { background: var(--bias-u); }
+
+        .bias-legend { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .bias-legend-item { display: flex; align-items: center; gap: 0.25rem; font-size: 0.74rem; color: var(--text-muted); }
+        .bias-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+        /* SRQ breakdown */
+        .srq-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .srq-card {
+            background: var(--card);
+            border: 1px solid var(--border-soft);
+            border-radius: 6px;
+            padding: 0.75rem 0.9rem;
+            text-align: center;
+        }
+
+        .srq-card-val { font-size: 1.5rem; font-weight: 700; color: var(--text); line-height: 1; }
+        .srq-card-val.c-blue { color: var(--v2); }
+        .srq-card-val.c-green { color: var(--v1); }
+        .srq-card-val.c-accent { color: var(--accent); }
+        .srq-card-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--text-dim); margin-top: 0.25rem; }
+
+        /* Claims */
+        .claims-list { display: flex; flex-direction: column; gap: 0.85rem; }
+
+        .claim-card {
+            background: var(--card);
+            border: 1px solid var(--border-soft);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .claim-card-header {
+            padding: 0.7rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .claim-type-tag { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); }
+        .claim-permalink { font-size: 0.65rem; color: var(--text-dim); text-decoration: none; margin-left: auto; }
+        .claim-permalink:hover { color: var(--accent); }
+
+        .claim-card-body { padding: 0.9rem 1rem; }
+
+        .claim-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-style: italic;
+            color: var(--text);
+            margin-bottom: 0.6rem;
+        }
+
+        .claim-explanation {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-bottom: 0.65rem;
+        }
+
+        .claim-conflicting {
+            font-size: 0.82rem;
+            color: var(--v4);
+            background: var(--v4-bg);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            margin-bottom: 0.65rem;
+        }
+
+        /* Sources */
+        .sources-section { margin-bottom: 0.75rem; }
+        .sources-header { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.4rem; }
+
+        .sources-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+        }
+
+        .src-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.75rem;
+            padding: 3px 9px;
+            border-radius: 4px;
+            background: var(--surface-2);
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        a.src-chip { cursor: pointer; }
+        a.src-chip:hover { color: var(--accent); border-color: var(--accent); }
+        .src-chip .src-link-icon { font-size: 0.6rem; opacity: 0.6; }
+        a.src-chip:hover .src-link-icon { opacity: 1; }
+        .src-chip .src-date { font-size: 0.6rem; opacity: 0.55; margin-left: 0.15rem; }
+
+        .src-chip.sl  { border-color: #1d3a6e; }
+        .src-chip.slc { border-color: #1a3058; }
+        .src-chip.sc  { border-color: #2a2d3e; }
+        .src-chip.src { border-color: #3a2010; }
+        .src-chip.sr  { border-color: #3a1010; }
+
+        .bias-tag {
+            font-size: 0.62rem;
+            padding: 0 4px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+        .bias-tag.bl  { background: #1d2d50; color: var(--bias-l); }
+        .bias-tag.blc { background: #1a2840; color: var(--bias-lc); }
+        .bias-tag.bc  { background: #1e2025; color: var(--bias-c); }
+        .bias-tag.brc { background: #2a1808; color: var(--bias-rc); }
+        .bias-tag.br  { background: #2a0808; color: var(--bias-r); }
+
+        /* Scores */
+        .claim-scores {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1rem;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .score-kv { display: flex; gap: 0.25rem; }
+        .score-k { color: var(--text-dim); }
+        .score-v { color: var(--text-muted); font-weight: 600; }
+
+        /* CVS badges */
+        .cvs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-size: 0.74rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .cvs-V1 { background: var(--v1-bg); color: var(--v1); }
+        .cvs-V2 { background: var(--v2-bg); color: var(--v2); }
+        .cvs-V3 { background: var(--v3-bg); color: var(--v3); }
+        .cvs-V4 { background: var(--v4-bg); color: var(--v4); }
+        .cvs-V5 { background: var(--v5-bg); color: var(--v5); border: 1px dashed #333; }
+
+        .cvs-dot { width: 6px; height: 6px; border-radius: 50%; }
+        .cvs-dot-V1 { background: var(--v1); }
+        .cvs-dot-V2 { background: var(--v2); }
+        .cvs-dot-V3 { background: var(--v3); }
+        .cvs-dot-V4 { background: var(--v4); }
+        .cvs-dot-V5 { background: var(--v5); }
+
+        /* ── Footer ──────────────────────────────────────── */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .footer-brand { font-size: 1.4rem; }
+        .footer-disclaimer { font-size: 0.7rem; color: var(--text-dim); flex: 1; text-align: center; padding: 0 1rem; }
+        .footer-nav { display: flex; gap: 1rem; }
+        .footer-nav a { font-size: 0.74rem; color: var(--text-muted); text-decoration: none; }
+        .footer-nav a:hover { color: var(--accent); }
+
+        @media (max-width: 640px) {
+            .article-wrap { padding: 1.25rem 1rem 2rem; }
+            .story-headline { font-size: 1.35rem; }
+            .srq-breakdown { grid-template-columns: 1fr 1fr; }
+            .site-footer { flex-direction: column; text-align: center; }
+            .footer-disclaimer { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="back-link" href="../../index.html">Week 40</a>
+        <div class="header-brand-sm brand-wordmark">
+            <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span>
+        </div>
+    </div>
+</header>
+
+
+<div class="article-wrap">
+
+    <div class="story-category">DOMESTIC_POLITICS</div>
+    <h1 class="story-headline">Tennessee Execution Fails After Two Lethal Injections</h1>
+
+    <div class="story-meta-row">
+        <span class="story-meta-item">2026-W40</span>
+        <span class="story-meta-item"><strong>18</strong> outlets</span>
+        
+        <span class="story-meta-item srq-inline">
+            SRQ
+            <div class="srq-track-sm">
+                <div class="srq-fill-sm" style="width:89.0%"></div>
+            </div>
+            <strong>0.89</strong>
+        </span>
+        
+        
+        
+        <span class="cvs-badge cvs-V1"><span class="cvs-dot cvs-dot-V1"></span>V1×10</span>
+        <span class="cvs-badge cvs-V2"><span class="cvs-dot cvs-dot-V2"></span>V2×12</span>
+        
+        <span class="cvs-badge cvs-V4"><span class="cvs-dot cvs-dot-V4"></span>V4×1</span>
+        
+    </div>
+
+    
+    <div class="key-stat-box">18 articles · SRQ 0.893</div>
+    
+
+    
+    <p class="story-brief">Tennessee&#39;s execution of convicted murderer Christa Pike was halted Wednesday after two doses of anesthetic failed to cause death, the second failed execution in the state this year.</p>
+    
+
+    
+    
+    <div class="section-title">Full Narration</div>
+    <p class="narration-block">Tennessee attempted to execute Christa Pike on Wednesday. It did not succeed. Two doses of anesthetic were administered. Pike survived both. Pike was convicted of murder. Wednesday&#39;s failed execution is the second time this year Tennessee has been unable to carry out a scheduled lethal injection. The state halted the procedure after the two doses failed to produce the intended effect. BBC News confirmed the execution was halted Wednesday. What Tennessee&#39;s corrections department has not yet announced is a rescheduled date or a review of the protocol used.</p>
+    
+
+    
+    
+    <div class="section-title">Source Bias Distribution</div>
+    <div class="bias-section">
+        <div class="bias-bar-full">
+            
+            
+            
+            
+            
+            
+            <div class="bseg blc" style="flex:3"
+                 title="Lean Left: 3">
+                Lean Left (3)
+            </div>
+            
+            
+            
+            
+            <div class="bseg bc" style="flex:4"
+                 title="Center: 4">
+                Center (4)
+            </div>
+            
+            
+            
+            
+            <div class="bseg brc" style="flex:1"
+                 title="Lean Right: 1">
+                Lean Right (1)
+            </div>
+            
+            
+            
+            
+            <div class="bseg br" style="flex:1"
+                 title="Right: 1">
+                Right (1)
+            </div>
+            
+            
+            
+            
+            
+        </div>
+        <div class="bias-legend">
+            
+            
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-lc)"></div>
+                <span>Lean Left: 3</span>
+            </div>
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-c)"></div>
+                <span>Center: 4</span>
+            </div>
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-rc)"></div>
+                <span>Lean Right: 1</span>
+            </div>
+            
+            
+            
+            
+            <div class="bias-legend-item">
+                <div class="bias-dot" style="background:var(--bias-r)"></div>
+                <span>Right: 1</span>
+            </div>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="section-title">Source Quality Metrics</div>
+    <div class="srq-breakdown">
+        <div class="srq-card">
+            <div class="srq-card-val c-accent">0.89</div>
+            <div class="srq-card-label">Story SRQ</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val c-blue">0.25</div>
+            <div class="srq-card-label">Avg Bias Diversity</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val c-green">0.91</div>
+            <div class="srq-card-label">Avg Factuality</div>
+        </div>
+        <div class="srq-card">
+            <div class="srq-card-val">18</div>
+            <div class="srq-card-label">Outlets</div>
+        </div>
+    </div>
+    
+
+    
+    
+    <div class="section-title">23 Claims Analyzed</div>
+    <div class="claims-list">
+        
+        <div class="claim-card" id="claim-32972">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32972">#32972</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;An execution of Christa Pike failed on Wednesday&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: AP, NYT, CNN, CBS and CBC report Pike&#39;s lethal-injection execution failed Wednesday.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32973">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32973">#32973</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Tennessee&#39;s execution of Christa Gail Pike was halted on Wednesday&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: Multiple outlets report Tennessee halted Pike&#39;s execution on Wednesday after a failed lethal injection.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32974">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32974">#32974</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Pike was a convicted murderer.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: The Tennessee Supreme Court affirmed Christa Pike’s convictions for premeditated first-degree murder and conspiracy.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32975">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32975">#32975</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Two doses of anesthetic failed to kill Christa Pike during the execution.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: AP, BBC, PBS, CBS and DW report two pentobarbital doses failed to kill Pike during execution.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32977">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32977">#32977</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Pike survived two lethal injections.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: BBC, NBC, CBS, AP, and others report Pike survived two administered pentobarbital doses.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32969">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32969">#32969</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Gail Pike survived two doses of lethal injection on Wednesday evening&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Multiple independent outlets report Pike survived two pentobarbital injections Wednesday evening and was hospitalized.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32970">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32970">#32970</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Tennessee officials failed to carry out the lethal injection of death row inmate Christa Pike on Wednesday.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 8 independent web sources: Multiple outlets report Pike survived two injections and officials suspended the execution Wednesday.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32971">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32971">#32971</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Frank Strada resigned&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Multiple outlets report Tennessee corrections chief Frank Strada offered and accepted resignation on October 3, 2026.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32976">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32976">#32976</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Tennessee&#39;s prison chief is resigning following Christa Pike&#39;s failed execution.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Tennessee corrections chief Frank Strada announced he will step down after Pike&#39;s failed execution.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32980">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32980">#32980</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Frank Strada is Tennessee&#39;s prisons chief&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: Tennessee lists Frank Strada as its Department of Correction commissioner, the state&#39;s prisons chief.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32981">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32981">#32981</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Two doses of lethal drug were administered during the failed execution of Christa Pike&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: AP and multiple outlets report that two pentobarbital doses were administered during Pike’s failed execution.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32982">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32982">#32982</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Gail Pike committed a murder at age 18&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: AP and other independent reports confirm Pike killed Colleen Slemmer in 1995 when Pike was 18.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32985">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32985">#32985</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Pike is in critical condition.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: BBC, AP, ABC News, NBC News, and The New York Times report Pike was critically ill after the failed execution.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32979">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-32979">#32979</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Pike&#39;s attorneys say she is alive and in critical condition after being given two separate doses of pentobarbital.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Multiple independent outlets report her attorneys said Pike survived two pentobarbital doses and remained alive in critical condition.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32983">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-32983">#32983</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;A federal appeals court sought to review whether Pike&#39;s allegations of childhood sexual abuse and rape were fully considered at her sentencing&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 4 independent web sources: Multiple outlets report the Sixth Circuit sought to review whether Pike’s abuse allegations were considered at sentencing.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32984">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32984">#32984</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Tennessee&#39;s prison commissioner Frank Strada resigned after an execution of Christa Pike.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Multiple outlets report Frank Strada resigned after Christa Pike’s failed execution attempt.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32978">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V4">
+                    <span class="cvs-dot cvs-dot-V4"></span>
+                    V4 Contested
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32978">#32978</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;There was a failed execution in Tennessee in 2024 before Christa Gail Pike&#39;s execution attempt&rdquo;</p>
+
+                
+                <p class="claim-explanation">Contested — web sources contradict claim: The failed Tennessee execution before Pike occurred in 2026, not 2024; 2024 brought a protocol change.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32988">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V1">
+                    <span class="cvs-dot cvs-dot-V1"></span>
+                    V1 Verified
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32988">#32988</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The execution was halted approximately one hour before it was scheduled to begin&rdquo;</p>
+
+                
+                <p class="claim-explanation">Verified — confirmed by official source: Multiple independent outlets report the execution was halted just over one hour before its scheduled start.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32986">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32986">#32986</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Christa Pike was sentenced to death for the gruesome murder of her classmate in 1995.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 4 independent web sources: Credible reports confirm Pike was sentenced to death for killing classmate Colleen Slemmer in 1995.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32987">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">factual</span>
+                <a class="claim-permalink" href="#claim-32987">#32987</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;An independent review is being conducted to determine what happened during the failed execution&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 3 independent web sources: Tennessee appointed former U.S. Attorney Ed Stanton to independently review the failed execution and determine what occurred.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32989">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-32989">#32989</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Frank Strada insisted his team followed protocol during the execution.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Multiple outlets report Strada said his department followed established execution protocol.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32990">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-32990">#32990</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;Pike&#39;s lawyers stated that the failure &#39;goes far beyond any one person&#39;.&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: BBC and five other independent outlets report Pike&#39;s lawyers made this statement after the failed execution.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="claim-card" id="claim-32991">
+            <div class="claim-card-header">
+                <span class="cvs-badge cvs-V2">
+                    <span class="cvs-dot cvs-dot-V2"></span>
+                    V2 Corroborated
+                </span>
+                <span class="claim-type-tag">attributional</span>
+                <a class="claim-permalink" href="#claim-32991">#32991</a>
+            </div>
+
+            <div class="claim-card-body">
+                <p class="claim-text">&ldquo;The failed execution is raising questions about Tennessee&#39;s capital punishment protocols&rdquo;</p>
+
+                
+                <p class="claim-explanation">Corroborated — confirmed by 6 independent web sources: Reports say Pike&#39;s failed execution prompted an independent review and renewed questions about Tennessee&#39;s protocols.</p>
+                
+
+                
+
+                
+                <div class="sources-section">
+                    <div class="sources-header">Sources (6)</div>
+                    <div class="sources-grid">
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/what-to-know-about-christa-gail-pikes-case-and-tennessees-previously-botched-executions" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/show/what-we-know-about-tennessees-botched-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/01</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.pbs.org/newshour/nation/court-halts-execution-of-christa-gail-pike-for-a-tennessee-murder-she-committed-at-age-18" target="_blank" rel="noopener noreferrer"
+                           title="Center · very-high">
+                            pbs.org
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">09/30</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.dw.com/en/tennessee-s-prison-chief-resigns-after-botched-execution-of-murderer-christa-pike/a-79532481?maca=en-rss-en-all-1573-rdf" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            dw.com
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a class="src-chip sc" href="https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer"
+                           title="Center · high">
+                            bbc.co.uk
+                            <span class="bias-tag bc">C</span>
+                            <span class="src-date">10/03</span>
+                            <span class="src-link-icon">↗</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+                
+
+                <div class="claim-scores">
+                    <span class="score-kv"><span class="score-k">SRQ</span><span class="score-v">0.554</span></span>
+                    <span class="score-kv"><span class="score-k">Bias spread</span><span class="score-v">1/5 categories</span></span>
+                    <span class="score-kv"><span class="score-k">Factuality avg</span><span class="score-v">0.91</span></span>
+                    <span class="score-kv"><span class="score-k">Bias diversity</span><span class="score-v">0.25</span></span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    
+    <div style="margin-top:2.5rem;padding:1rem 1.25rem;background:var(--accent-dim);border:1px solid #1e3a5e;border-radius:8px;">
+        <p style="font-size:0.82rem;color:#8ab4e0;line-height:1.6;">
+            <strong style="color:var(--accent)">SRQ</strong> (Source Reporting Quality) measures journalism quality.
+            <strong style="color:var(--v1)">CVS</strong> (Claim Verification Status) measures truth.
+            These are never combined.
+            <a href="None" style="color:var(--accent);text-decoration:none;">Full methodology &#8594;</a>
+        </p>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <div class="footer-brand brand-wordmark">
+        <span class="brand-thread">Thread</span><span class="brand-rok">RoK</span>
+    </div>
+    <p class="footer-disclaimer">
+        AI-assisted. Claims verified via automated source analysis. Bias ratings from Media Bias / Fact Check.
+    </p>
+    <nav class="footer-nav">
+        <a href="https://threadrok.github.io/evidence/">All Episodes</a>
+        <a href="None">Methodology</a>
+        <a href="https://youtube.com/@threadrok">YouTube</a>
+    </nav>
+</footer>
+
+</body>
+</html>
